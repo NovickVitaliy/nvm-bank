@@ -45,8 +45,25 @@ public class AuthService : IAuthService
             registrationResult.Errors.Select(x => x.Description))));
     }
 
-    public Task<Result<string>> LoginAsync(LoginDto loginDto, CancellationToken cancellationToken = default)
+    public async Task<Result<TokenDto>> LoginAsync(LoginDto loginDto, CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        var user = await _userManager.FindByEmailAsync(loginDto.Email);
+
+        if (user is null)
+        {
+            return Result<TokenDto>.Failure(Error.BadRequest("User with given email does not exist."));
+        }
+
+        var isPasswordCorrect = await _userManager.CheckPasswordAsync(user, loginDto.Password);
+
+        if (!isPasswordCorrect)
+        {
+            return Result<TokenDto>.Failure(Error.Unauthorized("Invalid password."));
+        }
+
+        var claims = await _userManager.GetClaimsAsync(user);
+        var token = _tokenService.GenerateJwtToken(user, claims.ToList(), cancellationToken);
+
+        return Result<TokenDto>.Success(token);
     }
 }

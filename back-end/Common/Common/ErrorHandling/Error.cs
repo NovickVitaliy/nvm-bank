@@ -10,4 +10,5 @@ public sealed record Error(int Code, string Description)
 
     public static Error Conflict(string message) => new((int)HttpStatusCode.Conflict, message);
     public static Error BadRequest(string message) => new((int)HttpStatusCode.BadRequest, message);
+    public static Error Unauthorized(string message) => new((int)HttpStatusCode.Unauthorized, message);
 }
