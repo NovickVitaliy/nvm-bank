@@ -6,6 +6,8 @@ using Auth.API.Services.Auth;
 using Auth.API.Services.Token;
 using Auth.API.Settings;
 using Carter;
+using Common.CQRS.Behaviours;
+using FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -19,16 +21,24 @@ builder.Services.AddOptions<JwtSettings>()
     .ValidateDataAnnotations()
     .ValidateOnStart();
 
+builder.Services.AddOptions<PasswordSettings>()
+    .Bind(config.GetSection(PasswordSettings.Position))
+    .ValidateDataAnnotations()
+    .ValidateOnStart();
+
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
 builder.Services.AddCarter();
 builder.Services.AddMediatR(config =>
 {
+    config.AddOpenBehavior(typeof(ValidationBehaviour<,>));
     config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
 });
 
 builder.Services.AddIdentity<IdentityUser<Guid>, IdentityRole<Guid>>(options =>
     {
         options.User.RequireUniqueEmail = true;
-        options.Password.ConfigurePasswordOptions();
+        options.Password.ConfigurePasswordOptions(builder.Services);
     })
     .AddEntityFrameworkStores<AuthDbContext>()
     .AddDefaultTokenProviders();

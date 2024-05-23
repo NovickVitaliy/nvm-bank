@@ -30,7 +30,7 @@ public class TokenService : ITokenService
 
         SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtOptions.Secret));
 
-        SigningCredentials signingCredentials = new SigningCredentials(key, SecurityAlgorithms.Sha512);
+        SigningCredentials signingCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
         JwtSecurityToken jwtSecurityToken = new JwtSecurityToken(
             issuer:_jwtOptions.Issuer,

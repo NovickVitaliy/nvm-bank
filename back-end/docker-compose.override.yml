@@ -1,5 +1,6 @@
 services:
   authdb:
+    container_name: authdb
     restart: always
     environment:
       - ACCEPT_EULA=Y
