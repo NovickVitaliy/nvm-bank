@@ -9,3 +9,14 @@ services:
       - "1433:1433"
     volumes:
       - mssql-authdb:/var/opt/mssql
+  
+  auth.api:
+    container_name: auth.api
+    restart: always
+    environment:
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ConnectionStrings__AuthDb=Server=authdb;Database=AuthDb;User Id=sa;Password=SwN12345678;Encrypt=False;TrustServerCertificate=True
+    ports:
+      - "6000:8080"
+    depends_on:
+      - authdb
