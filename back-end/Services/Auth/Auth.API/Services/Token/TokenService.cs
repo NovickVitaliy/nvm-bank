@@ -1,6 +1,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Auth.API.Models.Dtos;
 using Auth.API.Settings;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
@@ -17,7 +18,7 @@ public class TokenService : ITokenService
         _jwtOptions = _options.Value;
     }
 
-    public string GenerateJwtToken(IdentityUser<Guid> user, List<Claim> claims,
+    public TokenDto GenerateJwtToken(IdentityUser<Guid> user, List<Claim> claims,
         CancellationToken cancellationToken = default)
     {
         claims.AddRange([
@@ -38,7 +39,7 @@ public class TokenService : ITokenService
             expires: DateTime.UtcNow.AddMinutes(_jwtOptions.LifetimeInMinutes),
             signingCredentials: signingCredentials,
             notBefore:DateTime.UtcNow);
-
-        return new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
+        var token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken)!; 
+        return new TokenDto(token);
     }
 }

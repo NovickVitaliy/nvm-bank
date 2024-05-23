@@ -5,6 +5,6 @@ namespace Auth.API.Services.Auth;
 
 public interface IAuthService
 {
-    Task<Result<string>> RegisterAsync(RegisterDto registerDto, CancellationToken cancellationToken = default);
+    Task<Result<TokenDto>> RegisterAsync(RegisterDto registerDto, CancellationToken cancellationToken = default);
     Task<Result<string>> LoginAsync(LoginDto loginDto, CancellationToken cancellationToken = default);
 }

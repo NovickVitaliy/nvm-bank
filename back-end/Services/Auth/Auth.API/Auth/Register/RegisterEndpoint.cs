@@ -1,5 +1,6 @@
 using Auth.API.Models.Dtos;
 using Carter;
+using Common.ErrorHandling;
 using Mapster;
 using MediatR;
 
@@ -7,7 +8,7 @@ namespace Auth.API.Auth.Register;
 
 public record RegisterRequest(RegisterDto RegisterDto);
 
-public record RegisterResponse(string JwtToken);
+public record RegisterResponse(Result<TokenDto> Result);
 
 public class RegisterEndpoint : ICarterModule
 {
@@ -19,9 +20,9 @@ public class RegisterEndpoint : ICarterModule
 
             var result = await sender.Send(cmd);
 
-            var response = result.Adapt<RegisterResponse>();
-
-            return Results.Ok(response);
+            return result.Result.IsFailure 
+                ? Results.Conflict(result.Result.Error) 
+                : Results.Ok(result.Result.Value);
         });
     }
 }

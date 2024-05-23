@@ -16,13 +16,13 @@ public class AuthService : IAuthService
         _tokenService = tokenService;
     }
 
-    public async Task<Result<string>> RegisterAsync(RegisterDto registerDto, CancellationToken cancellationToken = default)
+    public async Task<Result<TokenDto>> RegisterAsync(RegisterDto registerDto, CancellationToken cancellationToken = default)
     {
         var user = await _userManager.FindByEmailAsync(registerDto.Email);
 
         if (user is not null)
         {
-            return Result<string>.Failure(Error.Conflict("User with given email already exists"));
+            return Result<TokenDto>.Failure(Error.Conflict("User with given email already exists"));
         }
 
         user = new IdentityUser<Guid>()
@@ -38,10 +38,10 @@ public class AuthService : IAuthService
         {
             var claims = await _userManager.GetClaimsAsync(user);
             var token = _tokenService.GenerateJwtToken(user, claims.ToList(), cancellationToken);
-            return Result<string>.Success(token);
+            return Result<TokenDto>.Success(token);
         }
 
-        return Result<string>.Failure(Error.BadRequest(string.Join("\n",
+        return Result<TokenDto>.Failure(Error.BadRequest(string.Join("\n",
             registrationResult.Errors.Select(x => x.Description))));
     }
 

@@ -12,7 +12,7 @@ namespace Auth.API.Auth.Register;
 
 public record RegisterCommand(RegisterDto RegisterDto) : ICommand<RegisterResult>;
 
-public record RegisterResult(Result<string> JwtToken);
+public record RegisterResult(Result<TokenDto> Result);
 
 public class RegisterCommandValidator : AbstractValidator<RegisterCommand>
 {
