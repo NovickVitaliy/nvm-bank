@@ -7,3 +7,5 @@ services:
       - SA_PASSWORD=SwN12345678
     ports:
       - "1433:1433"
+    volumes:
+      - mssql-authdb:/var/opt/mssql

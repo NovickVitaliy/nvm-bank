@@ -10,27 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5530e8c-3401-434c-9d88-bb41217d3e48" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Common/Common/ErrorHandling/Error.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/ErrorHandling/Error.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/bin/Debug/net8.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/bin/Debug/net8.0/Common.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/bin/Debug/net8.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/bin/Debug/net8.0/Common.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/ref/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/ref/Common.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/refint/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/refint/Common.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/Services/Auth/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/Services/Auth/AuthService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/Services/Auth/IAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/Services/Auth/IAuthService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Auth.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Auth.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Auth.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Auth.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Auth.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Auth.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.sourcelink.json" afterDir="false" />
@@ -63,6 +47,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3fa134a4f7024c6a9faff12697fb4fb9c8e8a0/27/5c24f399/ICollection`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8a6f498dd8d94ed29fcd8876abd65629268a0/96/8252459e/AuthenticationMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
@@ -106,7 +91,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Auth.API: https">
+  <component name="RunManager" selected=".NET Launch Settings Profile.Auth.API: http">
     <configuration name="Auth.API: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Services/Auth/Auth.API/Auth.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -274,6 +259,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Common/Common.CQRS/Behaviours/ValidationBehaviour.cs</url>
+          <line>20</line>
+          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\Behaviours\ValidationBehaviour.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="595" />
+            </startOffsets>
+            <endOffsets>
+              <option value="650" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -7,3 +7,6 @@
 
   authdb:
     image: mcr.microsoft.com/mssql/server
+    
+volumes:
+  mssql-authdb:

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="RD-241.15989.179">
-    <data-source name="AuthDb@localhost" uuid="fcd62409-c101-4648-9334-3c4c04305ab1">
+    <data-source name="@localhost" uuid="2f04480c-70f6-4c85-87dc-ff95db1f4a03">
       <database-info product="Microsoft SQL Server" version="16.00.4125" jdbc-version="4.2" driver-name="JetBrains JDBC Driver for SQL Server" driver-version="1.0" dbms="MSSQL" exact-version="16.0.4125" exact-driver-version="1.0">
         <extra-name-characters>$#@</extra-name-characters>
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>master_key</secret-storage>
-      <auth-provider>no-auth</auth-provider>
+      <user-name>sa</user-name>
       <schema-mapping>
         <introspection-scope>
           <node kind="database" qname="@">
