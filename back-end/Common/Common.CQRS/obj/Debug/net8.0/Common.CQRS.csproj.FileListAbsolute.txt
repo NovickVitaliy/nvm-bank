@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\bin\Debug\net8.0\Common.CQRS.deps.json
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\bin\Debug\net8.0\Common.CQRS.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\bin\Debug\net8.0\Common.CQRS.pdb
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\obj\Debug\net8.0\Common.CQRS.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\obj\Debug\net8.0\Common.CQRS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\obj\Debug\net8.0\Common.CQRS.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\obj\Debug\net8.0\Common.CQRS.AssemblyInfo.cs
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\obj\Debug\net8.0\Common.CQRS.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\obj\Debug\net8.0\Common.CQRS.sourcelink.json
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\obj\Debug\net8.0\Common.CQRS.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\obj\Debug\net8.0\refint\Common.CQRS.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\obj\Debug\net8.0\Common.CQRS.pdb
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\obj\Debug\net8.0\ref\Common.CQRS.dll

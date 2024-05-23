@@ -13,6 +13,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{CF9CBE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.CQRS", "Common\Common.CQRS\Common.CQRS.csproj", "{5ABD2865-7D36-443B-A90F-7CD718C517E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common\Common.csproj", "{F519D769-5D0C-424F-AAFE-91BF4B57DB7F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E0440F4F-8BF7-478B-80F3-2720DFC99586}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		docker-compose.override.yml = docker-compose.override.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +33,7 @@ Global
 		{9E816641-7F6E-4051-A789-522CE8C1CC68} = {0739A066-82FF-4683-8604-A6E174F59E18}
 		{AE30B96A-9EFE-4B93-9A5E-1286D900019C} = {9E816641-7F6E-4051-A789-522CE8C1CC68}
 		{5ABD2865-7D36-443B-A90F-7CD718C517E9} = {CF9CBEC9-9074-42B5-B9B6-8E698534C64F}
+		{F519D769-5D0C-424F-AAFE-91BF4B57DB7F} = {CF9CBEC9-9074-42B5-B9B6-8E698534C64F}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AE30B96A-9EFE-4B93-9A5E-1286D900019C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -35,5 +44,9 @@ Global
 		{5ABD2865-7D36-443B-A90F-7CD718C517E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ABD2865-7D36-443B-A90F-7CD718C517E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ABD2865-7D36-443B-A90F-7CD718C517E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F519D769-5D0C-424F-AAFE-91BF4B57DB7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F519D769-5D0C-424F-AAFE-91BF4B57DB7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F519D769-5D0C-424F-AAFE-91BF4B57DB7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F519D769-5D0C-424F-AAFE-91BF4B57DB7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,9 @@
+﻿services:
+#  auth.api:
+#    image: auth.api
+#    build:
+#      context: .
+#      dockerfile: Services/Auth/Auth.API/Dockerfile
+
+  authdb:
+    image: mcr.microsoft.com/mssql/server

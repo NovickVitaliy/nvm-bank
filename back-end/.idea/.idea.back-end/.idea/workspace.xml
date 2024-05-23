@@ -14,8 +14,26 @@
       <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common/ErrorHandling/Error.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/ErrorHandling/Error.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/Auth.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/Auth.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Auth.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Auth.API.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Auth.API.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Auth.API.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Auth.API.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Auth.API.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back-end.sln" beforeDir="false" afterPath="$PROJECT_DIR$/back-end.sln" afterDir="false" />
     </list>
@@ -39,6 +57,13 @@
     &quot;accountId&quot;: &quot;b929c7ad-4841-42c4-85c4-f93693583e4b&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3fa134a4f7024c6a9faff12697fb4fb9c8e8a0/27/5c24f399/ICollection`1.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
@@ -51,22 +76,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/common-cqrs&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Auth.API: IIS Express.executor": "Debug",
+    ".NET Launch Settings Profile.Auth.API: http.executor": "Debug",
+    "Docker.docker-compose.override.yml.authdb: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.authdb: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "feat/common-cqrs",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\User\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "DockerIgnore",
+      "yaml"
+    ],
+    "rider.external.source.directories": [
+      "C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\User\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Auth.API: IIS Express">
+}]]></component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.Auth.API: http">
     <configuration name="Auth.API: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Services/Auth/Auth.API/Auth.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -112,9 +146,143 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="Auth.API/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="auth.api" />
+          <option name="containerName" value="auth.api" />
+          <option name="contextFolderPath" value="C:\Users\User\Desktop\projects\nvm-bank\back-end" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8080" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="8080" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="sourceFilePath" value="Services/Auth/Auth.API/Dockerfile" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.override.yml.authdb: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="services">
+            <list>
+              <option value="authdb" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.override.yml" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="secondarySourceFiles">
+            <list>
+              <option value="docker-compose.override.yml" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.authdb: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="services">
+            <list>
+              <option value="authdb" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue=".NET Launch Settings Profile.Auth.API: http" />
+      <item itemvalue=".NET Launch Settings Profile.Auth.API: https" />
+      <item itemvalue=".NET Launch Settings Profile.Auth.API: IIS Express" />
+      <item itemvalue="Docker.Auth.API/Dockerfile" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.override.yml.authdb: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.authdb: Compose Deployment" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.authdb: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.override.yml.authdb: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Auth/Auth.API/Services/Auth/AuthService.cs</url>
+          <line>20</line>
+          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\Services\Auth\AuthService.cs" containingFunctionPresentation="Method 'RegisterAsync'">
+            <startOffsets>
+              <option value="645" />
+            </startOffsets>
+            <endOffsets>
+              <option value="711" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Auth/Auth.API/Auth/Register/RegisterEndpoint.cs</url>
+          <line>17</line>
+          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\Auth\Register\RegisterEndpoint.cs" containingFunctionPresentation="Lambda expression inside Method 'AddRoutes'">
+            <startOffsets>
+              <option value="429" />
+            </startOffsets>
+            <endOffsets>
+              <option value="468" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Auth/Auth.API/Auth/Register/RegisterHandler.cs</url>
+          <line>23</line>
+          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\Auth\Register\RegisterHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="672" />
+            </startOffsets>
+            <endOffsets>
+              <option value="757" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

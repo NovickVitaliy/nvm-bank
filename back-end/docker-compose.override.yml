@@ -1,0 +1,8 @@
+services:
+  authdb:
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=SwN12345678
+    ports:
+      - "1433:1433"
