@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth", "Auth", "{9E816641-7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth.API", "Services\Auth\Auth.API\Auth.API.csproj", "{AE30B96A-9EFE-4B93-9A5E-1286D900019C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{CF9CBEC9-9074-42B5-B9B6-8E698534C64F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.CQRS", "Common\Common.CQRS\Common.CQRS.csproj", "{5ABD2865-7D36-443B-A90F-7CD718C517E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,11 +24,16 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{9E816641-7F6E-4051-A789-522CE8C1CC68} = {0739A066-82FF-4683-8604-A6E174F59E18}
 		{AE30B96A-9EFE-4B93-9A5E-1286D900019C} = {9E816641-7F6E-4051-A789-522CE8C1CC68}
+		{5ABD2865-7D36-443B-A90F-7CD718C517E9} = {CF9CBEC9-9074-42B5-B9B6-8E698534C64F}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AE30B96A-9EFE-4B93-9A5E-1286D900019C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AE30B96A-9EFE-4B93-9A5E-1286D900019C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE30B96A-9EFE-4B93-9A5E-1286D900019C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE30B96A-9EFE-4B93-9A5E-1286D900019C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ABD2865-7D36-443B-A90F-7CD718C517E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ABD2865-7D36-443B-A90F-7CD718C517E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ABD2865-7D36-443B-A90F-7CD718C517E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ABD2865-7D36-443B-A90F-7CD718C517E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
