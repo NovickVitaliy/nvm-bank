@@ -23,7 +23,6 @@ public class TokenService : ITokenService
         claims.AddRange([
             new(JwtRegisteredClaimNames.Iss, _jwtOptions.Issuer),
             new(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-            new(JwtRegisteredClaimNames.Aud, _jwtOptions.Audience),
             new(JwtRegisteredClaimNames.Email, user.Email),
             new(JwtRegisteredClaimNames.Nbf, DateTimeOffset.UtcNow.ToUnixTimeMilliseconds().ToString()),
         ]);
