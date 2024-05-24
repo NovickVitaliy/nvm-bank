@@ -1,4 +1,5 @@
 using Auth.API.Models.Dtos;
+using Auth.API.Models.Identity;
 using Auth.API.Services.Token;
 using Common.ErrorHandling;
 using Microsoft.AspNetCore.Identity;
@@ -7,10 +8,10 @@ namespace Auth.API.Services.Auth;
 
 public class AuthService : IAuthService
 {
-    private readonly UserManager<IdentityUser<Guid>> _userManager;
+    private readonly UserManager<ApplicationUser> _userManager;
     private readonly ITokenService _tokenService;
     
-    public AuthService(UserManager<IdentityUser<Guid>> userManager, ITokenService tokenService)
+    public AuthService(UserManager<ApplicationUser> userManager, ITokenService tokenService)
     {
         _userManager = userManager;
         _tokenService = tokenService;
@@ -25,11 +26,12 @@ public class AuthService : IAuthService
             return Result<TokenDto>.Failure(Error.Conflict("User with given email already exists"));
         }
 
-        user = new IdentityUser<Guid>()
+        user = new ApplicationUser()
         {
             Email = registerDto.Email,
             PhoneNumber = registerDto.PhoneNumber,
             UserName = registerDto.Email,
+            CreatedAt = DateTime.Now
         };
 
         var registrationResult = await _userManager.CreateAsync(user, registerDto.Password);

@@ -2,6 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Auth.API.Models.Dtos;
+using Auth.API.Models.Identity;
 using Auth.API.Settings;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
@@ -18,7 +19,7 @@ public class TokenService : ITokenService
         _jwtOptions = _options.Value;
     }
 
-    public TokenDto GenerateJwtToken(IdentityUser<Guid> user, List<Claim> claims,
+    public TokenDto GenerateJwtToken(ApplicationUser user, List<Claim> claims,
         CancellationToken cancellationToken = default)
     {
         claims.AddRange([

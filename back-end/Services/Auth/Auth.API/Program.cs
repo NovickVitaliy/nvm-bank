@@ -2,6 +2,7 @@ using System.Reflection;
 using System.Text;
 using Auth.API.Data;
 using Auth.API.Extensions;
+using Auth.API.Models.Identity;
 using Auth.API.Services.Auth;
 using Auth.API.Services.Token;
 using Auth.API.Settings;
@@ -35,7 +36,7 @@ builder.Services.AddMediatR(config =>
     config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
 });
 
-builder.Services.AddIdentity<IdentityUser<Guid>, IdentityRole<Guid>>(options =>
+builder.Services.AddIdentity<ApplicationUser, IdentityRole<Guid>>(options =>
     {
         options.User.RequireUniqueEmail = true;
         options.Password.ConfigurePasswordOptions(builder.Services);

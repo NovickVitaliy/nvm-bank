@@ -1,3 +1,4 @@
+using Auth.API.Models.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
@@ -5,9 +6,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Auth.API.Data.Configurations;
 
-public class IdentityUserConfig : IEntityTypeConfiguration<IdentityUser<Guid>>
+public class IdentityUserConfig : IEntityTypeConfiguration<ApplicationUser>
 {
-    public void Configure(EntityTypeBuilder<IdentityUser<Guid>> builder)
+    public void Configure(EntityTypeBuilder<ApplicationUser> builder)
     {
         builder.ToTable("Users");
     }

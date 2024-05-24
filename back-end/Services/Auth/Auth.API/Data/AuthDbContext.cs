@@ -1,11 +1,12 @@
 using System.Reflection;
+using Auth.API.Models.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Auth.API.Data;
 
-public class AuthDbContext : IdentityDbContext<IdentityUser<Guid>, IdentityRole<Guid>, Guid>
+public class AuthDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
 {
     public AuthDbContext(DbContextOptions<AuthDbContext> options) : base(options)
     { }
