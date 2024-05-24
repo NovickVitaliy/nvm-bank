@@ -7,6 +7,10 @@
 
   authdb:
     image: mcr.microsoft.com/mssql/server
+   
+  usersdb:
+    image: postgres
     
 volumes:
   mssql-authdb:
+  postgres-usersdb:

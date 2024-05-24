@@ -11,6 +11,18 @@ services:
     volumes:
       - mssql-authdb:/var/opt/mssql
   
+  usersdb:
+    container_name: usersdb
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=ifYouSeeThisThenHaveANiceDay
+      - POSTGRES_USER=users.api
+      - POSTGRES_DB=UsersDb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-usersdb:/custom/data/directory
+  
   auth.api:
     container_name: auth.api
     restart: always
