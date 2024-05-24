@@ -1,5 +1,6 @@
 using System.Reflection;
 using System.Text;
+using Auth.API.BackgroundServices;
 using Auth.API.Data;
 using Auth.API.Extensions;
 using Auth.API.Models.Identity;
@@ -67,6 +68,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
+
+builder.Services.AddHostedService<DeleteUsersWithUnfinishedRegistrationService>();
 
 var app = builder.Build();
 
