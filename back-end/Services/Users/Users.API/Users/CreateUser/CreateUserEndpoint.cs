@@ -7,7 +7,7 @@ namespace Users.API.Users.CreateUser;
 
 public record CreateUserRequest(UserDto User);
 
-public record CreateUserResponse(UserDto User);
+public record CreateUserResponse(Guid Id);
 
 public class CreateUserEndpoint : ICarterModule
 {
@@ -24,8 +24,8 @@ public class CreateUserEndpoint : ICarterModule
                 return Results.BadRequest(response.Result.Error);
             }
 
-            return Results.Created($"/users/{response.Result.Value.Email}",
-                new { email = response.Result.Value.Email });
+            return Results.Created($"/users/{response.Result.Value}",
+                new CreateUserResponse(response.Result.Value));
         });
     }
 }

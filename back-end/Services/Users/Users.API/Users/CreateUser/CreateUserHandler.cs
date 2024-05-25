@@ -8,7 +8,7 @@ namespace Users.API.Users.CreateUser;
 
 public record CreateUserCommand(UserDto User) : ICommand<CreateUserResult>;
 
-public record CreateUserResult(Result<UserDto> Result);
+public record CreateUserResult(Result<Guid> Result);
 
 public class CreateUserHandler : ICommandHandler<CreateUserCommand, CreateUserResult>
 {

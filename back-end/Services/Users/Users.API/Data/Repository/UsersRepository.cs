@@ -45,11 +45,11 @@ public class UsersRepository : IUsersRepository
         return Result<UserDto>.Success(userDto);
     }
 
-    public async Task<Result<UserDto>> Create(UserDto userDto)
+    public async Task<Result<Guid>> Create(UserDto userDto)
     {
         if (await DoesUserWithGivenEmailExist(userDto.Email))
         {
-            return Result<UserDto>.Failure(Error.BadRequest("User with given email already exists."));
+            return Result<Guid>.Failure(Error.BadRequest("User with given email already exists."));
         }
 
         var user = userDto.Adapt<User>();
@@ -77,10 +77,10 @@ public class UsersRepository : IUsersRepository
         catch (Exception e)
         {
             await transaction.RollbackAsync();
-            return Result<UserDto>.Failure(Error.BadRequest(e.Message));
+            return Result<Guid>.Failure(Error.BadRequest(e.Message));
         }
 
-        return Result<UserDto>.Success(userDto);
+        return Result<Guid>.Success(user.Id);
     }
 
     private async Task<bool> DoesUserWithGivenEmailExist(string email)
