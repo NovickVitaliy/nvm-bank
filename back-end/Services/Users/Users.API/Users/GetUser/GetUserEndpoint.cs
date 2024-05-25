@@ -13,7 +13,16 @@ public class GetUserEndpoint : ICarterModule
     {
         app.MapGet("/users/{email}", async (string email, ISender sender) =>
         {
-            //TODO: 1) create GetUserQuery -> 2) send query to handler -> 3) return response to user based on the result
+            var cmd = new GetUserQuery(email);
+
+            var result = await sender.Send(cmd);
+
+            if (result.Result.IsFailure)
+            {
+                
+            }
+
+            return Results.Ok(result.Result.Value);
         });
     }
 }

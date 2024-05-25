@@ -17,12 +17,19 @@ public class UsersRepository : IUsersRepository
 
     public async Task<Result<UserDto>> Get(string email, bool isReadOnly)
     {
-        const string query = "SELECT * FROM \"Users\" AS u " +
-                             "INNER JOIN \"PhoneNumbers\" AS pn " +
-                             "ON u.\"Id\" = pn.\"UserId\" " +
-                             "WHERE u.\"Email\" = {0}";
+        const string query =
+            "SELECT u.\"Id\", u.\"FirstName\", u.\"LastName\", " +
+            "u.\"Email\", u.\"DateOfBirth\", u.\"Gender\"," +
+            " u.\"Address_Country\", u.\"Address_State\", " +
+            "u.\"Address_StreetAddress\", u.\"Address_ZipCode\", " +
+            "pn.\"Number\", pn.\"UserId\" FROM \"Users\" AS u " +
+            "INNER JOIN \"PhoneNumbers\" AS pn " +
+            "ON u.\"Id\" = pn.\"UserId\" " +
+            "WHERE u.\"Email\" = {0}";
 
-        var userQueryable = _db.Users.FromSqlRaw(query, email);
+        var userQueryable = _db.Users
+            .FromSqlRaw(query, email)
+            .Include(x => x.PhoneNumbers);
 
         var user = isReadOnly
             ? await userQueryable.AsNoTracking().SingleOrDefaultAsync()
@@ -51,7 +58,8 @@ public class UsersRepository : IUsersRepository
         try
         {
             await _db.Database.ExecuteSqlRawAsync(
-                "INSERT INTO \"Users\" (\"Id\", \"FirstName\", \"LastName\",\"DateOfBirth\", \"Email\", \"Gender\", \"Address_Country\", \"Address_State\", \"Address_StreetAddress\", \"Address_ZipCode\")" +
+                "INSERT INTO \"Users\" (\"Id\", \"FirstName\", \"LastName\",\"DateOfBirth\", \"Email\", \"Gender\"," +
+                " \"Address_Country\", \"Address_State\", \"Address_StreetAddress\", \"Address_ZipCode\")" +
                 "VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)", user.Id, user.FirstName, user.LastName,
                 user.DateOfBirth, user.Email, user.Gender, user.Address.Country, user.Address.State,
                 user.Address.StreetAddress, user.Address.ZipCode);
