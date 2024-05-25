@@ -99,14 +99,16 @@ public class UsersRepository : IUsersRepository
             : Result<bool>.Success(true);
     }
 
-    public async Task<Result<UserDto>> Update(UserDto userDto)
+    public async Task<Result<bool>> Update(Guid id, UserDto userDto)
     {
-        if (await DoesUserWithGivenEmailExist(userDto.Email))
-        {
-            return Result<UserDto>.Failure(Error.NotFound(nameof(User), userDto.Email));
-        }
+        var user = await _db.Users.FromSqlRaw("SELECT * FROM \"Users\" WHERE \"Id\" = {0}", id).SingleOrDefaultAsync();
 
-        await _db.Database.ExecuteSqlRawAsync("UPDATE \"Users\" SET " +
+        if (user is null)
+        {
+            return Result<bool>.Failure(Error.NotFound(nameof(User), id.ToString()));
+        }
+        
+        var rowsAffected = await _db.Database.ExecuteSqlRawAsync("UPDATE \"Users\" SET " +
                                               "\"FirstName\" = @p0, " +
                                               "\"LastName\" = @p1, " +
                                               "\"DateOfBirth\" = @p2, " +
@@ -116,11 +118,13 @@ public class UsersRepository : IUsersRepository
                                               "\"Address_State\" = @p6, " +
                                               "\"Address_StreetAddress\" = @p7, " +
                                               "\"Address_ZipCode\" = @p8 " +
-                                              "WHERE \"Email\" = @p9", userDto.FirstName, userDto.LastName,
+                                              "WHERE \"Id\" = @p9", userDto.FirstName, userDto.LastName,
             userDto.DateOfBirth,
             userDto.Email, userDto.Gender, userDto.Address.Country,
-            userDto.Address.State, userDto.Address.StreetAddress, userDto.Address.ZipCode, userDto.Email);
+            userDto.Address.State, userDto.Address.StreetAddress, userDto.Address.ZipCode, id);
 
-        return Result<UserDto>.Success(userDto);
+        return rowsAffected == 1
+            ? Result<bool>.Success(true)
+            : Result<bool>.Failure(Error.BadRequest("Error updating the User"));
     }
 }

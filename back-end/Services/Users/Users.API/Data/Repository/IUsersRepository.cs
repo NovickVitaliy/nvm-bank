@@ -8,5 +8,5 @@ public interface IUsersRepository
     Task<Result<UserDto>> Get(string email, bool isReadOnly);
     Task<Result<UserDto>> Create(UserDto userDto);
     Task<Result<bool>> Delete(string email);
-    Task<Result<UserDto>> Update(UserDto userDto);
+    Task<Result<bool>> Update(Guid id, UserDto userDto);
 }
