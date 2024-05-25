@@ -107,24 +107,51 @@ public class UsersRepository : IUsersRepository
         {
             return Result<bool>.Failure(Error.NotFound(nameof(User), id.ToString()));
         }
-        
-        var rowsAffected = await _db.Database.ExecuteSqlRawAsync("UPDATE \"Users\" SET " +
-                                              "\"FirstName\" = @p0, " +
-                                              "\"LastName\" = @p1, " +
-                                              "\"DateOfBirth\" = @p2, " +
-                                              "\"Email\" = @p3, " +
-                                              "\"Gender\" = @p4, " +
-                                              "\"Address_Country\" = @p5, " +
-                                              "\"Address_State\" = @p6, " +
-                                              "\"Address_StreetAddress\" = @p7, " +
-                                              "\"Address_ZipCode\" = @p8 " +
-                                              "WHERE \"Id\" = @p9", userDto.FirstName, userDto.LastName,
-            userDto.DateOfBirth,
-            userDto.Email, userDto.Gender, userDto.Address.Country,
-            userDto.Address.State, userDto.Address.StreetAddress, userDto.Address.ZipCode, id);
 
-        return rowsAffected == 1
-            ? Result<bool>.Success(true)
-            : Result<bool>.Failure(Error.BadRequest("Error updating the User"));
+        await using var transaction = await _db.Database.BeginTransactionAsync();
+
+        try
+        {
+            await _db.Database
+                .ExecuteSqlRawAsync("UPDATE \"Users\" SET " +
+                                    "\"FirstName\" = @p0, " +
+                                    "\"LastName\" = @p1, " +
+                                    "\"DateOfBirth\" = @p2, " +
+                                    "\"Email\" = @p3, " +
+                                    "\"Gender\" = @p4, " +
+                                    "\"Address_Country\" = @p5, " +
+                                    "\"Address_State\" = @p6, " +
+                                    "\"Address_StreetAddress\" = @p7, " +
+                                    "\"Address_ZipCode\" = @p8 " +
+                                    "WHERE \"Id\" = @p9", userDto.FirstName, userDto.LastName,
+                    userDto.DateOfBirth,
+                    userDto.Email, userDto.Gender, userDto.Address.Country,
+                    userDto.Address.State, userDto.Address.StreetAddress, userDto.Address.ZipCode, id);
+
+            foreach (var phoneNumber in userDto.PhoneNumbers)
+            {
+                var phoneForUserExists = await _db.PhoneNumbers
+                    .FromSqlRaw("SELECT * FROM \"PhoneNumbers\"" +
+                                "WHERE \"Number\" = {0} AND \"UserId\" = {1}",
+                        phoneNumber, id).SingleOrDefaultAsync() != null;
+
+                if (!phoneForUserExists)
+                {
+                    var phoneId = Guid.NewGuid();
+                    await _db.Database.ExecuteSqlRawAsync(
+                        "INSERT INTO \"PhoneNumbers\" (\"Id\", \"Number\", \"UserId\") " +
+                        "VALUES (@p0, @p1, @p2)", phoneId, phoneNumber, id);
+                }
+            }
+
+            await transaction.CommitAsync();
+        }
+        catch (Exception e)
+        {
+            await transaction.RollbackAsync();
+            return Result<bool>.Failure(Error.BadRequest(e.Message));
+        }
+        
+        return Result<bool>.Success(true);
     }
 }

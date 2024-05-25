@@ -13,11 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5530e8c-3401-434c-9d88-bb41217d3e48" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/Data/Repository/IUsersRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/Data/Repository/IUsersRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/Data/Repository/UsersRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/Data/Repository/UsersRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/Users/UpdateUser/UpdateUserEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/Users/UpdateUser/UpdateUserEndpoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/Users/UpdateUser/UpdateUserHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/Users/UpdateUser/UpdateUserHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Users.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Users.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Users.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Users.API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Users.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Users.API.pdb" afterDir="false" />
@@ -357,39 +353,13 @@
           <line>93</line>
           <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\Data\Repository\UsersRepository.cs" containingFunctionPresentation="Method 'Delete'">
             <startOffsets>
-              <option value="3397" />
+              <option value="3385" />
             </startOffsets>
             <endOffsets>
-              <option value="3531" />
+              <option value="3519" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Services/Users/Users.API/Data/Repository/UsersRepository.cs</url>
-          <line>54</line>
-          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\Data\Repository\UsersRepository.cs" containingFunctionPresentation="Method 'Create'">
-            <startOffsets>
-              <option value="1693" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1726" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Services/Users/Users.API/Data/Repository/UsersRepository.cs</url>
-          <line>49</line>
-          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\Data\Repository\UsersRepository.cs" containingFunctionPresentation="Method 'Create'">
-            <startOffsets>
-              <option value="1507" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1560" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Services/Users/Users.API/Data/Repository/UsersRepository.cs</url>
@@ -416,19 +386,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Services/Users/Users.API/Data/Repository/UsersRepository.cs</url>
-          <line>103</line>
-          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\Data\Repository\UsersRepository.cs" containingFunctionPresentation="Method 'Update'">
-            <startOffsets>
-              <option value="3770" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3881" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
