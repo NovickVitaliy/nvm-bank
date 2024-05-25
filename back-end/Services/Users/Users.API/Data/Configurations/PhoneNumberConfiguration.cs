@@ -13,6 +13,8 @@ public class PhoneNumberConfiguration : IEntityTypeConfiguration<PhoneNumber>
         builder.Property(x => x.Number)
             .IsRequired()
             .HasMaxLength(10);
+        
+        builder.HasAlternateKey(x => x.Number);
 
         builder.HasOne(x => x.User)
             .WithMany(x => x.PhoneNumbers)
