@@ -40,17 +40,45 @@ public class UsersRepository : IUsersRepository
 
     public async Task<Result<UserDto>> Create(UserDto userDto)
     {
+        if (await DoesUserWithGivenEmailExist(userDto.Email))
+        {
+            return Result<UserDto>.Failure(Error.BadRequest("User with given email already exists."));
+        }
+
         var user = userDto.Adapt<User>();
         user.Id = Guid.NewGuid();
-        var rowsAffected = await _db.Database.ExecuteSqlRawAsync(
-            "INSERT INTO \"Users\" (\"Id\", \"FirstName\", \"LastName\",\"DateOfBirth\", \"Email\", \"Gender\", \"Address_Country\", \"Address_State\", \"Address_StreetAddress\", \"Address_ZipCode\")" +
-            "VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)", user.Id, user.FirstName, user.LastName,
-            user.DateOfBirth, user.Email, user.Gender, user.Address.Country, user.Address.State,
-            user.Address.StreetAddress, user.Address.ZipCode);
+        await using var transaction = await _db.Database.BeginTransactionAsync();
+        try
+        {
+            await _db.Database.ExecuteSqlRawAsync(
+                "INSERT INTO \"Users\" (\"Id\", \"FirstName\", \"LastName\",\"DateOfBirth\", \"Email\", \"Gender\", \"Address_Country\", \"Address_State\", \"Address_StreetAddress\", \"Address_ZipCode\")" +
+                "VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)", user.Id, user.FirstName, user.LastName,
+                user.DateOfBirth, user.Email, user.Gender, user.Address.Country, user.Address.State,
+                user.Address.StreetAddress, user.Address.ZipCode);
 
-        return rowsAffected == 1
-            ? Result<UserDto>.Success(userDto)
-            : Result<UserDto>.Failure(Error.BadRequest("Error occured while creating user."));
+            foreach (var pn in user.PhoneNumbers)
+            {
+                pn.Id = Guid.NewGuid();
+                pn.UserId = user.Id;
+                await _db.Database.ExecuteSqlRawAsync("INSERT INTO \"PhoneNumbers\" (\"Id\", \"Number\", \"UserId\") " +
+                                                      "VALUES (@p0, @p1, @p2)", pn.Id, pn.Number, pn.UserId);
+            }
+
+            await transaction.CommitAsync();
+        }
+        catch (Exception e)
+        {
+            await transaction.RollbackAsync();
+            return Result<UserDto>.Failure(Error.BadRequest(e.Message));
+        }
+
+        return Result<UserDto>.Success(userDto);
+    }
+
+    private async Task<bool> DoesUserWithGivenEmailExist(string email)
+    {
+        return (await _db.Users.FromSqlRaw("SELECT * FROM \"Users\" WHERE \"Email\" = {0}", email)
+            .SingleOrDefaultAsync()) != null;
     }
 
     public async Task<Result<bool>> Delete(string email)
@@ -65,13 +93,7 @@ public class UsersRepository : IUsersRepository
 
     public async Task<Result<UserDto>> Update(UserDto userDto)
     {
-        if (!_db.Users.TryGetNonEnumeratedCount(out var count))
-        {
-            count = await _db.Database.ExecuteSqlRawAsync("SELECT COUNT(*) FROM \"Users\" WHERE \"Email\" = {0}",
-                userDto.Email);
-        }
-
-        if (count == 0)
+        if (await DoesUserWithGivenEmailExist(userDto.Email))
         {
             return Result<UserDto>.Failure(Error.NotFound(nameof(User), userDto.Email));
         }
@@ -86,7 +108,8 @@ public class UsersRepository : IUsersRepository
                                               "\"Address_State\" = @p6, " +
                                               "\"Address_StreetAddress\" = @p7, " +
                                               "\"Address_ZipCode\" = @p8 " +
-                                              "WHERE \"Email\" = @p9", userDto.FirstName, userDto.LastName, userDto.DateOfBirth,
+                                              "WHERE \"Email\" = @p9", userDto.FirstName, userDto.LastName,
+            userDto.DateOfBirth,
             userDto.Email, userDto.Gender, userDto.Address.Country,
             userDto.Address.State, userDto.Address.StreetAddress, userDto.Address.ZipCode, userDto.Email);
 
