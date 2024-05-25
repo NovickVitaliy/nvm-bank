@@ -3,6 +3,7 @@ using Carter;
 using Common.CQRS.Behaviours;
 using Microsoft.EntityFrameworkCore;
 using Users.API.Data;
+using Users.API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,11 @@ builder.Services.AddMediatR(config =>
 });
 
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    await app.MigrateDatabaseAsync();
+}
 
 app.MapGet("/", () => "Hello World!");
 
