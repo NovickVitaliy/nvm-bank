@@ -89,13 +89,13 @@ public class UsersRepository : IUsersRepository
             .SingleOrDefaultAsync()) != null;
     }
 
-    public async Task<Result<bool>> Delete(string email)
+    public async Task<Result<bool>> Delete(Guid id)
     {
-        var rowsAffected = await _db.Users.FromSqlRaw("DELETE FROM \"Users\" WHERE \"Email\" = {0}", email)
+        var rowsAffected = await _db.Users.FromSqlRaw("SELECT * FROM \"Users\" WHERE \"Id\" = {0}", id)
             .ExecuteDeleteAsync();
 
         return rowsAffected == 0
-            ? Result<bool>.Failure(Error.NotFound(nameof(User), email))
+            ? Result<bool>.Failure(Error.NotFound(nameof(User), id.ToString()))
             : Result<bool>.Success(true);
     }
 
