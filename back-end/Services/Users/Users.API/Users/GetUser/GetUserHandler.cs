@@ -6,7 +6,7 @@ using Users.API.Models.Dtos;
 
 namespace Users.API.Users.GetUser;
 
-public record GetUserQuery(string Email) : IQuery<GetUserResult>;
+public record GetUserQuery(Guid Id) : IQuery<GetUserResult>;
 
 public record GetUserResult(Result<UserDto> Result);
 
@@ -21,7 +21,7 @@ public class GetUserHandler : IQueryHandler<GetUserQuery, GetUserResult>
 
     public async Task<GetUserResult> Handle(GetUserQuery request, CancellationToken cancellationToken)
     {
-        var result = await _usersRepository.Get(request.Email, isReadOnly: true);
+        var result = await _usersRepository.Get(request.Id, isReadOnly: true);
         
         return new GetUserResult(result);
     }

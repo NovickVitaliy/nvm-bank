@@ -29,6 +29,7 @@ public static class MapsterConfiguration
         });
 
         TypeAdapterConfig<User, UserDto>.NewConfig().MapWith(src => new UserDto(
+                src.Id,
                 src.FirstName,
                 src.LastName,
                 src.DateOfBirth,

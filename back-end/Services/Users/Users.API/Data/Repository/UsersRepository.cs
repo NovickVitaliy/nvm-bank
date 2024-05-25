@@ -15,7 +15,7 @@ public class UsersRepository : IUsersRepository
         _db = db;
     }
 
-    public async Task<Result<UserDto>> Get(string email, bool isReadOnly)
+    public async Task<Result<UserDto>> Get(Guid id, bool isReadOnly)
     {
         const string query =
             "SELECT u.\"Id\", u.\"FirstName\", u.\"LastName\", " +
@@ -25,10 +25,10 @@ public class UsersRepository : IUsersRepository
             "pn.\"Number\", pn.\"UserId\" FROM \"Users\" AS u " +
             "INNER JOIN \"PhoneNumbers\" AS pn " +
             "ON u.\"Id\" = pn.\"UserId\" " +
-            "WHERE u.\"Email\" = {0}";
+            "WHERE u.\"Id\" = {0}";
 
         var userQueryable = _db.Users
-            .FromSqlRaw(query, email)
+            .FromSqlRaw(query, id)
             .Include(x => x.PhoneNumbers);
 
         var user = isReadOnly
@@ -37,7 +37,7 @@ public class UsersRepository : IUsersRepository
 
         if (user is null)
         {
-            return Result<UserDto>.Failure(Error.NotFound(nameof(User), email));
+            return Result<UserDto>.Failure(Error.NotFound(nameof(User), id.ToString()));
         }
 
         var userDto = user.Adapt<UserDto>();
