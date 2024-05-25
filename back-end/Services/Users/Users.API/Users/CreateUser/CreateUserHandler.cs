@@ -1,6 +1,7 @@
 using Common.CQRS.Handlers;
 using Common.CQRS.Requests;
 using Common.ErrorHandling;
+using Users.API.Data.Repository;
 using Users.API.Models.Dtos;
 
 namespace Users.API.Users.CreateUser;
@@ -11,10 +12,15 @@ public record CreateUserResult(Result<UserDto> Result);
 
 public class CreateUserHandler : ICommandHandler<CreateUserCommand, CreateUserResult>
 {
+    private readonly IUsersRepository _usersRepository;
+
+    public CreateUserHandler(IUsersRepository usersRepository)
+    {
+        _usersRepository = usersRepository;
+    }
+
     public async Task<CreateUserResult> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
-        //TODO: Create user using user repository
-
-        return new CreateUserResult(Result<UserDto>.Success(request.User));
+        return new CreateUserResult(await _usersRepository.Create(request.User));
     }
 }

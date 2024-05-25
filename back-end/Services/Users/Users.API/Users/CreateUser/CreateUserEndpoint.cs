@@ -1,4 +1,5 @@
 using Carter;
+using Mapster;
 using MediatR;
 using Users.API.Models.Dtos;
 
@@ -14,7 +15,17 @@ public class CreateUserEndpoint : ICarterModule
     {
         app.MapPost("/users", async (CreateUserRequest req, ISender sender) =>
         {
-            //TODO: 1) map request to CreateUserCommand -> 2) send command to handler -> 3) return response to user based on the result
+            var cmd = req.Adapt<CreateUserCommand>();
+
+            var response = await sender.Send(cmd);
+
+            if (response.Result.IsFailure)
+            {
+                return Results.BadRequest(response.Result.Error);
+            }
+
+            return Results.Created($"/users/{response.Result.Value.Email}",
+                new { email = response.Result.Value.Email });
         });
     }
 }

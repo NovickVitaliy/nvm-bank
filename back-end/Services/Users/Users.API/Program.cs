@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Users.API.Data;
 using Users.API.Data.Repository;
 using Users.API.Extensions;
+using Users.API.MappingConfiguration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,8 @@ builder.Services.AddMediatR(config =>
 });
 
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+
+MapsterConfiguration.ConfigureMappings();
 
 var app = builder.Build();
 

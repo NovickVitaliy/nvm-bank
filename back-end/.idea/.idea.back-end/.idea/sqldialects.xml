@@ -4,4 +4,7 @@
     <file url="file://$PROJECT_DIR$/Services/Auth/Auth.API/BackgroundServices/DeleteUsersWithUnfinishedRegistrationService.cs" dialect="TSQL" />
     <file url="file://$PROJECT_DIR$/Services/Users/Users.API/Data/Repository/UsersRepository.cs" dialect="PostgreSQL" />
   </component>
+  <component name="SqlResolveMappings">
+    <file url="file://$PROJECT_DIR$/Services/Users/Users.API/Data/Repository/UsersRepository.cs" scope="{&quot;node&quot;:{  &quot;@negative&quot;:&quot;1&quot;,  &quot;group&quot;:{   &quot;@kind&quot;:&quot;root&quot;,   &quot;node&quot;:{    &quot;name&quot;:{     &quot;@qname&quot;:&quot;1bc1b7f9-e1cb-41da-86b5-edd7dca67004&quot;    },    &quot;group&quot;:{     &quot;@kind&quot;:&quot;database&quot;,     &quot;node&quot;:{      &quot;name&quot;:{       &quot;@qname&quot;:&quot;UsersDb&quot;      },      &quot;group&quot;:{       &quot;@kind&quot;:&quot;schema&quot;,       &quot;node&quot;:{        &quot;name&quot;:{         &quot;@qname&quot;:&quot;public&quot;        }       }      }     }    }   }  } }}" />
+  </component>
 </project>
