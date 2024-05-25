@@ -3,6 +3,7 @@ using Carter;
 using Common.CQRS.Behaviours;
 using Microsoft.EntityFrameworkCore;
 using Users.API.Data;
+using Users.API.Data.Repository;
 using Users.API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +20,8 @@ builder.Services.AddMediatR(config =>
     config.AddOpenBehavior(typeof(ValidationBehaviour<,>));
     config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
 });
+
+builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 
 var app = builder.Build();
 

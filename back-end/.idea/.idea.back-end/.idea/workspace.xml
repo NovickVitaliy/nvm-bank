@@ -13,10 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5530e8c-3401-434c-9d88-bb41217d3e48" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/dataSources/1bc1b7f9-e1cb-41da-86b5-edd7dca67004.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/dataSources/1bc1b7f9-e1cb-41da-86b5-edd7dca67004.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/dataSources/1bc1b7f9-e1cb-41da-86b5-edd7dca67004/storage_v2/_src_/database/UsersDb.hsxzWg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/dataSources/1bc1b7f9-e1cb-41da-86b5-edd7dca67004/storage_v2/_src_/database/UsersDb.hsxzWg/schema/public.abK9xQ.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
