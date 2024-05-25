@@ -27,5 +27,15 @@ public static class MapsterConfiguration
                 Number = x
             }).ToList()
         });
+
+        TypeAdapterConfig<User, UserDto>.NewConfig().MapWith(src => new UserDto(
+                src.FirstName,
+                src.LastName,
+                src.DateOfBirth,
+                src.Email,
+                src.PhoneNumbers.Select(x => x.Number).ToArray(),
+                src.Gender,
+                new AddressDto(src.Address.Country, src.Address.Country,
+                    src.Address.ZipCode, src.Address.StreetAddress)));
     }
 }
