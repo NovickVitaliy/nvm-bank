@@ -1,5 +1,6 @@
 using System.Reflection;
 using Carter;
+using Common.Auth;
 using Common.CQRS.Behaviours;
 using Microsoft.EntityFrameworkCore;
 using Users.API.Data;
@@ -10,6 +11,9 @@ using Users.API.MappingConfiguration;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCarter();
+
+builder.Services.ConfigureAuthentication(builder.Configuration);
+builder.Services.AddAuthorization();
 
 builder.Services.AddDbContext<UsersDbContext>(opt =>
 {
@@ -34,6 +38,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapGet("/", () => "Hello World!");
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapCarter();
 

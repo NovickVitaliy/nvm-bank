@@ -109,3 +109,13 @@ C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\obj\De
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\obj\Debug\net8.0\Users.API.pdb
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\obj\Debug\net8.0\Users.API.genruntimeconfig.cache
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\obj\Debug\net8.0\ref\Users.API.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\Debug\net8.0\Common.Auth.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\Debug\net8.0\Common.Auth.pdb

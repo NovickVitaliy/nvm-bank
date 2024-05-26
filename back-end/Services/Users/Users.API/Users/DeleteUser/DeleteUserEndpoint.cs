@@ -22,6 +22,6 @@ public class DeleteUserEndpoint : ICarterModule
             }
 
             return Results.Ok(new DeleteUserResponse(true));
-        });
+        }).RequireAuthorization("");
     }
 }

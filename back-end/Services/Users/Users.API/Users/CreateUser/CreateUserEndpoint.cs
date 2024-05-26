@@ -26,6 +26,6 @@ public class CreateUserEndpoint : ICarterModule
 
             return Results.Created($"/users/{response.Result.Value}",
                 new CreateUserResponse(response.Result.Value));
-        });
+        }).RequireAuthorization();
     }
 }

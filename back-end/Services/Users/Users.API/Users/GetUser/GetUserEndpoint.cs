@@ -23,6 +23,6 @@ public class GetUserEndpoint : ICarterModule
             }
 
             return Results.Ok(result.Result.Value);
-        });
+        }).RequireAuthorization();
     }
 }

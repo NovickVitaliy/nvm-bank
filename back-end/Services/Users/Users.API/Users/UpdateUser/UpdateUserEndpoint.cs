@@ -31,6 +31,6 @@ public class UpdateUserEndpoint : ICarterModule
             }
 
             return Results.Ok(new UpdateUserResponse(result.Result.Value!));
-        });
+        }).RequireAuthorization();
     }
 }
