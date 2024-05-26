@@ -2,6 +2,7 @@ using System.Reflection;
 using Carter;
 using Common.Auth;
 using Common.CQRS.Behaviours;
+using Common.ErrorHandling;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Users.API.Data;
@@ -15,7 +16,7 @@ builder.Services.AddCarter();
 
 builder.Services.ConfigureAuthentication(builder.Configuration);
 builder.Services.AddAuthorization();
-
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddDbContext<UsersDbContext>(opt =>
 {
     opt.UseNpgsql(builder.Configuration.GetConnectionString("UsersDb"));
@@ -38,6 +39,8 @@ if (app.Environment.IsDevelopment())
 {
     await app.MigrateDatabaseAsync();
 }
+
+app.UseExceptionHandler(options => {});
 
 app.MapGet("/", () => "Hello World!");
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "svO/wZ0fsUf9RE9JJOyyznp1JmtwQ+RmIY2w/tklfc7CMns+jVdfyHWiKF6BxiiqC94fmgluGZK1ugViA1DrbA==",
+  "dgSpecHash": "ss4Rj8ut1fnzlett3cHut5qa30WCLuRpShA0yzh8oxzyfIwl4EOh5oMrd8A3gKCn0wWFO+bhR0nWkoyf5j4/QQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\Desktop\\projects\\nvm-bank\\back-end\\Services\\Auth\\Auth.API\\Auth.API.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\User\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\carter\\8.1.0\\carter.8.1.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\fluentvalidation\\11.9.1\\fluentvalidation.11.9.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.1\\fluentvalidation.dependencyinjectionextensions.11.9.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\mapster\\7.4.1-pre01\\mapster.7.4.1-pre01.nupkg.sha512",
@@ -39,6 +40,7 @@
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.dependencymodel\\8.0.0\\microsoft.extensions.dependencymodel.8.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.features\\8.0.5\\microsoft.extensions.features.8.0.5.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.identity.core\\8.0.5\\microsoft.extensions.identity.core.8.0.5.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.identity.stores\\8.0.5\\microsoft.extensions.identity.stores.8.0.5.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",

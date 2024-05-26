@@ -119,3 +119,6 @@ C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\De
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\Debug\net8.0\Common.Auth.dll
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\Debug\net8.0\Common.Auth.pdb
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Users\Users.API\obj\Debug\net8.0\Users.API.MvcApplicationPartsAssemblyInfo.cs
