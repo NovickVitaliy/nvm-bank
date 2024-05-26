@@ -11,7 +11,7 @@ public record CreateUserResponse(Guid Id);
 
 public class CreateUserEndpoint : ICarterModule
 {
-    public void AddRoutes(IEndpointRouteBuilder app)
+    public  void AddRoutes(IEndpointRouteBuilder app)
     {
         app.MapPost("/users", async (CreateUserRequest req, ISender sender) =>
         {
@@ -23,7 +23,7 @@ public class CreateUserEndpoint : ICarterModule
             {
                 return Results.BadRequest(response.Result.Error);
             }
-
+            
             return Results.Created($"/users/{response.Result.Value}",
                 new CreateUserResponse(response.Result.Value));
         }).RequireAuthorization();

@@ -2,6 +2,7 @@ using System.Reflection;
 using Carter;
 using Common.Auth;
 using Common.CQRS.Behaviours;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Users.API.Data;
 using Users.API.Data.Repository;
@@ -20,6 +21,7 @@ builder.Services.AddDbContext<UsersDbContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("UsersDb"));
 });
 
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 builder.Services.AddMediatR(config =>
 {
     config.AddOpenBehavior(typeof(ValidationBehaviour<,>));
