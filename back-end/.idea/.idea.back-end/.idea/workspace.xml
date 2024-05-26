@@ -13,52 +13,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5530e8c-3401-434c-9d88-bb41217d3e48" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Auth/obj/Debug/net8.0/Common.Auth.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Auth/obj/Debug/net8.0/Common.Auth.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Auth/obj/Debug/net8.0/Common.Auth.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Auth/obj/Debug/net8.0/Common.Auth.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Auth/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Auth/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Auth/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Auth/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/Behaviours/ValidationBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/Behaviours/ValidationBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/Common.CQRS.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/Common.CQRS.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/bin/Debug/net8.0/Common.CQRS.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/bin/Debug/net8.0/Common.CQRS.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/bin/Debug/net8.0/Common.CQRS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/bin/Debug/net8.0/Common.CQRS.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/bin/Debug/net8.0/Common.CQRS.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/bin/Debug/net8.0/Common.CQRS.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Common.CQRS.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Common.CQRS.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/ref/Common.CQRS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/ref/Common.CQRS.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/refint/Common.CQRS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/refint/Common.CQRS.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/Common.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/Common.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/bin/Debug/net8.0/Common.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/bin/Debug/net8.0/Common.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common/ErrorHandling/GlobalExceptionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/ErrorHandling/GlobalExceptionHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common/bin/Debug/net8.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/bin/Debug/net8.0/Common.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common/bin/Debug/net8.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/bin/Debug/net8.0/Common.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Common.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Common.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/ref/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/ref/Common.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/refint/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/refint/Common.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Auth.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Auth.API.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.CQRS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.CQRS.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.CQRS.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.CQRS.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.dll" afterDir="false" />
@@ -69,10 +62,7 @@
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Users.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Users.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.sourcelink.json" afterDir="false" />
@@ -82,7 +72,6 @@
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/Users.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/Users.API.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,6 +100,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3fa134a4f7024c6a9faff12697fb4fb9c8e8a0/27/5c24f399/ICollection`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8a6f498dd8d94ed29fcd8876abd65629268a0/96/8252459e/AuthenticationMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9161da3da671f777cc3652d39696c23db97793e37cb97fcb4e1e87234e56322/ValidationException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fb367341658aaedd7de424d4c9189db33c4387e268dcc4011918569442ab12/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -422,17 +412,30 @@
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Common/Common.CQRS/Behaviours/ValidationBehaviour.cs</url>
-          <line>20</line>
-          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\Behaviours\ValidationBehaviour.cs" containingFunctionPresentation="Method 'Handle'">
+          <url>file://$PROJECT_DIR$/Common/Common/Exceptions/ValidationException.cs</url>
+          <line>18</line>
+          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common\Exceptions\ValidationException.cs" containingFunctionPresentation="Method 'WriteAsJsonToResponse'">
             <startOffsets>
-              <option value="595" />
+              <option value="524" />
             </startOffsets>
             <endOffsets>
-              <option value="650" />
+              <option value="544" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="26" />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Common/Common/ErrorHandling/GlobalExceptionHandler.cs</url>
+          <line>15</line>
+          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common\ErrorHandling\GlobalExceptionHandler.cs" containingFunctionPresentation="Method 'TryHandleAsync'">
+            <startOffsets>
+              <option value="416" />
+            </startOffsets>
+            <endOffsets>
+              <option value="461" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

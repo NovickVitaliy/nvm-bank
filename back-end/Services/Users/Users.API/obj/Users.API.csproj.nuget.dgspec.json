@@ -92,7 +92,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\User\\Desktop\\projects\\nvm-bank\\back-end\\Common\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\projects\\nvm-bank\\back-end\\Common\\Common\\Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

@@ -1,6 +1,8 @@
 using Common.CQRS.Requests;
+using Common.Extensions;
 using FluentValidation;
 using MediatR;
+using ValidationException = Common.Exceptions.ValidationException;
 
 namespace Common.CQRS.Behaviours;
 
@@ -28,9 +30,9 @@ public class ValidationBehaviour<TRequest, TResponse>
             .SelectMany(x => x.Errors)
             .ToList();
 
-        if (failures.Any())
+        if (failures.Count != 0)
         {
-            throw new ValidationException(failures);
+            throw new ValidationException(failures.ToValidationErrorsDictionary());
         }
 
         return await next();

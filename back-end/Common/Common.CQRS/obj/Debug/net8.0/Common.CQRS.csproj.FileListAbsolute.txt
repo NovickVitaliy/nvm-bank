@@ -11,3 +11,6 @@ C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\obj\Debug\ne
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\obj\Debug\net8.0\refint\Common.CQRS.dll
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\obj\Debug\net8.0\Common.CQRS.pdb
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\obj\Debug\net8.0\ref\Common.CQRS.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\bin\Debug\net8.0\Common.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\bin\Debug\net8.0\Common.pdb
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.CQRS\obj\Debug\net8.0\Common.C.21EED90C.Up2Date
