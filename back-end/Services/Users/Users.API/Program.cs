@@ -3,6 +3,7 @@ using Carter;
 using Common.Auth;
 using Common.CQRS.Behaviours;
 using Common.ErrorHandling;
+using Common.Messaging.Extension;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Users.API.Data;
@@ -32,6 +33,8 @@ builder.Services.AddMediatR(config =>
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 
 MapsterConfiguration.ConfigureMappings();
+
+builder.Services.ConfigureMessageBroker(builder.Configuration);
 
 var app = builder.Build();
 

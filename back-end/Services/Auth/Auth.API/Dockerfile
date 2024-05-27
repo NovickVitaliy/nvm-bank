@@ -10,6 +10,7 @@ WORKDIR /src
 COPY ["Services/Auth/Auth.API/Auth.API.csproj", "Services/Auth/Auth.API/"]
 COPY ["Common/Common.CQRS/Common.CQRS.csproj", "Common/Common.CQRS/"]
 COPY ["Common/Common/Common.csproj", "Common/Common/"]
+COPY ["Common/Common.Messaging/Common.Messaging.csproj", "Common/Common.Messaging/"]
 RUN dotnet restore "Services/Auth/Auth.API/Auth.API.csproj"
 COPY . .
 WORKDIR "/src/Services/Auth/Auth.API"

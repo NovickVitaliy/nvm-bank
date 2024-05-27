@@ -4,7 +4,7 @@ using Common.ErrorHandling;
 using Mapster;
 using MediatR;
 
-namespace Auth.API.Auth.Register;
+namespace Auth.API.Auth.Commands.Register;
 
 public record RegisterRequest(RegisterDto RegisterDto);
 

@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.API", "Services\Users
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Auth", "Common\Common.Auth\Common.Auth.csproj", "{92BF6E57-95C7-4338-8D17-201492287ADB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Messaging", "Common\Common.Messaging\Common.Messaging.csproj", "{99B69976-1FB3-4485-A747-63C3821FA6F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,7 @@ Global
 		{C88AC34C-16CF-43C9-BFBB-8A55BFF79F41} = {0739A066-82FF-4683-8604-A6E174F59E18}
 		{F73F9668-BB9B-41B2-9098-50E3A6113EB2} = {C88AC34C-16CF-43C9-BFBB-8A55BFF79F41}
 		{92BF6E57-95C7-4338-8D17-201492287ADB} = {CF9CBEC9-9074-42B5-B9B6-8E698534C64F}
+		{99B69976-1FB3-4485-A747-63C3821FA6F7} = {CF9CBEC9-9074-42B5-B9B6-8E698534C64F}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AE30B96A-9EFE-4B93-9A5E-1286D900019C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -65,5 +68,9 @@ Global
 		{92BF6E57-95C7-4338-8D17-201492287ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92BF6E57-95C7-4338-8D17-201492287ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92BF6E57-95C7-4338-8D17-201492287ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99B69976-1FB3-4485-A747-63C3821FA6F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99B69976-1FB3-4485-A747-63C3821FA6F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99B69976-1FB3-4485-A747-63C3821FA6F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99B69976-1FB3-4485-A747-63C3821FA6F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

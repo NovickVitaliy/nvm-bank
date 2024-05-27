@@ -20,7 +20,12 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\Common\Common.CQRS\Common.CQRS.csproj" />
+      <ProjectReference Include="..\..\..\Common\Common.Messaging\Common.Messaging.csproj" />
       <ProjectReference Include="..\..\..\Common\Common\Common.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Auth\Commands\" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,7 +1,9 @@
 using Common.CQRS.Handlers;
 using Common.CQRS.Requests;
 using Common.ErrorHandling;
+using Common.Messaging.Events.UserCreated;
 using FluentValidation;
+using MassTransit;
 using Users.API.Data.Repository;
 using Users.API.Models.Dtos;
 
@@ -57,14 +59,30 @@ public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
 public class CreateUserHandler : ICommandHandler<CreateUserCommand, CreateUserResult>
 {
     private readonly IUsersRepository _usersRepository;
-
-    public CreateUserHandler(IUsersRepository usersRepository)
+    private readonly IRequestClient<UserCreatedEvent> _requestClient;
+    public CreateUserHandler(IUsersRepository usersRepository, IRequestClient<UserCreatedEvent> requestClient)
     {
         _usersRepository = usersRepository;
+        _requestClient = requestClient;
     }
 
     public async Task<CreateUserResult> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
-        return new CreateUserResult(await _usersRepository.Create(request.User));
+        var result = await _usersRepository.Create(request.User);
+        if (result.IsSuccess)
+        {
+            var response = await _requestClient.GetResponse<UserCreatedResponse>(new UserCreatedEvent()
+            {
+                UserEmail = request.User.Email,
+                MainPhoneNumber = request.User.PhoneNumbers[0]
+            }, cancellationToken);
+
+            if (!response.Message.Success)
+            {
+                await _usersRepository.Delete(result.Value);
+                result = Result<Guid>.Failure(Error.BadRequest(response.Message.Description));
+            }
+        }
+        return new CreateUserResult(result);
     }
 }

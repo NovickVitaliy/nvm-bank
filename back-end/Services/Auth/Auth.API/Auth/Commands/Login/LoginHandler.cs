@@ -5,7 +5,7 @@ using Common.CQRS.Requests;
 using Common.ErrorHandling;
 using FluentValidation;
 
-namespace Auth.API.Auth.Login;
+namespace Auth.API.Auth.Commands.Login;
 
 public record LoginCommand(LoginDto LoginDto) : ICommand<LoginResult>;
 

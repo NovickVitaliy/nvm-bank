@@ -9,6 +9,7 @@ using Auth.API.Services.Token;
 using Auth.API.Settings;
 using Carter;
 using Common.CQRS.Behaviours;
+using Common.Messaging.Extension;
 using FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -54,6 +55,8 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 
 builder.Services.AddHostedService<DeleteUsersWithUnfinishedRegistrationService>();
+
+builder.Services.ConfigureMessageBroker(builder.Configuration, Assembly.GetExecutingAssembly());
 
 var app = builder.Build();
 

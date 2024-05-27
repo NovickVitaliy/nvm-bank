@@ -151,3 +151,9 @@ C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\bin\Debu
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\obj\Debug\net8.0\Auth.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\bin\Debug\net8.0\MassTransit.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\bin\Debug\net8.0\MassTransit.Abstractions.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\bin\Debug\net8.0\RabbitMQ.Client.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\bin\Debug\net8.0\Common.Messaging.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\bin\Debug\net8.0\Common.Messaging.pdb

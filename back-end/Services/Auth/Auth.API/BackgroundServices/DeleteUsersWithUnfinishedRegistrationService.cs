@@ -8,8 +8,8 @@ namespace Auth.API.BackgroundServices;
 public class DeleteUsersWithUnfinishedRegistrationService : BackgroundService
 {
     private readonly IServiceProvider _serviceProvider;
-    private readonly TimeSpan _periodToCheckUsers = TimeSpan.FromSeconds(15);
-    private readonly TimeSpan _timeToFinishRegistration = TimeSpan.FromMinutes(1);
+    private readonly TimeSpan _periodToCheckUsers = TimeSpan.FromMinutes(15);
+    private readonly TimeSpan _timeToFinishRegistration = TimeSpan.FromMinutes(60);
 
     public DeleteUsersWithUnfinishedRegistrationService(IServiceProvider serviceProvider)
     {

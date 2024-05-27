@@ -3,7 +3,7 @@ using Carter;
 using Mapster;
 using MediatR;
 
-namespace Auth.API.Auth.Login;
+namespace Auth.API.Auth.Commands.Login;
 
 public record LoginRequest(LoginDto LoginDto);
 

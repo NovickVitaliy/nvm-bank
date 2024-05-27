@@ -8,7 +8,7 @@ using Common.ErrorHandling;
 using FluentValidation;
 using Microsoft.Extensions.Options;
 
-namespace Auth.API.Auth.Register;
+namespace Auth.API.Auth.Commands.Register;
 
 public record RegisterCommand(RegisterDto RegisterDto) : ICommand<RegisterResult>;
 

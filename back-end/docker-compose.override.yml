@@ -29,7 +29,19 @@ services:
     environment:
       - ASPNETCORE_HTTP_PORTS=8080
       - ConnectionStrings__AuthDb=Server=authdb;Database=AuthDb;User Id=sa;Password=SwN12345678;Encrypt=False;TrustServerCertificate=True
+      - MessageBroker__Host=amqp://nvm-bank-mb:5672
     ports:
       - "6000:8080"
     depends_on:
       - authdb
+  
+  rabbitmq-broker:
+    container_name: rabbitmq-broker
+    restart: always
+    hostname: nvm-bank-mb
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
