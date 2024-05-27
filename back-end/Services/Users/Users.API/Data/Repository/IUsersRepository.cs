@@ -9,4 +9,5 @@ public interface IUsersRepository
     Task<Result<Guid>> Create(UserDto userDto);
     Task<Result<bool>> Delete(Guid id);
     Task<Result<bool>> Update(Guid id, UserDto userDto);
+    Task<Result<bool>> DeletePhoneNumber(Guid userId, string phoneNumber);
 }

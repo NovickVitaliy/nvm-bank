@@ -174,6 +174,17 @@ public class UsersRepository : IUsersRepository
         return Result<bool>.Success(true);
     }
 
+    public async Task<Result<bool>> DeletePhoneNumber(Guid userId, string phoneNumber)
+    {
+        var rowsAffected = await _db.Database.ExecuteSqlRawAsync(
+            "DELETE FROM \"PhoneNumbers\" " +
+            "WHERE \"UserId\" = @p0 AND \"Number\" = @p1", userId, phoneNumber);
+
+        return rowsAffected == 1
+            ? Result<bool>.Success(true)
+            : Result<bool>.Failure(Error.NotFound(nameof(PhoneNumber), phoneNumber));
+    }
+
     private async Task<bool> IsPhoneTakenBySomeoneElse(string phoneNumber, Guid id)
     {
         return (await _db.Database.SqlQueryRaw<int>(
