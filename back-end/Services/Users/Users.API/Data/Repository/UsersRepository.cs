@@ -52,6 +52,14 @@ public class UsersRepository : IUsersRepository
             return Result<Guid>.Failure(Error.BadRequest("User with given email already exists."));
         }
 
+        foreach (var phoneNumber in userDto.PhoneNumbers)
+        {
+            if (IsPhoneNumberTaken(phoneNumber))
+            {
+                return Result<Guid>.Failure(Error.BadRequest($"Phone number {phoneNumber} is already taken."));
+            }
+        }
+        
         var user = userDto.Adapt<User>();
         user.Id = Guid.NewGuid();
         await using var transaction = await _db.Database.BeginTransactionAsync();
@@ -83,6 +91,13 @@ public class UsersRepository : IUsersRepository
         return Result<Guid>.Success(user.Id);
     }
 
+    private bool IsPhoneNumberTaken(string phoneNumber)
+    {
+        var res = _db.Database.SqlQueryRaw<int>("SELECT COUNT(*) FROM \"PhoneNumbers\" WHERE \"Number\" = {0}",
+            phoneNumber).ToList();
+        return res[0] > 0;
+    }
+
     private async Task<bool> DoesUserWithGivenEmailExist(string email)
     {
         return (await _db.Users.FromSqlRaw("SELECT * FROM \"Users\" WHERE \"Email\" = {0}", email)
@@ -107,7 +122,7 @@ public class UsersRepository : IUsersRepository
         {
             return Result<bool>.Failure(Error.NotFound(nameof(User), id.ToString()));
         }
-
+        
         await using var transaction = await _db.Database.BeginTransactionAsync();
 
         try
@@ -130,17 +145,21 @@ public class UsersRepository : IUsersRepository
 
             foreach (var phoneNumber in userDto.PhoneNumbers)
             {
-                var phoneForUserExists = await _db.PhoneNumbers
-                    .FromSqlRaw("SELECT * FROM \"PhoneNumbers\"" +
-                                "WHERE \"Number\" = {0} AND \"UserId\" = {1}",
-                        phoneNumber, id).SingleOrDefaultAsync() != null;
-
-                if (!phoneForUserExists)
+                var doesUserHaveThisPhone = await DoesUserHaveThisPhone(id, phoneNumber);
+                var isPhoneTakenBySomeoneElse = await IsPhoneTakenBySomeoneElse(phoneNumber, id);
+                
+                if(doesUserHaveThisPhone) continue;
+                
+                if (!doesUserHaveThisPhone && !isPhoneTakenBySomeoneElse)
                 {
                     var phoneId = Guid.NewGuid();
                     await _db.Database.ExecuteSqlRawAsync(
                         "INSERT INTO \"PhoneNumbers\" (\"Id\", \"Number\", \"UserId\") " +
                         "VALUES (@p0, @p1, @p2)", phoneId, phoneNumber, id);
+                }
+                else
+                {
+                    return Result<bool>.Failure(Error.BadRequest($"Phone number: {phoneNumber} is already taken."));
                 }
             }
 
@@ -153,5 +172,21 @@ public class UsersRepository : IUsersRepository
         }
         
         return Result<bool>.Success(true);
+    }
+
+    private async Task<bool> IsPhoneTakenBySomeoneElse(string phoneNumber, Guid id)
+    {
+        return (await _db.Database.SqlQueryRaw<int>(
+            "SELECT COUNT(*) FROM \"PhoneNumbers\" " +
+            "WHERE \"Number\" = {0} " +
+            "AND \"UserId\" != {1}", phoneNumber, id).ToListAsync())[0] > 0;
+    }
+
+    private async Task<bool> DoesUserHaveThisPhone(Guid id, string phoneNumber)
+    {
+        return await _db.PhoneNumbers
+            .FromSqlRaw("SELECT * FROM \"PhoneNumbers\"" +
+                        "WHERE \"Number\" = {0} AND \"UserId\" = {1}",
+                phoneNumber, id).SingleOrDefaultAsync() != null;
     }
 }

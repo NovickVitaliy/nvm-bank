@@ -148,3 +148,6 @@ C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\bin\Debu
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\bin\Debug\net8.0\Common.dll
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\bin\Debug\net8.0\Common.pdb
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Auth\Auth.API\obj\Debug\net8.0\Auth.API.MvcApplicationPartsAssemblyInfo.cs
