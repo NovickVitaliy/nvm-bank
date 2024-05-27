@@ -3,7 +3,7 @@ using Common.CQRS.Requests;
 using Common.ErrorHandling;
 using Users.API.Data.Repository;
 
-namespace Users.API.Users.UpdateUser;
+namespace Users.API.Users.DeletePhoneNumber;
 
 public record DeletePhoneNumberCommand(Guid UserId, string PhoneNumber) : ICommand<DeletePhoneNumberResult>;
 

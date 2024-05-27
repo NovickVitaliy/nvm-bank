@@ -1,7 +1,8 @@
 using Carter;
 using MediatR;
+using Users.API.Users.UpdateUser;
 
-namespace Users.API.Users.UpdateUser;
+namespace Users.API.Users.DeletePhoneNumber;
 
 public record DeletePhoneNumberResponse(bool IsSuccess);
 
