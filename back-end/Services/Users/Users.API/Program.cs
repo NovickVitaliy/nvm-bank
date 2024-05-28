@@ -3,6 +3,7 @@ using Carter;
 using Common.Auth;
 using Common.CQRS.Behaviours;
 using Common.ErrorHandling;
+using Common.Logging;
 using Common.Messaging.Extension;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,8 @@ using Users.API.Extensions;
 using Users.API.MappingConfiguration;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.ConfigureLogging();
 
 builder.Services.AddCarter();
 
@@ -26,6 +29,7 @@ builder.Services.AddDbContext<UsersDbContext>(opt =>
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 builder.Services.AddMediatR(config =>
 {
+    config.AddOpenBehavior(typeof(LoggingBehaviour<,>));
     config.AddOpenBehavior(typeof(ValidationBehaviour<,>));
     config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
 });

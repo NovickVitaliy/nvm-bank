@@ -9,6 +9,7 @@ using Auth.API.Services.Token;
 using Auth.API.Settings;
 using Carter;
 using Common.CQRS.Behaviours;
+using Common.Logging;
 using Common.Messaging.Extension;
 using FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -18,6 +19,8 @@ using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
+
+builder.ConfigureLogging();
 
 builder.Services.AddOptions<JwtSettings>()
     .Bind(config.GetSection("JwtSettings"))
@@ -34,6 +37,7 @@ builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 builder.Services.AddCarter();
 builder.Services.AddMediatR(config =>
 {
+    config.AddOpenBehavior(typeof(LoggingBehaviour<,>));
     config.AddOpenBehavior(typeof(ValidationBehaviour<,>));
     config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
 });

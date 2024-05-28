@@ -30,10 +30,12 @@ services:
       - ASPNETCORE_HTTP_PORTS=8080
       - ConnectionStrings__AuthDb=Server=authdb;Database=AuthDb;User Id=sa;Password=SwN12345678;Encrypt=False;TrustServerCertificate=True
       - MessageBroker__Host=amqp://nvm-bank-mb:5672
+      - Serilog__WriteTo__1__Args__serverUrl=http://seq-logging:5341
     ports:
       - "6000:8080"
     depends_on:
       - authdb
+      - seq-logging
   
   rabbitmq-broker:
     container_name: rabbitmq-broker
@@ -45,3 +47,12 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
+  
+  seq-logging:
+    container_name: seq-logging
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - "5341:5341"
+      - "8081:80"

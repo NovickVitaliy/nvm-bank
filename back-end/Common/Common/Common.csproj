@@ -10,6 +10,9 @@
       <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
       <PackageReference Include="Mapster" Version="7.4.1-pre01" />
       <PackageReference Include="Microsoft.Extensions.Features" Version="8.0.5" />
+      <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+      <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
+      <PackageReference Include="Serilog.Sinks.Seq" Version="7.0.1" />
     </ItemGroup>
 
     <ItemGroup>

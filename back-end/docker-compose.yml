@@ -14,6 +14,9 @@
   rabbitmq-broker:
     image: rabbitmq:3-management
     
+  seq-logging:
+    image: datalust/seq:latest
+    
 volumes:
   mssql-authdb:
   postgres-usersdb:
