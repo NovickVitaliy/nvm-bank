@@ -1,6 +1,7 @@
 using Common.CQRS.Handlers;
 using Common.CQRS.Requests;
 using Common.ErrorHandling;
+using Common.Messaging.Events;
 using Common.Messaging.Events.UserCreated;
 using FluentValidation;
 using MassTransit;
@@ -60,10 +61,15 @@ public class CreateUserHandler : ICommandHandler<CreateUserCommand, CreateUserRe
 {
     private readonly IUsersRepository _usersRepository;
     private readonly IRequestClient<UserCreatedEvent> _requestClient;
-    public CreateUserHandler(IUsersRepository usersRepository, IRequestClient<UserCreatedEvent> requestClient)
+    private readonly IPublishEndpoint _publishEndpoint;
+    public CreateUserHandler(
+        IUsersRepository usersRepository, 
+        IRequestClient<UserCreatedEvent> requestClient, 
+        IPublishEndpoint publishEndpoint)
     {
         _usersRepository = usersRepository;
         _requestClient = requestClient;
+        _publishEndpoint = publishEndpoint;
     }
 
     public async Task<CreateUserResult> Handle(CreateUserCommand request, CancellationToken cancellationToken)
@@ -82,6 +88,13 @@ public class CreateUserHandler : ICommandHandler<CreateUserCommand, CreateUserRe
                 await _usersRepository.Delete(result.Value);
                 result = Result<Guid>.Failure(Error.BadRequest(response.Message.Description));
             }
+
+            await _publishEndpoint.Publish(new UserFinishedRegistration
+            {
+                Email = request.User.Email,
+                FirstName = request.User.FirstName,
+                LastName = request.User.LastName
+            }, cancellationToken);
         }
         return new CreateUserResult(result);
     }
