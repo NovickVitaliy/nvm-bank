@@ -19,3 +19,23 @@ services:
     - "C:\\Users\\User\\Desktop\\projects\\nvm-bank\\back-end\\Services\\Auth\\Auth.API:/app:rw"
     - "C:\\Users\\User\\Desktop\\projects\\nvm-bank\\back-end:/src:rw"
     working_dir: "/app"
+  notification.api:
+    build:
+      context: "C:\\Users\\User\\Desktop\\projects\\nvm-bank\\back-end"
+      dockerfile: "Services/Notification/Notification.API/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Notification.API.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "notification.api:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\User\\.nuget\\packages:/home/app/.nuget/packages"
+    - "C:\\Users\\User\\Desktop\\projects\\nvm-bank\\back-end\\Services\\Notification\\\
+      Notification.API:/app:rw"
+    - "C:\\Users\\User\\Desktop\\projects\\nvm-bank\\back-end:/src:rw"
+    working_dir: "/app"

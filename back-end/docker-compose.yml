@@ -4,6 +4,12 @@
     build:
       context: .
       dockerfile: Services/Auth/Auth.API/Dockerfile
+      
+  notification.api:
+    image: notification.api
+    build:
+      context: .
+      dockerfile: Services/Notification/Notification.API/Dockerfile
 
   authdb:
     image: mcr.microsoft.com/mssql/server
