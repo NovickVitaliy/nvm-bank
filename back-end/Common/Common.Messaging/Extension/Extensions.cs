@@ -1,4 +1,5 @@
 using System.Reflection;
+using Common.Messaging.Filters;
 using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,9 +21,12 @@ public static class Extensions
             {
                 configurator.AddConsumers(assembly);
             }
+
             
             configurator.UsingRabbitMq((context, factoryConfigurator) =>
             {
+                factoryConfigurator.UseConsumeFilter(typeof(MessageBrokerLoggingFilter<>), context);
+                
                 factoryConfigurator.Host(new Uri(configuration["MessageBroker:Host"!]), hostConfigurator =>
                 {
                     hostConfigurator.Username(configuration["MessageBroker:Username"]);
