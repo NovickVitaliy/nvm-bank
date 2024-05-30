@@ -6,6 +6,6 @@ public record UserDto(
     string LastName,
     DateOnly DateOfBirth,
     string Email,
-    string[] PhoneNumbers,
+    PhoneNumberDto[] PhoneNumbers,
     string Gender,
     AddressDto Address);

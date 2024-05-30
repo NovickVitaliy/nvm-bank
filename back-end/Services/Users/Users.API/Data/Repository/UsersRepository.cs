@@ -43,7 +43,7 @@ public class UsersRepository : IUsersRepository
 
         foreach (var phoneNumber in userDto.PhoneNumbers)
         {
-            if (await IsPhoneNumberTaken(phoneNumber))
+            if (await IsPhoneNumberTaken(phoneNumber.Number))
             {
                 return Result<Guid>.Failure(Error.BadRequest($"Phone number {phoneNumber} is already taken."));
             }

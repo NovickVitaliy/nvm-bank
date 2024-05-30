@@ -53,7 +53,13 @@ public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
             .NotEmpty().WithMessage("Date Of Birth cannot be empty.");
 
         RuleFor(x => x.User.PhoneNumbers)
-            .NotEmpty().WithMessage("Phone Numbers cannot be empty.");
+            .NotEmpty().WithMessage("Phone Numbers cannot be empty.")
+            .Must(OnlyOneMainPhoneGiven).WithMessage("Only one phone number can be made as main.");
+    }
+
+    private static bool OnlyOneMainPhoneGiven(PhoneNumberDto[] phoneNumbers)
+    {
+        return phoneNumbers.Count(x => x.IsMain) == 1;
     }
 }
 
@@ -80,7 +86,7 @@ public class CreateUserHandler : ICommandHandler<CreateUserCommand, CreateUserRe
             var response = await _requestClient.GetResponse<UserCreatedResponse>(new UserCreatedEvent()
             {
                 UserEmail = request.User.Email,
-                MainPhoneNumber = request.User.PhoneNumbers[0]
+                MainPhoneNumber = request.User.PhoneNumbers.Single(x => x.IsMain).Number,
             }, cancellationToken);
 
             if (!response.Message.Success)

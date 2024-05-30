@@ -8,5 +8,6 @@ public class PhoneNumber : ISoftDelete
     public required string Number { get; set; } = string.Empty;
     public Guid UserId { get; set; }
     public User User { get; set; }
+    public bool IsMain { get; set; }
     public bool IsDeleted { get; set; } = false;
 }

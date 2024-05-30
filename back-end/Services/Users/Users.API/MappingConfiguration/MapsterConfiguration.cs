@@ -24,7 +24,8 @@ public static class MapsterConfiguration
             DateOfBirth = src.DateOfBirth,
             PhoneNumbers = src.PhoneNumbers.Select(x => new PhoneNumber()
             {
-                Number = x
+                Number = x.Number,
+                IsMain = x.IsMain,
             }).ToList()
         });
 
@@ -34,7 +35,7 @@ public static class MapsterConfiguration
                 src.LastName,
                 src.DateOfBirth,
                 src.Email,
-                src.PhoneNumbers.Select(x => x.Number).ToArray(),
+                src.PhoneNumbers.Select(x => new PhoneNumberDto(x.Number, x.IsMain)).ToArray(),
                 src.Gender,
                 new AddressDto(src.Address.Country, src.Address.Country,
                     src.Address.ZipCode, src.Address.StreetAddress)));
