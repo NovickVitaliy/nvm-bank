@@ -1,9 +1,12 @@
+using Users.API.Interfaces;
+
 namespace Users.API.Models.Domain;
 
-public class PhoneNumber
+public class PhoneNumber : ISoftDelete
 {
     public Guid Id { get; set; }
-    public string Number { get; set; } = string.Empty;
+    public required string Number { get; set; } = string.Empty;
     public Guid UserId { get; set; }
     public User User { get; set; }
+    public bool IsDeleted { get; set; } = false;
 }

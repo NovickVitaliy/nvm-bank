@@ -9,6 +9,8 @@ public class PhoneNumberConfiguration : IEntityTypeConfiguration<PhoneNumber>
     public void Configure(EntityTypeBuilder<PhoneNumber> builder)
     {
         builder.ToTable("PhoneNumbers");
+
+        builder.HasQueryFilter(x => !x.IsDeleted);
         
         builder.Property(x => x.Number)
             .IsRequired()

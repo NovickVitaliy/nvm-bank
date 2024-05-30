@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.52">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>750</IntrospectionStateNumber>
+      <IntrospectionStateNumber>742</IntrospectionStateNumber>
       <ServerVersion>16.2</ServerVersion>
-      <StartupTime>1716642707</StartupTime>
+      <StartupTime>1717091486</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -1399,7 +1399,7 @@ true posixrules
 13212||10|C|G
 13212||-9223372036854775808|U|G
 13212||10|U|G</Grants>
-      <IntrospectionStateNumber>750</IntrospectionStateNumber>
+      <IntrospectionStateNumber>742</IntrospectionStateNumber>
       <ObjectId>16384</ObjectId>
       <OwnerName>users.api</OwnerName>
     </database>
@@ -1408,50 +1408,50 @@ true posixrules
       <ObjectId>5</ObjectId>
       <OwnerName>users.api</OwnerName>
     </database>
-    <role id="4" parent="1" name="pg_database_owner">
+    <role id="4" parent="1" name="pg_checkpoint">
+      <ObjectId>4544</ObjectId>
+    </role>
+    <role id="5" parent="1" name="pg_create_subscription">
+      <ObjectId>6304</ObjectId>
+    </role>
+    <role id="6" parent="1" name="pg_database_owner">
       <ObjectId>6171</ObjectId>
     </role>
-    <role id="5" parent="1" name="pg_read_all_data">
-      <ObjectId>6181</ObjectId>
+    <role id="7" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
     </role>
-    <role id="6" parent="1" name="pg_write_all_data">
-      <ObjectId>6182</ObjectId>
-    </role>
-    <role id="7" parent="1" name="pg_monitor">
+    <role id="8" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
       <RoleGrants>3374
 3375
 3377</RoleGrants>
     </role>
-    <role id="8" parent="1" name="pg_read_all_settings">
+    <role id="9" parent="1" name="pg_read_all_data">
+      <ObjectId>6181</ObjectId>
+    </role>
+    <role id="10" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
     </role>
-    <role id="9" parent="1" name="pg_read_all_stats">
+    <role id="11" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
     </role>
-    <role id="10" parent="1" name="pg_stat_scan_tables">
-      <ObjectId>3377</ObjectId>
-    </role>
-    <role id="11" parent="1" name="pg_read_server_files">
+    <role id="12" parent="1" name="pg_read_server_files">
       <ObjectId>4569</ObjectId>
     </role>
-    <role id="12" parent="1" name="pg_write_server_files">
-      <ObjectId>4570</ObjectId>
-    </role>
-    <role id="13" parent="1" name="pg_execute_server_program">
-      <ObjectId>4571</ObjectId>
-    </role>
-    <role id="14" parent="1" name="pg_signal_backend">
+    <role id="13" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
     </role>
-    <role id="15" parent="1" name="pg_checkpoint">
-      <ObjectId>4544</ObjectId>
+    <role id="14" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
     </role>
-    <role id="16" parent="1" name="pg_use_reserved_connections">
+    <role id="15" parent="1" name="pg_use_reserved_connections">
       <ObjectId>4550</ObjectId>
     </role>
-    <role id="17" parent="1" name="pg_create_subscription">
-      <ObjectId>6304</ObjectId>
+    <role id="16" parent="1" name="pg_write_all_data">
+      <ObjectId>6182</ObjectId>
+    </role>
+    <role id="17" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
     </role>
     <role id="18" parent="1" name="users.api">
       <BypassRls>1</BypassRls>
@@ -4823,27 +4823,27 @@ true posixrules
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>750</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-05-25.14:24:45</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>742</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-05-30.17:53:50</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <table id="265" parent="264" name="PhoneNumbers">
-      <ObjectId>24591</ObjectId>
-      <StateNumber>746</StateNumber>
+      <ObjectId>16402</ObjectId>
+      <StateNumber>741</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>users.api</OwnerName>
     </table>
     <table id="266" parent="264" name="Users">
-      <ObjectId>24582</ObjectId>
-      <StateNumber>746</StateNumber>
+      <ObjectId>16393</ObjectId>
+      <StateNumber>741</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>users.api</OwnerName>
     </table>
     <table id="267" parent="264" name="__EFMigrationsHistory">
-      <ObjectId>24577</ObjectId>
-      <StateNumber>745</StateNumber>
+      <ObjectId>16388</ObjectId>
+      <StateNumber>738</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>users.api</OwnerName>
     </table>
@@ -4851,180 +4851,211 @@ true posixrules
       <DasType>uuid|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <TypeId>2950</TypeId>
     </column>
     <column id="269" parent="265" name="Number">
       <DasType>varchar(10)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="270" parent="265" name="UserId">
       <DasType>uuid|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <TypeId>2950</TypeId>
     </column>
-    <foreign-key id="271" parent="265" name="FK_PhoneNumbers_Users_UserId">
+    <column id="271" parent="265" name="IsDeleted">
+      <DasType>boolean|0s</DasType>
+      <DefaultExpression>false</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>741</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <foreign-key id="272" parent="265" name="FK_PhoneNumbers_Users_UserId">
       <ColNames>UserId</ColNames>
-      <ObjectId>24596</ObjectId>
+      <ObjectId>16407</ObjectId>
       <OnDelete>cascade</OnDelete>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>24582</RefTableId>
+      <RefTableId>16393</RefTableId>
     </foreign-key>
-    <index id="272" parent="265" name="PK_PhoneNumbers">
+    <index id="273" parent="265" name="PK_PhoneNumbers">
       <ColNames>Id</ColNames>
-      <ObjectId>24594</ObjectId>
+      <ObjectId>16405</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="273" parent="265" name="IX_PhoneNumbers_UserId">
+    <index id="274" parent="265" name="AK_PhoneNumbers_Number">
+      <ColNames>Number</ColNames>
+      <ObjectId>16413</ObjectId>
+      <StateNumber>740</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <index id="275" parent="265" name="IX_PhoneNumbers_UserId">
       <ColNames>UserId</ColNames>
-      <ObjectId>24601</ObjectId>
-      <StateNumber>746</StateNumber>
+      <ObjectId>16412</ObjectId>
+      <StateNumber>739</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="274" parent="265" name="PK_PhoneNumbers">
-      <ObjectId>24595</ObjectId>
+    <key id="276" parent="265" name="PK_PhoneNumbers">
+      <ObjectId>16406</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>746</StateNumber>
-      <UnderlyingIndexId>24594</UnderlyingIndexId>
+      <StateNumber>739</StateNumber>
+      <UnderlyingIndexId>16405</UnderlyingIndexId>
     </key>
-    <column id="275" parent="266" name="Id">
+    <key id="277" parent="265" name="AK_PhoneNumbers_Number">
+      <ObjectId>16414</ObjectId>
+      <StateNumber>740</StateNumber>
+      <UnderlyingIndexId>16413</UnderlyingIndexId>
+    </key>
+    <column id="278" parent="266" name="Id">
       <DasType>uuid|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <TypeId>2950</TypeId>
     </column>
-    <column id="276" parent="266" name="FirstName">
+    <column id="279" parent="266" name="FirstName">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="277" parent="266" name="LastName">
+    <column id="280" parent="266" name="LastName">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="278" parent="266" name="DateOfBirth">
+    <column id="281" parent="266" name="DateOfBirth">
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="279" parent="266" name="Email">
+    <column id="282" parent="266" name="Email">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="280" parent="266" name="Gender">
+    <column id="283" parent="266" name="Gender">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="281" parent="266" name="Address_Country">
+    <column id="284" parent="266" name="Address_Country">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="282" parent="266" name="Address_State">
+    <column id="285" parent="266" name="Address_State">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="283" parent="266" name="Address_StreetAddress">
+    <column id="286" parent="266" name="Address_StreetAddress">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="284" parent="266" name="Address_ZipCode">
+    <column id="287" parent="266" name="Address_ZipCode">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="285" parent="266" name="PK_Users">
+    <column id="288" parent="266" name="IsDeleted">
+      <DasType>boolean|0s</DasType>
+      <DefaultExpression>false</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+      <StateNumber>741</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="289" parent="266" name="PK_Users">
       <ColNames>Id</ColNames>
-      <ObjectId>24587</ObjectId>
+      <ObjectId>16398</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>746</StateNumber>
+      <StateNumber>739</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="286" parent="266" name="AK_Users_Email">
+    <index id="290" parent="266" name="AK_Users_Email">
       <ColNames>Email</ColNames>
-      <ObjectId>24589</ObjectId>
-      <StateNumber>746</StateNumber>
+      <ObjectId>16400</ObjectId>
+      <StateNumber>739</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="287" parent="266" name="PK_Users">
-      <ObjectId>24588</ObjectId>
+    <key id="291" parent="266" name="PK_Users">
+      <ObjectId>16399</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>746</StateNumber>
-      <UnderlyingIndexId>24587</UnderlyingIndexId>
+      <StateNumber>739</StateNumber>
+      <UnderlyingIndexId>16398</UnderlyingIndexId>
     </key>
-    <key id="288" parent="266" name="AK_Users_Email">
-      <ObjectId>24590</ObjectId>
-      <StateNumber>746</StateNumber>
-      <UnderlyingIndexId>24589</UnderlyingIndexId>
+    <key id="292" parent="266" name="AK_Users_Email">
+      <ObjectId>16401</ObjectId>
+      <StateNumber>739</StateNumber>
+      <UnderlyingIndexId>16400</UnderlyingIndexId>
     </key>
-    <column id="289" parent="267" name="MigrationId">
+    <column id="293" parent="267" name="MigrationId">
       <DasType>varchar(150)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>745</StateNumber>
+      <StateNumber>738</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="290" parent="267" name="ProductVersion">
+    <column id="294" parent="267" name="ProductVersion">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>745</StateNumber>
+      <StateNumber>738</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="291" parent="267" name="PK___EFMigrationsHistory">
+    <index id="295" parent="267" name="PK___EFMigrationsHistory">
       <ColNames>MigrationId</ColNames>
-      <ObjectId>24580</ObjectId>
+      <ObjectId>16391</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>745</StateNumber>
+      <StateNumber>738</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="292" parent="267" name="PK___EFMigrationsHistory">
-      <ObjectId>24581</ObjectId>
+    <key id="296" parent="267" name="PK___EFMigrationsHistory">
+      <ObjectId>16392</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>745</StateNumber>
-      <UnderlyingIndexId>24580</UnderlyingIndexId>
+      <StateNumber>738</StateNumber>
+      <UnderlyingIndexId>16391</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

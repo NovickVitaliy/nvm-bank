@@ -7,9 +7,12 @@ using Common.Logging;
 using Common.Messaging.Extension;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Users.API.Data;
+using Users.API.Data.Interceptors;
 using Users.API.Data.Repository;
 using Users.API.Extensions;
+using Users.API.Interfaces;
 using Users.API.MappingConfiguration;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,8 +24,9 @@ builder.Services.AddCarter();
 builder.Services.ConfigureAuthentication(builder.Configuration);
 builder.Services.AddAuthorization();
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
-builder.Services.AddDbContext<UsersDbContext>(opt =>
+builder.Services.AddDbContext<UsersDbContext>((sp, opt) =>
 {
+    opt.AddInterceptors(new SoftDeleteInterceptor());
     opt.UseNpgsql(builder.Configuration.GetConnectionString("UsersDb"));
 });
 

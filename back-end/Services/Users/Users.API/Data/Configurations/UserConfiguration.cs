@@ -10,6 +10,8 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
     {
         builder.ToTable("Users");
 
+        builder.HasQueryFilter(x => !x.IsDeleted);
+        
         builder.HasKey(x => x.Id);
 
         builder.Property(x => x.FirstName)

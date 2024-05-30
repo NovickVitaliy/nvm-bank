@@ -6,4 +6,5 @@ public class ApplicationUser : IdentityUser<Guid>
 {
     public bool RegistrationFinished { get; set; } = false;
     public DateTime CreatedAt { get; set; }
+    public bool IsDeleted { get; set; } = false;
 }
