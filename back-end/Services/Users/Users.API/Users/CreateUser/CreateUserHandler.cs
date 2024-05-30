@@ -6,6 +6,7 @@ using Common.Messaging.Events.UserCreated;
 using FluentValidation;
 using MassTransit;
 using Users.API.Data.Repository;
+using Users.API.Helpers;
 using Users.API.Models.Dtos;
 
 namespace Users.API.Users.CreateUser;
@@ -55,7 +56,28 @@ public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
         RuleFor(x => x.User.PhoneNumbers)
             .NotEmpty().WithMessage("Phone Numbers cannot be empty.")
             .Must(OnlyOneMainPhoneGiven).WithMessage("Only one phone number can be made as main.");
+
+        RuleFor(x => x.User.PhoneNumbers.Length)
+            .Equal(UsersConstants.MaximumNumberOfPhoneNumbers)
+            .WithMessage("You can create only 5 phone numbers for you account.");
+
+        RuleForEach(x => x.User.PhoneNumbers)
+            .ChildRules(x =>
+            {
+                x.RuleFor(dto => dto.Number)
+                    .NotEmpty().WithMessage(dto => $"Phone number '{dto.Number}' cannot be empty.")
+                    .Length(10).WithMessage(dto => $"Phone number '{dto.Number}' must have lenght of 10 characters.")
+                    .Must(DoesConsistOfOnlyDigits)
+                    .WithMessage(dto => $"Phone number {dto.Number} must consist only of digits.");
+            });
     }
+
+    private static bool DoesConsistOfOnlyDigits(
+        PhoneNumberDto phoneNumberDto, 
+        string number,
+        ValidationContext<PhoneNumberDto> context)
+        => number.All(char.IsDigit);
+
 
     private static bool OnlyOneMainPhoneGiven(PhoneNumberDto[] phoneNumbers)
     {
@@ -68,9 +90,10 @@ public class CreateUserHandler : ICommandHandler<CreateUserCommand, CreateUserRe
     private readonly IUsersRepository _usersRepository;
     private readonly IRequestClient<UserCreatedEvent> _requestClient;
     private readonly IPublishEndpoint _publishEndpoint;
+
     public CreateUserHandler(
-        IUsersRepository usersRepository, 
-        IRequestClient<UserCreatedEvent> requestClient, 
+        IUsersRepository usersRepository,
+        IRequestClient<UserCreatedEvent> requestClient,
         IPublishEndpoint publishEndpoint)
     {
         _usersRepository = usersRepository;
@@ -102,6 +125,7 @@ public class CreateUserHandler : ICommandHandler<CreateUserCommand, CreateUserRe
                 LastName = request.User.LastName
             }, cancellationToken);
         }
+
         return new CreateUserResult(result);
     }
 }

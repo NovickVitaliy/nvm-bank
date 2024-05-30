@@ -29,7 +29,6 @@ public class AuthService : IAuthService
         user = new ApplicationUser()
         {
             Email = registerDto.Email,
-            PhoneNumber = registerDto.PhoneNumber,
             UserName = registerDto.Email,
             CreatedAt = DateTime.Now
         };

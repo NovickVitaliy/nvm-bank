@@ -27,12 +27,6 @@ public class RegisterCommandValidator : AbstractValidator<RegisterCommand>
             .NotEmpty().WithMessage("'Email Address' cannot be empty.")
             .EmailAddress().WithMessage("'Email Address' must be a proper email address.");
 
-        RuleFor(x => x.RegisterDto.PhoneNumber)
-            .NotEmpty().WithMessage("'Phone Number' cannot be empty.")
-            .MinimumLength(10).WithMessage("'Phone Number' must not be less than 10 characters.")
-            .MaximumLength(20).WithMessage("'Phone Number' must not exceed 50 characters.")
-            .Matches(new Regex(PasswordPatterns.PhoneNumber)).WithMessage("'Phone Number' is not valid.");
-
         RuleFor(x => x.RegisterDto.Password)
             .NotEmpty().WithMessage("'Password' cannot be empty.")
             .MinimumLength(passwordSettings.RequiredLength)
