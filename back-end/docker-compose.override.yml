@@ -23,6 +23,18 @@ services:
     volumes:
       - postgres-usersdb:/var/lib/postgresql/data
   
+  checkingsdb:
+    container_name: checkingsdb
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=ifYouSeeThisThenHaveANiceDay
+      - POSTGRES_USER=checkings.api
+      - POSTGRES_DB=CheckingsDb
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres-checkingsdb:/var/lib/postgresql/data
+  
   auth.api:
     container_name: auth.api
     restart: always

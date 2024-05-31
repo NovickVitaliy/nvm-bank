@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.BankingAccounts\bin\Debug\net8.0\Common.BankingAccounts.deps.json
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.BankingAccounts\bin\Debug\net8.0\Common.BankingAccounts.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.BankingAccounts\bin\Debug\net8.0\Common.BankingAccounts.pdb
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.BankingAccounts\obj\Debug\net8.0\Common.BankingAccounts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.BankingAccounts\obj\Debug\net8.0\Common.BankingAccounts.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.BankingAccounts\obj\Debug\net8.0\Common.BankingAccounts.AssemblyInfo.cs
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.BankingAccounts\obj\Debug\net8.0\Common.BankingAccounts.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.BankingAccounts\obj\Debug\net8.0\Common.BankingAccounts.sourcelink.json
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.BankingAccounts\obj\Debug\net8.0\Common.BankingAccounts.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.BankingAccounts\obj\Debug\net8.0\refint\Common.BankingAccounts.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.BankingAccounts\obj\Debug\net8.0\Common.BankingAccounts.pdb
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Common\Common.BankingAccounts\obj\Debug\net8.0\ref\Common.BankingAccounts.dll
