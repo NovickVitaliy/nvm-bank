@@ -58,7 +58,7 @@ public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
             .Must(OnlyOneMainPhoneGiven).WithMessage("Only one phone number can be made as main.");
 
         RuleFor(x => x.User.PhoneNumbers.Length)
-            .Equal(UsersConstants.MaximumNumberOfPhoneNumbers)
+            .LessThanOrEqualTo(UsersConstants.MaximumNumberOfPhoneNumbers)
             .WithMessage("You can create only 5 phone numbers for you account.");
 
         RuleForEach(x => x.User.PhoneNumbers)

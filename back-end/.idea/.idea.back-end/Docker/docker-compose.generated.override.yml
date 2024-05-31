@@ -39,3 +39,22 @@ services:
       Notification.API:/app:rw"
     - "C:\\Users\\User\\Desktop\\projects\\nvm-bank\\back-end:/src:rw"
     working_dir: "/app"
+  users.api:
+    build:
+      context: "C:\\Users\\User\\Desktop\\projects\\nvm-bank\\back-end"
+      dockerfile: "Services/Users/Users.API/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Users.API.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "users.api:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\User\\.nuget\\packages:/home/app/.nuget/packages"
+    - "C:\\Users\\User\\Desktop\\projects\\nvm-bank\\back-end\\Services\\Users\\Users.API:/app:rw"
+    - "C:\\Users\\User\\Desktop\\projects\\nvm-bank\\back-end:/src:rw"
+    working_dir: "/app"

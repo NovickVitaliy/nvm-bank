@@ -37,6 +37,7 @@ services:
       - authdb
       - seq-logging
       - rabbitmq-broker
+      - notification.api
   
   notification.api:
     container_name: notification.api
@@ -49,6 +50,22 @@ services:
       - "6002:8080"
     depends_on:
       - rabbitmq-broker
+  
+  users.api:
+    container_name: users.api
+    restart: always
+    environment:
+      - ASPNETCORE_HTTP_PORTS=8080
+      - MessageBroker__Host=amqp://nvm-bank-mb:5672
+      - Serilog__WriteTo__1__Args__serverUrl=http://seq-logging:5341
+      - ConnectionStrings__UsersDb=Server=usersdb;Port=5432;Database=UsersDb;User Id=users.api;Password=ifYouSeeThisThenHaveANiceDay;Include Error Detail=true
+    ports:
+      - "6001:8080"
+    depends_on:
+      - usersdb
+      - rabbitmq-broker
+      - seq-logging
+      - notification.api
   
   rabbitmq-broker:
     container_name: rabbitmq-broker
