@@ -29,6 +29,7 @@ public class GetUsersCheckingAccountsEndpoint : ICarterModule
                 }
 
                 return Results.Ok(new GetUsersCheckingAccountsResponse(result.Result.Value));
-            });
+            })
+            .RequireAuthorization();
     }
 }

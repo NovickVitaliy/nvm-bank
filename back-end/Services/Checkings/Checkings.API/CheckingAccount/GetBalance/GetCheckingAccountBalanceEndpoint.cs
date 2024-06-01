@@ -28,6 +28,7 @@ public class GetCheckingAccountBalanceEndpoint : ICarterModule
                 }
 
                 return Results.Ok(new GetCheckingAccountBalanceResponse(result.Result.Value));
-            });
+            })
+            .RequireAuthorization();
     }
 }

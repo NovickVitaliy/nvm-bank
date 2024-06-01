@@ -30,6 +30,7 @@ public class CloseCheckingAccountEndpoint : ICarterModule
                 }
 
                 return Results.Ok(new CloseCheckingAccountResponse(result.Result.Value));
-            });
+            })
+            .RequireAuthorization();
     }
 }

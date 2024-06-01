@@ -1,5 +1,6 @@
 using Carter;
 using Checkings.API.Models.Dtos;
+using Common.ErrorHandling;
 using Common.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -28,6 +29,7 @@ public class GetCheckingAccountEndpoint : ICarterModule
                 }
 
                 return Results.Ok(new GetCheckingsAccountResponse(result.Result.Value));
-            });
+            })
+            .RequireAuthorization();
     }
 }

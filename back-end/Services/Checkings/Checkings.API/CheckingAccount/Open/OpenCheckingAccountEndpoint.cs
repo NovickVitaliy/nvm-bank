@@ -31,6 +31,7 @@ public class OpenCheckingAccountEndpoint : ICarterModule
                 }
 
                 return Results.Ok(new OpenCheckingsAccountResponse(result.Result.Value.Id, result.Result.Value.AccountNumber));
-            });
+            })
+            .RequireAuthorization();
     }
 }
