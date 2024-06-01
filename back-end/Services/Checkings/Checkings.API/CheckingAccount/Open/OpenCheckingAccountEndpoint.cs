@@ -4,6 +4,7 @@ using Common.Extensions;
 using Mapster;
 using MediatR;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Checkings.API.CheckingAccount.Open;
 
@@ -17,9 +18,8 @@ public class OpenCheckingAccountEndpoint : ICarterModule
     {
         app.MapPost("/checkings/accounts", 
             async (
-                OpenCheckingAccountRequest req, 
-                ISender sender,
-                IHttpContextAccessor httpContextAccessor) =>
+                [FromBody] OpenCheckingAccountRequest req, 
+                [FromServices] ISender sender) =>
             {
                 var cmd = req.Adapt<OpenCheckingAccountCommand>();
 
@@ -27,8 +27,7 @@ public class OpenCheckingAccountEndpoint : ICarterModule
                 
                 if (result.Result.IsFailure)
                 {
-                    result.Result.Error.WriteToResponse(httpContextAccessor.HttpContext!.Response);
-                    return Results.StatusCode(result.Result.Error.Code);
+                    return Results.BadRequest(result.Result.Error);
                 }
 
                 return Results.Ok(new OpenCheckingsAccountResponse(result.Result.Value.Id, result.Result.Value.AccountNumber));

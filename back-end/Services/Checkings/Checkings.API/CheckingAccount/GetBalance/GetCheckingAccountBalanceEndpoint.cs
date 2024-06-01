@@ -3,6 +3,7 @@ using Checkings.API.Models.Dtos;
 using Common.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Checkings.API.CheckingAccount.GetBalance;
 
@@ -14,9 +15,8 @@ public class GetCheckingAccountBalanceEndpoint : ICarterModule
     {
         app.MapGet("/checkings/accounts/{accountId:guid}/balance", 
             async (
-                Guid accountId, 
-                ISender sender,
-                IHttpContextAccessor httpContextAccessor) =>
+                [FromRoute] Guid accountId, 
+                [FromServices] ISender sender) =>
             {
                 var query = new GetCheckingAccountBalanceQuery(accountId);
 
@@ -24,8 +24,7 @@ public class GetCheckingAccountBalanceEndpoint : ICarterModule
 
                 if (result.Result.IsFailure)
                 {
-                    result.Result.Error.WriteToResponse(httpContextAccessor.HttpContext!.Response);
-                    return Results.StatusCode(result.Result.Error.Code);
+                    return Results.BadRequest(result.Result.Error);
                 }
 
                 return Results.Ok(new GetCheckingAccountBalanceResponse(result.Result.Value));

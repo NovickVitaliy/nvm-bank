@@ -42,7 +42,7 @@ builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 
 MapsterConfiguration.ConfigureMappings();
 
-builder.Services.ConfigureMessageBroker(builder.Configuration);
+builder.Services.ConfigureMessageBroker(builder.Configuration, Assembly.GetExecutingAssembly());
 
 var app = builder.Build();
 

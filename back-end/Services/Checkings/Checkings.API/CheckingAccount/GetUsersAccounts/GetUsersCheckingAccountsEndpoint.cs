@@ -3,6 +3,7 @@ using Checkings.API.Models.Dtos;
 using Common.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Checkings.API.CheckingAccount.GetUsersAccounts;
 
@@ -15,9 +16,8 @@ public class GetUsersCheckingAccountsEndpoint : ICarterModule
     {
         app.MapGet("/checkings/users/{userEmail}/accounts", 
             async (
-                string userEmail, 
-                ISender sender,
-                IHttpContextAccessor httpContextAccessor) =>
+                [FromRoute] string userEmail, 
+                [FromServices] ISender sender) =>
             {
                 var query = new GetUsersCheckingAccountsQuery(userEmail);
 
@@ -25,8 +25,7 @@ public class GetUsersCheckingAccountsEndpoint : ICarterModule
 
                 if (result.Result.IsFailure)
                 {
-                    result.Result.Error.WriteToResponse(httpContextAccessor.HttpContext!.Response);
-                    return Results.StatusCode(result.Result.Error.Code);
+                    return Results.BadRequest(result.Result.Error);
                 }
 
                 return Results.Ok(new GetUsersCheckingAccountsResponse(result.Result.Value));

@@ -3,10 +3,11 @@ using Common.Extensions;
 using Mapster;
 using MediatR;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Checkings.API.CheckingAccount.Close;
 
-public record CloseCheckingAccountRequest(Guid AccountId, bool IsAwareOfConsequences = false);
+public record CloseCheckingAccountRequest(Guid AccountId, bool IsAware = false);
 
 public record CloseCheckingAccountResponse(bool IsSuccess);
 
@@ -16,9 +17,8 @@ public class CloseCheckingAccountEndpoint : ICarterModule
     {
         app.MapDelete("/checkings/accounts/{accountId}",
             async (
-                CloseCheckingAccountRequest req, 
-                ISender sender,
-                IHttpContextAccessor httpContextAccessor) =>
+                [FromBody] CloseCheckingAccountRequest req, 
+                [FromServices] ISender sender) =>
             {
                 var cmd = req.Adapt<CloseCheckingAccountCommand>();
 
@@ -26,8 +26,7 @@ public class CloseCheckingAccountEndpoint : ICarterModule
 
                 if (result.Result.IsFailure)
                 {
-                    result.Result.Error.WriteToResponse(httpContextAccessor.HttpContext!.Response);
-                    return Results.StatusCode(result.Result.Error.Code);
+                    return Results.BadRequest(result.Result.Error);
                 }
 
                 return Results.Ok(new CloseCheckingAccountResponse(result.Result.Value));
