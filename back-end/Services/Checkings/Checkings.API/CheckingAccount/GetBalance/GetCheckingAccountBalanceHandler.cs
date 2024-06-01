@@ -1,3 +1,4 @@
+using Checkings.API.Data.Repository;
 using Checkings.API.Models.Dtos;
 using Common.CQRS.Handlers;
 using Common.CQRS.Requests;
@@ -11,8 +12,17 @@ public record GetCheckingAccountBalanceResult(Result<AccountBalanceDto> Result);
 
 public class GetCheckingAccountBalanceHandler : IQueryHandler<GetCheckingAccountBalanceQuery, GetCheckingAccountBalanceResult>
 {
-    public Task<GetCheckingAccountBalanceResult> Handle(GetCheckingAccountBalanceQuery request, CancellationToken cancellationToken)
+    private readonly ICheckingsRepository _checkingsRepository;
+
+    public GetCheckingAccountBalanceHandler(ICheckingsRepository checkingsRepository)
     {
-        throw new NotImplementedException();
+        _checkingsRepository = checkingsRepository;
+    }
+
+    public async Task<GetCheckingAccountBalanceResult> Handle(GetCheckingAccountBalanceQuery request, CancellationToken cancellationToken)
+    {
+        var result = await _checkingsRepository.GetBalance(request.AccountId);
+
+        return new GetCheckingAccountBalanceResult(result);
     }
 }

@@ -1,6 +1,8 @@
+using Checkings.API.Data.Repository;
 using Common.CQRS.Handlers;
 using Common.CQRS.Requests;
 using Common.ErrorHandling;
+using Mapster;
 
 namespace Checkings.API.CheckingAccount.Close;
 
@@ -10,8 +12,17 @@ public record CloseCheckingAccountResult(Result<bool> Result);
 
 public class CloseCheckingAccountHandler : ICommandHandler<CloseCheckingAccountCommand, CloseCheckingAccountResult>
 {
-    public Task<CloseCheckingAccountResult> Handle(CloseCheckingAccountCommand request, CancellationToken cancellationToken)
+    private readonly ICheckingsRepository _checkingsRepository;
+
+    public CloseCheckingAccountHandler(ICheckingsRepository checkingsRepository)
     {
-        throw new NotImplementedException();
+        _checkingsRepository = checkingsRepository;
+    }
+
+    public async Task<CloseCheckingAccountResult> Handle(CloseCheckingAccountCommand request, CancellationToken cancellationToken)
+    {
+        var result = await _checkingsRepository.CloseAccount(request.AccountId, request.IsAware);
+
+        return new CloseCheckingAccountResult(result);
     }
 }
