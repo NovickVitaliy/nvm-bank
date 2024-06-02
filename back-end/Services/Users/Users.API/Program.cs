@@ -6,8 +6,11 @@ using Common.ErrorHandling;
 using Common.Logging;
 using Common.Messaging.Extension;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using Users.API.Authorization;
+using Users.API.Authorization.MatchEmailPolicy;
 using Users.API.Data;
 using Users.API.Data.Interceptors;
 using Users.API.Data.Repository;
@@ -22,8 +25,19 @@ builder.ConfigureLogging();
 builder.Services.AddCarter();
 
 builder.Services.ConfigureAuthentication(builder.Configuration);
-builder.Services.AddAuthorization();
+
+builder.Services.AddAuthorizationBuilder()
+    .AddPolicy(Policies.MatchEmailInTokenAndBodyPolicy, policyBuilder =>
+    {
+        policyBuilder.Requirements.Add(new MatchEmailRequirement());
+    });
+
+builder.Services.AddSingleton<IAuthorizationHandler, MatchEmailHandler>();
+
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
 builder.Services.AddDbContext<UsersDbContext>((sp, opt) =>
 {
     opt.AddInterceptors(new SoftDeleteInterceptor());
@@ -31,6 +45,7 @@ builder.Services.AddDbContext<UsersDbContext>((sp, opt) =>
 });
 
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
 builder.Services.AddMediatR(config =>
 {
     config.AddOpenBehavior(typeof(LoggingBehaviour<,>));

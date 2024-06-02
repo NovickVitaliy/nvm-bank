@@ -3,6 +3,7 @@ using Common.ApiResponses;
 using Common.Extensions;
 using Mapster;
 using MediatR;
+using Users.API.Authorization;
 using Users.API.Models.Dtos;
 
 namespace Users.API.Users.CreateUser;
@@ -31,6 +32,6 @@ public class CreateUserEndpoint : ICarterModule
             var result = await sender.Send(cmd);
 
             return result.Result.ToHttpResponse<Guid, CreateUserResponse>();
-        }).RequireAuthorization();
+        }).RequireAuthorization(Policies.MatchEmailInTokenAndBodyPolicy);
     }
 }
