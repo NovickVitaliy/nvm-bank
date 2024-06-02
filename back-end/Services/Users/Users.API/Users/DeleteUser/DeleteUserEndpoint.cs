@@ -1,10 +1,21 @@
 using Carter;
+using Common.ApiResponses;
+using Common.Extensions;
 using MediatR;
 
 namespace Users.API.Users.DeleteUser;
 
 
-public record DeleteUserResponse(bool IsSuccess);
+public record DeleteUserResponse : BaseHttpResponse<bool>
+{
+    public DeleteUserResponse(bool value) : base(value)
+    { }
+
+    public DeleteUserResponse() : this(value:default)
+    {
+        
+    }
+}
 
 public class DeleteUserEndpoint : ICarterModule
 {
@@ -16,12 +27,7 @@ public class DeleteUserEndpoint : ICarterModule
 
             var result = await sender.Send(cmd);
 
-            if (result.Result.IsFailure)
-            {
-                return Results.NotFound(new DeleteUserResponse(false));
-            }
-
-            return Results.Ok(new DeleteUserResponse(true));
+            return result.Result.ToHttpResponse<bool, DeleteUserResponse>();
         }).RequireAuthorization("");
     }
 }

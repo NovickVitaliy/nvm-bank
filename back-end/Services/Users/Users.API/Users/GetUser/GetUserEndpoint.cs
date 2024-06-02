@@ -1,11 +1,22 @@
 using Carter;
+using Common.ApiResponses;
+using Common.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Users.API.Models.Dtos;
 
 namespace Users.API.Users.GetUser;
 
-public record GetUserResponse(UserDto User);
+public record GetUserResponse : BaseHttpResponse<UserDto>
+{
+    public GetUserResponse(UserDto value) : base(value)
+    { }
+
+    public GetUserResponse() : this(value:default)
+    {
+        
+    }
+}
 
 public class GetUserEndpoint : ICarterModule
 {
@@ -17,12 +28,7 @@ public class GetUserEndpoint : ICarterModule
 
             var result = await sender.Send(cmd);
 
-            if (result.Result.IsFailure)
-            {
-                return Results.NotFound(new { description = "User was not found" });
-            }
-
-            return Results.Ok(result.Result.Value);
+            return result.Result.ToHttpResponse<UserDto, GetUserResponse>();
         }).RequireAuthorization();
     }
 }

@@ -52,7 +52,7 @@ public class AuthService : IAuthService
 
         if (user is null)
         {
-            return Result<TokenDto>.Failure(Error.BadRequest("User with given email does not exist."));
+            return Result<TokenDto>.Failure(Error.NotFound("User", loginDto.Email));
         }
 
         var isPasswordCorrect = await _userManager.CheckPasswordAsync(user, loginDto.Password);

@@ -1,5 +1,6 @@
 using Carter;
 using Checkings.API.Models.Dtos;
+using Common.ApiResponses;
 using Common.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -7,7 +8,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Checkings.API.CheckingAccount.GetBalance;
 
-public record GetCheckingAccountBalanceResponse(AccountBalanceDto AccountBalance);
+public record GetCheckingAccountBalanceResponse : BaseHttpResponse<AccountBalanceDto>
+{
+    public GetCheckingAccountBalanceResponse(AccountBalanceDto value) : base(value)
+    {
+    }
+
+    public GetCheckingAccountBalanceResponse() : this(value:default!)
+    {
+        
+    }
+}
 
 public class GetCheckingAccountBalanceEndpoint : ICarterModule
 {
@@ -22,12 +33,7 @@ public class GetCheckingAccountBalanceEndpoint : ICarterModule
 
                 var result = await sender.Send(query);
 
-                if (result.Result.IsFailure)
-                {
-                    return Results.BadRequest(result.Result.Error);
-                }
-
-                return Results.Ok(new GetCheckingAccountBalanceResponse(result.Result.Value));
+                return result.Result.ToHttpResponse<AccountBalanceDto, GetCheckingAccountBalanceResponse>();
             })
             .RequireAuthorization();
     }

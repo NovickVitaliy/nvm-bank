@@ -1,4 +1,6 @@
 using Carter;
+using Common.ApiResponses;
+using Common.Extensions;
 using Mapster;
 using MediatR;
 using Users.API.Models.Dtos;
@@ -7,7 +9,16 @@ namespace Users.API.Users.CreateUser;
 
 public record CreateUserRequest(UserDto User);
 
-public record CreateUserResponse(Guid Id);
+public record CreateUserResponse : BaseHttpResponse<Guid>
+{
+    public CreateUserResponse(Guid value) : base(value)
+    { }
+
+    public CreateUserResponse() : this(value:default)
+    {
+        
+    }
+}
 
 public class CreateUserEndpoint : ICarterModule
 {
@@ -17,15 +28,9 @@ public class CreateUserEndpoint : ICarterModule
         {
             var cmd = req.Adapt<CreateUserCommand>();
 
-            var response = await sender.Send(cmd);
+            var result = await sender.Send(cmd);
 
-            if (response.Result.IsFailure)
-            {
-                return Results.BadRequest(response.Result.Error);
-            }
-            
-            return Results.Created($"/users/{response.Result.Value}",
-                new CreateUserResponse(response.Result.Value));
+            return result.Result.ToHttpResponse<Guid, CreateUserResponse>();
         }).RequireAuthorization();
     }
 }

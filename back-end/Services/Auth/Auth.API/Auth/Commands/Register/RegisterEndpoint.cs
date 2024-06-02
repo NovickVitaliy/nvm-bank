@@ -1,6 +1,8 @@
 using Auth.API.Models.Dtos;
 using Carter;
+using Common.ApiResponses;
 using Common.ErrorHandling;
+using Common.Extensions;
 using Mapster;
 using MediatR;
 
@@ -8,7 +10,14 @@ namespace Auth.API.Auth.Commands.Register;
 
 public record RegisterRequest(RegisterDto RegisterDto);
 
-public record RegisterResponse(Result<TokenDto> Result);
+public record RegisterResponse : BaseHttpResponse<TokenDto>
+{
+    public RegisterResponse(TokenDto value) : base(value)
+    { }
+
+    public RegisterResponse() : this(value:default!)
+    { }
+}
 
 public class RegisterEndpoint : ICarterModule
 {
@@ -20,9 +29,8 @@ public class RegisterEndpoint : ICarterModule
 
             var result = await sender.Send(cmd);
 
-            return result.Result.IsFailure 
-                ? Results.Conflict(result.Result.Error) 
-                : Results.Ok(result.Result.Value);
+
+            return result.Result.ToHttpResponse<TokenDto, RegisterResponse>();
         });
     }
 }

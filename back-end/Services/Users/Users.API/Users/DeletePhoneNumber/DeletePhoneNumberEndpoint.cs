@@ -1,10 +1,21 @@
 using Carter;
+using Common.ApiResponses;
+using Common.Extensions;
 using MediatR;
 using Users.API.Users.UpdateUser;
 
 namespace Users.API.Users.DeletePhoneNumber;
 
-public record DeletePhoneNumberResponse(bool IsSuccess);
+public record DeletePhoneNumberResponse : BaseHttpResponse<bool>
+{
+    public DeletePhoneNumberResponse(bool value) : base(value)
+    { }
+
+    public DeletePhoneNumberResponse() : base(value:default)
+    {
+        
+    }
+}
 
 public class DeletePhoneNumberEndpoint : ICarterModule
 {
@@ -20,12 +31,7 @@ public class DeletePhoneNumberEndpoint : ICarterModule
 
             var result = await sender.Send(cmd);
 
-            if (result.Result.IsFailure)
-            {
-                return Results.NotFound(result.Result.Error);
-            }
-
-            return Results.Ok(new DeletePhoneNumberResponse(result.Result.Value));
+            return result.Result.ToHttpResponse<bool, DeletePhoneNumberResponse>();
         });
     }
 }
