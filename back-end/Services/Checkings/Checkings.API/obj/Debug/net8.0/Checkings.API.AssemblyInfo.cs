@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Checkings.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2017600eb7f4d08bf48d377df54957ebdf3b5367")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+313ff83e51c32847e429666178c1dfe7f418df75")]
 [assembly: System.Reflection.AssemblyProductAttribute("Checkings.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Checkings.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

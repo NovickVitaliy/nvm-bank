@@ -79,6 +79,21 @@ services:
       - seq-logging
       - notification.api
   
+  checkings.api:
+    container_name: checkings.api
+    restart: always
+    environment:
+      - ASPNETCORE_HTTP_PORTS=8080
+      - MessageBroker__Host=amqp://nvm-bank-mb:5672
+      - Serilog__WriteTo__1__Args__serverUrl=http://seq-logging:5341
+      - ConnectionStrings__UsersDb=Server=checkingsdb;Port=5432;Database=UsersDb;User Id=users.api;Password=ifYouSeeThisThenHaveANiceDay;Include Error Detail=true
+    ports:
+      - "6003:8080"
+    depends_on:
+      - checkingsdb
+      - seq-logging
+      - rabbitmq-broker
+  
   rabbitmq-broker:
     container_name: rabbitmq-broker
     restart: always
