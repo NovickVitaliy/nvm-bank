@@ -36,9 +36,8 @@ public class DeleteClosedAccountAfterTimeJob : BackgroundService
             messages.AddRange(accountsToDelete.Select(checkingAccount => new ClosedCheckingAccountDeletedPermanently
                 { AccountNumber = checkingAccount.AccountNumber, OwnerEmail = checkingAccount.OwnerEmail }));
 
-            var tasks = messages.Select(message => publishEndpoint.Publish(message, stoppingToken));
+            await publishEndpoint.PublishBatch(messages, cancellationToken: stoppingToken);
             dbContext.CheckingAccounts.RemoveRange(accountsToDelete);
-            await Task.WhenAll(tasks);
         }
     }
 }

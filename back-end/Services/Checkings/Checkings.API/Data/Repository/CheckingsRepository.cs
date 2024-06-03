@@ -52,13 +52,13 @@ public class CheckingsRepository : ICheckingsRepository
             .CountAsync() >= maximumNumberOfCheckingAccounts;
     }
 
-    public async Task<(Result<bool>, string)> CloseAccount(Guid id, bool isAware)
+    public async Task<(Result<bool>, string, Guid)> CloseAccount(Guid id, bool isAware)
     {
         if (!isAware)
         {
             return (Result<bool>.Failure(
                     Error.BadRequest("To close the account you must be aware of the possible consequences.")),
-                string.Empty);
+                string.Empty, Guid.Empty);
         }
 
         var checkingAccount = await _db.CheckingAccounts.FindAsync(id);
@@ -66,14 +66,14 @@ public class CheckingsRepository : ICheckingsRepository
         if (checkingAccount is null)
         {
             return (Result<bool>.Failure(
-                Error.BadRequest("Checking account is not found.")), string.Empty);
+                Error.BadRequest("Checking account is not found.")), string.Empty, Guid.Empty);
         }
 
         checkingAccount.Status = AccountStatus.Closed;
 
         await _db.SaveChangesAsync();
 
-        return (Result<bool>.Success(true), checkingAccount.OwnerEmail);
+        return (Result<bool>.Success(true), checkingAccount.OwnerEmail, checkingAccount.AccountNumber);
     }
 
     public async Task<Result<CheckingAccountDto>> GetAccount(Guid id)

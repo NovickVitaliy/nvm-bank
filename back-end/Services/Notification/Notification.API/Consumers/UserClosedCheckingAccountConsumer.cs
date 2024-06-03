@@ -26,7 +26,7 @@ public class UserClosedCheckingAccountConsumer : IConsumer<UserClosedCheckingAcc
         {
             Subject = "Checking Account Closed",
             Body =
-                $"Your checking account with id of {context.Message.AccountId} has been closed. You have 14 days to reopen the account if you wish to.",
+                $"Your checking account with number of {context.Message.AccountNumber} has been closed. You have 14 days to reopen the account if you wish to.",
             Format = TextFormat.Plain
         });
     }

@@ -30,7 +30,7 @@ public class CloseCheckingAccountHandler : ICommandHandler<CloseCheckingAccountC
             await _publishEndpoint.Publish(new UserClosedCheckingAccount()
             {
                 Email = result.Email,
-                AccountId = request.AccountId
+                AccountNumber = result.AccountNumber
             }, cancellationToken);
         }
         
