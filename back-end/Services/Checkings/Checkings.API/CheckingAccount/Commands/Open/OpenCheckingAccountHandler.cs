@@ -6,7 +6,7 @@ using Common.Messaging.Events.UserExists;
 using FluentValidation;
 using MassTransit;
 
-namespace Checkings.API.CheckingAccount.Open;
+namespace Checkings.API.CheckingAccount.Commands.Open;
 
 public record OpenCheckingAccountCommand(string OwnerEmail, string Currency) : ICommand<OpenCheckingAccountResult>;
 

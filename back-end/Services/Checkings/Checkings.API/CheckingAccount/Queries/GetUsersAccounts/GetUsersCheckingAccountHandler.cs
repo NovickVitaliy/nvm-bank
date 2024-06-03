@@ -4,7 +4,7 @@ using Common.CQRS.Handlers;
 using Common.CQRS.Requests;
 using Common.ErrorHandling;
 
-namespace Checkings.API.CheckingAccount.GetUsersAccounts;
+namespace Checkings.API.CheckingAccount.Queries.GetUsersAccounts;
 
 public record GetUsersCheckingAccountsQuery(string UserEmail) : IQuery<GetUsersCheckingAccountsResult>;
 

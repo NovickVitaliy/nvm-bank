@@ -4,7 +4,7 @@ using Common.CQRS.Handlers;
 using Common.CQRS.Requests;
 using Common.ErrorHandling;
 
-namespace Checkings.API.CheckingAccount.GetBalance;
+namespace Checkings.API.CheckingAccount.Queries.GetBalance;
 
 public record GetCheckingAccountBalanceQuery(Guid AccountId) : IQuery<GetCheckingAccountBalanceResult>;
 

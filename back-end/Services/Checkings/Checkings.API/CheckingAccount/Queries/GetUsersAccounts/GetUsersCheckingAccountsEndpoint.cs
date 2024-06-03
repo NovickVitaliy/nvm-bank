@@ -3,10 +3,9 @@ using Checkings.API.Models.Dtos;
 using Common.ApiResponses;
 using Common.Extensions;
 using MediatR;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Checkings.API.CheckingAccount.GetUsersAccounts;
+namespace Checkings.API.CheckingAccount.Queries.GetUsersAccounts;
 
 
 public record GetUsersCheckingAccountsResponse : BaseHttpResponse<IReadOnlyCollection<CheckingAccountDto>>

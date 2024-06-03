@@ -1,13 +1,11 @@
 using Carter;
-using Checkings.API.Models.Dtos;
 using Common.ApiResponses;
 using Common.Extensions;
 using Mapster;
 using MediatR;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Checkings.API.CheckingAccount.Open;
+namespace Checkings.API.CheckingAccount.Commands.Open;
 
 public record OpenCheckingAccountRequest(string OwnerEmail, string Currency);
 

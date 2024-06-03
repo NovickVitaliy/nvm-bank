@@ -1,14 +1,11 @@
 using Carter;
-using Checkings.API.CheckingAccount.Close;
 using Checkings.API.Models.Dtos;
 using Common.ApiResponses;
-using Common.ErrorHandling;
 using Common.Extensions;
 using MediatR;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Checkings.API.CheckingAccount.Get;
+namespace Checkings.API.CheckingAccount.Queries.Get;
 
 public record GetCheckingsAccountResponse : BaseHttpResponse<CheckingAccountDto>
 {

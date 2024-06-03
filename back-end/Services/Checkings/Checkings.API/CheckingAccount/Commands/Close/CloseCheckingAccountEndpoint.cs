@@ -3,10 +3,9 @@ using Common.ApiResponses;
 using Common.Extensions;
 using Mapster;
 using MediatR;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Checkings.API.CheckingAccount.Close;
+namespace Checkings.API.CheckingAccount.Commands.Close;
 
 public record CloseCheckingAccountRequest(Guid AccountId, bool IsAware = false);
 

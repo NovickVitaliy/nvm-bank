@@ -2,9 +2,8 @@ using Checkings.API.Data.Repository;
 using Common.CQRS.Handlers;
 using Common.CQRS.Requests;
 using Common.ErrorHandling;
-using Mapster;
 
-namespace Checkings.API.CheckingAccount.Close;
+namespace Checkings.API.CheckingAccount.Commands.Close;
 
 public record CloseCheckingAccountCommand(Guid AccountId, bool IsAware) : ICommand<CloseCheckingAccountResult>;
 
