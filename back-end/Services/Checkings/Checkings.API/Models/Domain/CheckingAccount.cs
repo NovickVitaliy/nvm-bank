@@ -11,4 +11,5 @@ public class CheckingAccount
     public required DateTime CreatedAt { get; set; }
     public required AccountStatus Status { get; set; }
     public required string Currency { get; set; }
+    public DateTime? ClosedOn { get; set; }
 }
