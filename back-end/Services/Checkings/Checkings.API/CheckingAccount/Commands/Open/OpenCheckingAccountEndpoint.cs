@@ -9,9 +9,10 @@ namespace Checkings.API.CheckingAccount.Commands.Open;
 
 public record OpenCheckingAccountRequest(string OwnerEmail, string Currency);
 
-public record OpenCheckingsAccountResponse : BaseHttpResponse<(string Id, string AccountNumber)>
+public record CheckingAccountOpenedDto(string Id, string AccountNumber);
+public record OpenCheckingsAccountResponse : BaseHttpResponse<CheckingAccountOpenedDto>
 {
-    public OpenCheckingsAccountResponse((string Id, string AccountNumber) value) : base(value)
+    public OpenCheckingsAccountResponse(CheckingAccountOpenedDto value) : base(value)
     { }
 
     public OpenCheckingsAccountResponse() : this(value:default!)
@@ -32,7 +33,7 @@ public class OpenCheckingAccountEndpoint : ICarterModule
 
                 var result = await sender.Send(cmd);
 
-                return result.Result.ToHttpResponse<(string Id, string AccountNumber), OpenCheckingsAccountResponse>();
+                return result.Result.ToHttpResponse<CheckingAccountOpenedDto, OpenCheckingsAccountResponse>();
             })
             .RequireAuthorization();
     }

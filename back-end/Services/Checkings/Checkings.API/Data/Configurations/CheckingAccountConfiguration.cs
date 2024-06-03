@@ -12,8 +12,6 @@ public class CheckingAccountConfiguration : IEntityTypeConfiguration<Models.Doma
 
         builder.HasQueryFilter(x => x.Status != AccountStatus.Closed);
         
-        builder.HasAlternateKey(x => x.OwnerEmail);
-
         builder.Property(x => x.Balance)
             .IsRequired();
 

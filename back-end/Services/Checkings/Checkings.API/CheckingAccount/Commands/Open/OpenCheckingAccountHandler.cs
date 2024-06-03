@@ -10,7 +10,7 @@ namespace Checkings.API.CheckingAccount.Commands.Open;
 
 public record OpenCheckingAccountCommand(string OwnerEmail, string Currency) : ICommand<OpenCheckingAccountResult>;
 
-public record OpenCheckingAccountResult(Result<(string Id, string AccountNumber)> Result);
+public record OpenCheckingAccountResult(Result<CheckingAccountOpenedDto> Result);
 
 public sealed class OpenCheckingsAccountValidtor : AbstractValidator<OpenCheckingAccountCommand>
 {

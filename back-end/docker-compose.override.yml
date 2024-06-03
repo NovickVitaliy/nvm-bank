@@ -86,7 +86,7 @@ services:
       - ASPNETCORE_HTTP_PORTS=8080
       - MessageBroker__Host=amqp://nvm-bank-mb:5672
       - Serilog__WriteTo__1__Args__serverUrl=http://seq-logging:5341
-      - ConnectionStrings__UsersDb=Server=checkingsdb;Port=5432;Database=UsersDb;User Id=users.api;Password=ifYouSeeThisThenHaveANiceDay;Include Error Detail=true
+      - ConnectionStrings__CheckingsDb=Server=checkingsdb;Port=5432;Database=CheckingsDb;User Id=checkings.api;Password=ifYouSeeThisThenHaveANiceDay;Include Error Detail=true
     ports:
       - "6003:8080"
     depends_on:

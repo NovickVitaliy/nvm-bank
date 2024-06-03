@@ -22,15 +22,12 @@ public class UserFinishedRegistrationConsumer : IConsumer<UserFinishedRegistrati
         var recipient = new Recipient
         {
             Email = eventMessage.Email,
-            FirstName = eventMessage.FirstName,
-            LastName = eventMessage.LastName
         };
         
         var messageDetails = new MessageDetails
         {
             Subject = "Welcome to NVM-Bank",
-            Body = $"Dear {eventMessage.FirstName} {eventMessage.LastName}, " +
-                   $"welcome the the NVM-Bank. We hope that you will have great time using our bank!",
+            Body = $"Welcome the the NVM-Bank. We hope that you will have great time using our bank!",
             Format = TextFormat.Plain
         };
 

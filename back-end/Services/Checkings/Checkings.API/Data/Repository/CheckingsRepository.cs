@@ -1,3 +1,4 @@
+using Checkings.API.CheckingAccount.Commands.Open;
 using Checkings.API.Models.Dtos;
 using Common.Accounts.Status;
 using Common.ErrorHandling;
@@ -15,7 +16,7 @@ public class CheckingsRepository : ICheckingsRepository
         _db = db;
     }
 
-    public async Task<Result<(string Id, string AccountNumber)>> OpenAccount(string ownerEmail, string currency)
+    public async Task<Result<CheckingAccountOpenedDto>> OpenAccount(string ownerEmail, string currency)
     {
         var account = new Models.Domain.CheckingAccount
         {
@@ -31,30 +32,30 @@ public class CheckingsRepository : ICheckingsRepository
 
         await _db.SaveChangesAsync();
 
-        return Result<(string Id, string AccountNumber)>.Success((account.Id.ToString(), account.AccountNumber.ToString()));
+        return Result<CheckingAccountOpenedDto>.Success(new CheckingAccountOpenedDto(account.Id.ToString(), account.AccountNumber.ToString()));
     }
 
-    public async Task<Result<bool>> CloseAccount(Guid id, bool isAware)
+    public async Task<(Result<bool>, string)> CloseAccount(Guid id, bool isAware)
     {
         if (!isAware)
         {
-            return Result<bool>.Failure(
-                Error.BadRequest("To close the account you must be aware of the possible consequences."));
+            return (Result<bool>.Failure(
+                Error.BadRequest("To close the account you must be aware of the possible consequences.")), string.Empty);
         }
 
         var checkingAccount = await _db.CheckingAccounts.FindAsync(id);
 
         if (checkingAccount is null)
         {
-            return Result<bool>.Failure(
-                Error.BadRequest("Checking account is not found."));
+            return (Result<bool>.Failure(
+                Error.BadRequest("Checking account is not found.")), string.Empty);
         }
 
         checkingAccount.Status = AccountStatus.Closed;
 
         await _db.SaveChangesAsync();
         
-        return Result<bool>.Success(true);
+        return (Result<bool>.Success(true), checkingAccount.OwnerEmail);
     }
 
     public async Task<Result<CheckingAccountDto>> GetAccount(Guid id)

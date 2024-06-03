@@ -21,7 +21,7 @@ public class EmailService : IEmailService
         
         message.From.Add(new MailboxAddress(_emailSettings.SenderName, _emailSettings.SenderEmail));
         
-        message.To.Add(new MailboxAddress($"{recipient.FirstName} {recipient.LastName}" ,
+        message.To.Add(new MailboxAddress($"{recipient.Email}" ,
             recipient.Email));
         
         message.Subject = message.Subject;
