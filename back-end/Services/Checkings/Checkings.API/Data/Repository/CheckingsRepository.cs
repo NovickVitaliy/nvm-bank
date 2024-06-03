@@ -1,4 +1,5 @@
 using Checkings.API.CheckingAccount.Commands.Open;
+using Checkings.API.CheckingAccount.Commands.Reopen;
 using Checkings.API.Models.Dtos;
 using Common.Accounts;
 using Common.Accounts.Status;
@@ -121,5 +122,23 @@ public class CheckingsRepository : ICheckingsRepository
                 .Select(x => x.Adapt<CheckingAccountDto>())
                 .ToList()
                 .AsReadOnly());
+    }
+
+    public async Task<Result<CheckingAccountReopenedDto>> ReopenAccount(Guid accountId)
+    {
+        var account = await _db.CheckingAccounts.IgnoreQueryFilters()
+            .Where(x => x.Id == accountId)
+            .SingleOrDefaultAsync();
+
+        if (account is null)
+        {
+            return Result<CheckingAccountReopenedDto>.Failure(Error.NotFound(nameof(Models.Domain.CheckingAccount), accountId.ToString()));
+        }
+
+        account.Status = AccountStatus.Active;
+
+        await _db.SaveChangesAsync();
+
+        return Result<CheckingAccountReopenedDto>.Success(new CheckingAccountReopenedDto(true));
     }
 }

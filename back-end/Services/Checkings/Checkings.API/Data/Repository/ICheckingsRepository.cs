@@ -1,4 +1,5 @@
 using Checkings.API.CheckingAccount.Commands.Open;
+using Checkings.API.CheckingAccount.Commands.Reopen;
 using Checkings.API.Models.Dtos;
 using Common.ErrorHandling;
 
@@ -11,4 +12,5 @@ public interface ICheckingsRepository
     Task<Result<CheckingAccountDto>> GetAccount(Guid id);
     Task<Result<AccountBalanceDto>> GetBalance(Guid id);
     Task<Result<IReadOnlyCollection<CheckingAccountDto>>> GetUsersAccounts(string ownerEmail);
+    Task<Result<CheckingAccountReopenedDto>> ReopenAccount(Guid requestAccountId);
 }

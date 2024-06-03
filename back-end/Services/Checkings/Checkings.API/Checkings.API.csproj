@@ -31,7 +31,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="CheckingAccount\Commands\" />
       <Folder Include="CheckingAccount\EventHandlers\" />
       <Folder Include="CheckingAccount\Queries\" />
     </ItemGroup>
