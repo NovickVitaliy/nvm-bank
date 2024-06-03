@@ -1,5 +1,6 @@
 using Checkings.API.CheckingAccount.Commands.Open;
 using Checkings.API.Models.Dtos;
+using Common.Accounts;
 using Common.Accounts.Status;
 using Common.ErrorHandling;
 using Mapster;
@@ -18,6 +19,13 @@ public class CheckingsRepository : ICheckingsRepository
 
     public async Task<Result<CheckingAccountOpenedDto>> OpenAccount(string ownerEmail, string currency)
     {
+        if (await DoesUserHaveMaximumNumberOfAccount(ownerEmail,
+                CheckingAccountConstants.MaximumNumberOfCheckingAccounts))
+        {
+            return Result<CheckingAccountOpenedDto>.Failure(Error.BadRequest(
+                "You already own 5 checking accounts. Both opened and closed. Please delete the closed account in order to create a new one"));
+        }
+
         var account = new Models.Domain.CheckingAccount
         {
             OwnerEmail = ownerEmail,
@@ -32,7 +40,16 @@ public class CheckingsRepository : ICheckingsRepository
 
         await _db.SaveChangesAsync();
 
-        return Result<CheckingAccountOpenedDto>.Success(new CheckingAccountOpenedDto(account.Id.ToString(), account.AccountNumber.ToString()));
+        return Result<CheckingAccountOpenedDto>.Success(new CheckingAccountOpenedDto(account.Id.ToString(),
+            account.AccountNumber.ToString()));
+    }
+
+    private async Task<bool> DoesUserHaveMaximumNumberOfAccount(string ownerEmail, int maximumNumberOfCheckingAccounts)
+    {
+        return await _db.CheckingAccounts
+            .IgnoreQueryFilters()
+            .Where(x => x.OwnerEmail == ownerEmail)
+            .CountAsync() >= maximumNumberOfCheckingAccounts;
     }
 
     public async Task<(Result<bool>, string)> CloseAccount(Guid id, bool isAware)
@@ -40,7 +57,8 @@ public class CheckingsRepository : ICheckingsRepository
         if (!isAware)
         {
             return (Result<bool>.Failure(
-                Error.BadRequest("To close the account you must be aware of the possible consequences.")), string.Empty);
+                    Error.BadRequest("To close the account you must be aware of the possible consequences.")),
+                string.Empty);
         }
 
         var checkingAccount = await _db.CheckingAccounts.FindAsync(id);
@@ -54,7 +72,7 @@ public class CheckingsRepository : ICheckingsRepository
         checkingAccount.Status = AccountStatus.Closed;
 
         await _db.SaveChangesAsync();
-        
+
         return (Result<bool>.Success(true), checkingAccount.OwnerEmail);
     }
 
@@ -66,7 +84,8 @@ public class CheckingsRepository : ICheckingsRepository
 
         if (account is null)
         {
-            return Result<CheckingAccountDto>.Failure(Error.NotFound(nameof(Models.Domain.CheckingAccount), id.ToString()));
+            return Result<CheckingAccountDto>.Failure(Error.NotFound(nameof(Models.Domain.CheckingAccount),
+                id.ToString()));
         }
 
         return Result<CheckingAccountDto>.Success(account.Adapt<CheckingAccountDto>());
