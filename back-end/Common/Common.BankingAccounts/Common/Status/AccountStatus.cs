@@ -1,4 +1,4 @@
-namespace Common.Accounts.Status;
+namespace Common.Accounts.Common.Status;
 
 public enum AccountStatus
 {

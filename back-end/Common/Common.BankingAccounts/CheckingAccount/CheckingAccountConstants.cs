@@ -1,4 +1,4 @@
-namespace Common.Accounts;
+namespace Common.Accounts.CheckingAccount;
 
 public static class CheckingAccountConstants
 {

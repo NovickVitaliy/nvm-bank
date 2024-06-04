@@ -1,4 +1,4 @@
-using Common.Accounts.Status;
+using Common.Accounts.Common.Status;
 
 namespace Checkings.API.Models.Dtos;
 

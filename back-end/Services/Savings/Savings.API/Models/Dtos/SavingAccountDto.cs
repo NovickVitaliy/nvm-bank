@@ -1,15 +1,18 @@
 using Common.Accounts.Common.Status;
+using Common.Accounts.SavingAccount;
 
-namespace Checkings.API.Models.Domain;
+namespace Savings.API.Models.Dtos;
 
-public class CheckingAccount
+public class SavingAccountDto
 {
     public Guid Id { get; set; }
-    public required string OwnerEmail { get; set; }
+    public required string EmailOwner { get; set; }
     public required Guid AccountNumber { get; set; }
     public required ulong Balance { get; set; }
     public required DateTime CreatedAt { get; set; }
     public required AccountStatus Status { get; set; }
     public required string Currency { get; set; }
     public DateTime? ClosedOn { get; set; }
+    public required double InterestRate { get; set; }
+    public required InterestAccrualPeriod AccrualPeriod {get; set; }
 }

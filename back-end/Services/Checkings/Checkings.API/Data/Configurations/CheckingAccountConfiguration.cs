@@ -1,4 +1,4 @@
-using Common.Accounts.Status;
+using Common.Accounts.Common.Status;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

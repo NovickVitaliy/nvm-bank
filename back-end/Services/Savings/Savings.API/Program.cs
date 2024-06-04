@@ -27,7 +27,7 @@ builder.Services.AddMediatR(config =>
 
 builder.Services.AddValidatorsFromAssembly(assembly);
 
-builder.Services.ConfigureMessageBroker(builder.Configuration, Assembly.GetExecutingAssembly());
+builder.Services.ConfigureMessageBroker(builder.Configuration, assembly);
 
 builder.Services.Configure<JsonOptions>(config =>
 {

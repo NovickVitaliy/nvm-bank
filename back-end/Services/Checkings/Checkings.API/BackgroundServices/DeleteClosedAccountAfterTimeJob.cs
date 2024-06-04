@@ -1,5 +1,6 @@
 using Checkings.API.Data;
 using Common.Accounts;
+using Common.Accounts.CheckingAccount;
 using Common.Messaging.Events;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
