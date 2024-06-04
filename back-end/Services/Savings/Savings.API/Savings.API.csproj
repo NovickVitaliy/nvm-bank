@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Common\Common.Auth\Common.Auth.csproj" />
+      <ProjectReference Include="..\..\..\Common\Common.BankingAccounts\Common.BankingAccounts.csproj" />
+      <ProjectReference Include="..\..\..\Common\Common.CQRS\Common.CQRS.csproj" />
+      <ProjectReference Include="..\..\..\Common\Common.Messaging\Common.Messaging.csproj" />
+      <ProjectReference Include="..\..\..\Common\Common\Common.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Carter" Version="8.1.0" />
+    </ItemGroup>
+
+</Project>
