@@ -4,6 +4,7 @@ using System.Text.Json.Serialization;
 using Carter;
 using Checkings.API.Data;
 using Checkings.API.Data.Repository;
+using Checkings.API.Extensions;
 using Common.Auth;
 using Common.CQRS.Behaviours;
 using Common.ErrorHandling;
@@ -54,6 +55,11 @@ builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddScoped<ICheckingsRepository, CheckingsRepository>();
 
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    await app.MigrateDatabaseAsync();
+}
 
 app.UseExceptionHandler(options => { });
 
