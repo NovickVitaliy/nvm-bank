@@ -20,7 +20,8 @@ public class CheckingAccountConfiguration : IEntityTypeConfiguration<Models.Doma
             .HasMaxLength(3);
 
         builder.Property(x => x.Status)
-            .IsRequired();
+            .IsRequired()
+            .HasConversion<string>();
 
         builder.Property(x => x.AccountNumber)
             .IsRequired();
