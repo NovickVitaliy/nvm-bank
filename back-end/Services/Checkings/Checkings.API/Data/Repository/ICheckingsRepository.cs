@@ -1,6 +1,7 @@
 using Checkings.API.CheckingAccount.Commands.Open;
 using Checkings.API.CheckingAccount.Commands.Reopen;
 using Checkings.API.Models.Dtos;
+using Common.Accounts.Common;
 using Common.ErrorHandling;
 
 namespace Checkings.API.Data.Repository;

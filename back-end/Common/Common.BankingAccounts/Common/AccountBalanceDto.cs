@@ -1,4 +1,4 @@
-namespace Checkings.API.Models.Dtos;
+namespace Common.Accounts.Common;
 
 public record AccountBalanceDto(
     Guid AccountId, 
