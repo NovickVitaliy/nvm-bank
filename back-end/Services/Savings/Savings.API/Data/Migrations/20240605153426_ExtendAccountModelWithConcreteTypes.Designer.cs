@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Savings.API.Data;
@@ -11,9 +12,11 @@ using Savings.API.Data;
 namespace Savings.API.Data.Migrations
 {
     [DbContext(typeof(SavingDbContext))]
-    partial class SavingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240605153426_ExtendAccountModelWithConcreteTypes")]
+    partial class ExtendAccountModelWithConcreteTypes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

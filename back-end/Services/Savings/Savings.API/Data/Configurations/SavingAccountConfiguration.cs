@@ -7,7 +7,7 @@ public class SavingAccountConfiguration : IEntityTypeConfiguration<Models.Domain
 {
     public void Configure(EntityTypeBuilder<Models.Domain.SavingAccount> builder)
     {
-        builder.ToTable("SavingAccounts");
+        builder.UseTpcMappingStrategy();
 
         builder.HasKey(x => x.Id);
 

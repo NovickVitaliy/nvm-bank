@@ -3,7 +3,7 @@ using Common.Accounts.SavingAccount;
 
 namespace Savings.API.Models.Domain;
 
-public class SavingAccount
+public abstract class SavingAccount
 {
     public Guid Id { get; set; }
     public required string EmailOwner { get; set; }
