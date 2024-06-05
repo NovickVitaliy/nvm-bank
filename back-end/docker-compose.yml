@@ -31,6 +31,9 @@
     
   checkingsdb:
     image: postgres
+
+  savingsdb:
+    image: postgres
   
   rabbitmq-broker:
     image: rabbitmq:3-management
@@ -42,3 +45,4 @@ volumes:
   mssql-authdb:
   postgres-usersdb:
   postgres-checkingsdb:
+  postgres-savingsdb:

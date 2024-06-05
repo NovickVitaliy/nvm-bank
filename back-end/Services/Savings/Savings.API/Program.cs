@@ -8,6 +8,9 @@ using Common.Logging;
 using Common.Messaging.Extension;
 using FluentValidation;
 using Microsoft.AspNetCore.Http.Json;
+using Microsoft.EntityFrameworkCore;
+using Savings.API.Data;
+using Savings.API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 var assembly = Assembly.GetExecutingAssembly();
@@ -41,7 +44,17 @@ builder.Services.AddCarter(configurator: config =>
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
+builder.Services.AddDbContext<SavingDbContext>(opt =>
+{
+    opt.UseNpgsql(builder.Configuration.GetConnectionString(SavingDbContext.ConnectionStringName));
+});
+
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    await app.MigrateDatabaseAsync();
+}
 
 app.UseExceptionHandler(options => { });
 

@@ -34,6 +34,18 @@ services:
       - "5433:5432"
     volumes:
       - postgres-checkingsdb:/var/lib/postgresql/data
+
+  savingsdb:
+    container_name: savingsdb
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=ifYouSeeThisThenHaveANiceDay
+      - POSTGRES_USER=savings.api
+      - POSTGRES_DB=SavingsDb
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres-savingsdb:/var/lib/postgresql/data
   
   auth.api:
     container_name: auth.api
