@@ -1,5 +1,6 @@
 using Carter;
 using Common.ApiResponses;
+using Common.Extensions;
 using MediatR;
 using Savings.API.Models.Dtos;
 
@@ -22,8 +23,13 @@ public class GetSavingAccountEndpoint : ICarterModule
     {
         app.MapGet("/savings/accounts/{accountId:guid}", 
             async (Guid accountId, ISender sender) =>
-        {
-            //TODO: create query -> send and get result -> return response
-        });
+            {
+                var query = new GetSavingAccountQuery(accountId);
+
+                var result = await sender.Send(query);
+
+                return result.Result.ToHttpResponse<SavingAccountDto, GetSavingAccountResponse>();
+            })
+            .RequireAuthorization();
     }
 }

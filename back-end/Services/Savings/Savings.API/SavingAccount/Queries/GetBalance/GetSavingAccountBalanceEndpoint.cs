@@ -1,6 +1,7 @@
 using Carter;
 using Common.Accounts.Common;
 using Common.ApiResponses;
+using Common.Extensions;
 using MediatR;
 
 namespace Savings.API.SavingAccount.Queries.GetBalance;
@@ -20,8 +21,12 @@ public class GetSavingAccountBalanceEndpoint : ICarterModule
     {
         app.MapGet("/savings/accounts/{accountId:guid}/balance", 
             async (Guid accountId, ISender sender) =>
-        {
-            //TODO: create query -> send and get result -> return response
-        });
+            {
+                var query = new GetSavingAccountBalanceQuery(accountId);
+
+                var result = await sender.Send(query);
+
+                return result.Result.ToHttpResponse<AccountBalanceDto, GetSavingAccountBalanceResponse>();
+            }).RequireAuthorization();
     }
 }

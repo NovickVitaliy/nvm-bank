@@ -10,6 +10,7 @@ using FluentValidation;
 using Microsoft.AspNetCore.Http.Json;
 using Microsoft.EntityFrameworkCore;
 using Savings.API.Data;
+using Savings.API.Data.Repository;
 using Savings.API.Extensions;
 using Savings.API.Services.AccountFactory;
 
@@ -49,6 +50,8 @@ builder.Services.AddDbContext<SavingDbContext>(opt =>
 {
     opt.UseNpgsql(builder.Configuration.GetConnectionString(SavingDbContext.ConnectionStringName));
 });
+
+builder.Services.AddScoped<ISavingsRepository, SavingsRepository>();
 
 builder.Services.AddScoped<IAccountFactory, RegularAccountFactory>();
 builder.Services.AddScoped<IAccountFactory, MoneyMarketAccountFactory>();

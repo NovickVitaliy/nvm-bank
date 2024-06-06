@@ -1,5 +1,6 @@
 using Carter;
 using Common.ApiResponses;
+using Common.Extensions;
 using MediatR;
 
 namespace Savings.API.SavingAccount.Commands.Reopen;
@@ -24,7 +25,11 @@ public class ReopenSavingAccountEndpoint : ICarterModule
         app.MapPost("/savings/account/{accountId:guid}/reopen",
             async (Guid accountId, ISender sender) =>
             {
-                //TODO: create cmd -> send and get result -> return response
+                var cmd = new ReopenSavingAccountCommand(accountId);
+
+                var result = await sender.Send(cmd);
+
+                return result.Result.ToHttpResponse<ReopenedSavingAccountDto, ReopenSavingAccountResponse>();
             });
     }
 }

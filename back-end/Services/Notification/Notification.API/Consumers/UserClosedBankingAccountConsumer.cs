@@ -6,16 +6,16 @@ using Notification.API.Services.Emailing;
 
 namespace Notification.API.Consumers;
 
-public class UserClosedCheckingAccountConsumer : IConsumer<UserClosedCheckingAccount>
+public class UserClosedBankingAccountConsumer : IConsumer<UserClosedBankingAccount>
 {
     private readonly IEmailService _emailService;
 
-    public UserClosedCheckingAccountConsumer(IEmailService emailService)
+    public UserClosedBankingAccountConsumer(IEmailService emailService)
     {
         _emailService = emailService;
     }
 
-    public async Task Consume(ConsumeContext<UserClosedCheckingAccount> context)
+    public async Task Consume(ConsumeContext<UserClosedBankingAccount> context)
     {
         var recipient = new Recipient
         {

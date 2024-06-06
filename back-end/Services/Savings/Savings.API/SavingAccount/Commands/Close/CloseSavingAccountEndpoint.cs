@@ -1,5 +1,7 @@
 using Carter;
 using Common.ApiResponses;
+using Common.Extensions;
+using Mapster;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,7 +29,11 @@ public class CloseSavingAccountEndpoint : ICarterModule
                 [FromBody] CloseSavingAccountRequest req,
                 [FromServices] ISender sender) =>
             {
-                //TODO: create cmd -> send and get result -> return response
+                var cmd = req.Adapt<CloseSavingAccountCommand>();
+
+                var result = await sender.Send(cmd);
+
+                return result.Result.ToHttpResponse<bool, CloseSavingAccountResponse>();
             }).RequireAuthorization();
     }
 }

@@ -27,10 +27,11 @@ public class CloseCheckingAccountHandler : ICommandHandler<CloseCheckingAccountC
 
         if (result.Result.Value)
         {
-            await _publishEndpoint.Publish(new UserClosedCheckingAccount()
+            await _publishEndpoint.Publish(new UserClosedBankingAccount()
             {
                 Email = result.Email,
-                AccountNumber = result.AccountNumber
+                AccountNumber = result.AccountNumber,
+                AccountType = nameof(Models.Domain.CheckingAccount)
             }, cancellationToken);
         }
         

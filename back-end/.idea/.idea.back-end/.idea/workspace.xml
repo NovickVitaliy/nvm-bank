@@ -22,58 +22,113 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5530e8c-3401-434c-9d88-bb41217d3e48" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/dataSources/88d37e76-6967-4728-908e-e48baeb483b3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/dataSources/88d37e76-6967-4728-908e-e48baeb483b3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Auth/obj/Debug/net8.0/Common.Auth.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Auth/obj/Debug/net8.0/Common.Auth.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Auth/obj/Debug/net8.0/Common.Auth.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Auth/obj/Debug/net8.0/Common.Auth.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Auth/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Auth/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Auth/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Auth/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.BankingAccounts/bin/Debug/net8.0/Common.BankingAccounts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.BankingAccounts/bin/Debug/net8.0/Common.BankingAccounts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.BankingAccounts/bin/Debug/net8.0/Common.BankingAccounts.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.BankingAccounts/bin/Debug/net8.0/Common.BankingAccounts.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/Common.BankingAccounts.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/Common.BankingAccounts.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/Common.BankingAccounts.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/Common.BankingAccounts.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Messaging/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Messaging/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Messaging/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Messaging/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/Common.BankingAccounts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/Common.BankingAccounts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/Common.BankingAccounts.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/Common.BankingAccounts.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/Common.BankingAccounts.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/Common.BankingAccounts.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/ref/Common.BankingAccounts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/ref/Common.BankingAccounts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/refint/Common.BankingAccounts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/refint/Common.BankingAccounts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/bin/Debug/net8.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/bin/Debug/net8.0/Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/bin/Debug/net8.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/bin/Debug/net8.0/Common.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common/bin/Debug/net8.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/bin/Debug/net8.0/Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common/bin/Debug/net8.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/bin/Debug/net8.0/Common.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/ref/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/ref/Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/refint/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/refint/Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Auth.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Auth.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Auth.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Auth.API.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Auth.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Auth.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.CQRS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.CQRS.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.CQRS.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.CQRS.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.Messaging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.Messaging.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.Messaging.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.Messaging.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/bin/Debug/net8.0/Common.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/ref/Auth.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/ref/Auth.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/refint/Auth.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/refint/Auth.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Checkings.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Checkings.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Checkings.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Checkings.API.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Checkings.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Checkings.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.Auth.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.Auth.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.Auth.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.Auth.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.BankingAccounts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.BankingAccounts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.BankingAccounts.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.BankingAccounts.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.CQRS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.CQRS.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.CQRS.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.CQRS.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.Messaging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.Messaging.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.Messaging.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.Messaging.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/bin/Debug/net8.0/Common.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Notification/Notification.API/obj/Debug/net8.0/Notification.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Notification/Notification.API/obj/Debug/net8.0/Notification.API.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Notification/Notification.API/obj/Debug/net8.0/Notification.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Notification/Notification.API/obj/Debug/net8.0/Notification.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Notification/Notification.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Notification/Notification.API/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Notification/Notification.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Notification/Notification.API/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/Savings.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/Savings.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/ref/Checkings.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/ref/Checkings.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/refint/Checkings.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/refint/Checkings.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Notification/Notification.API/bin/Debug/net8.0/Common.Messaging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Notification/Notification.API/bin/Debug/net8.0/Common.Messaging.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Notification/Notification.API/bin/Debug/net8.0/Common.Messaging.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Notification/Notification.API/bin/Debug/net8.0/Common.Messaging.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Notification/Notification.API/bin/Debug/net8.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Notification/Notification.API/bin/Debug/net8.0/Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Notification/Notification.API/bin/Debug/net8.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Notification/Notification.API/bin/Debug/net8.0/Common.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/Data/Repository/ISavingsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/Data/Repository/ISavingsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/Models/Dtos/CreateAccountDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/Models/Dtos/CreateAccountDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Close/CloseSavingAccountEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Close/CloseSavingAccountEndpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Close/CloseSavingAccountHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Close/CloseSavingAccountHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Open/OpenSavingAccountEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Open/OpenSavingAccountEndpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Open/OpenSavingAccountHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Open/OpenSavingAccountHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Reopen/ReopenSavingAccountEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Reopen/ReopenSavingAccountEndpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Reopen/ReopenSavingAccountHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Reopen/ReopenSavingAccountHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Queries/Get/GetSavingAccountEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Queries/Get/GetSavingAccountEndpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Queries/Get/GetSavingAccountHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Queries/Get/GetSavingAccountHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Queries/GetBalance/GetSavingAccountBalanceEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Queries/GetBalance/GetSavingAccountBalanceEndpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Queries/GetBalance/GetSavingAccountBalanceHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Queries/GetBalance/GetSavingAccountBalanceHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Queries/GetUsersAccounts/GetUsersSavingAccountEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Queries/GetUsersAccounts/GetUsersSavingAccountEndpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Queries/GetUsersAccounts/GetUsersSavingAccountsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Queries/GetUsersAccounts/GetUsersSavingAccountsHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/bin/Debug/net8.0/Common.BankingAccounts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/bin/Debug/net8.0/Common.BankingAccounts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/bin/Debug/net8.0/Common.BankingAccounts.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/bin/Debug/net8.0/Common.BankingAccounts.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/bin/Debug/net8.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/bin/Debug/net8.0/Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/bin/Debug/net8.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/bin/Debug/net8.0/Common.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/bin/Debug/net8.0/Savings.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/bin/Debug/net8.0/Savings.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/bin/Debug/net8.0/Savings.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/bin/Debug/net8.0/Savings.API.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/bin/Debug/net8.0/Savings.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/bin/Debug/net8.0/Savings.API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Savings.API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Savings.API.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Savings.API.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Savings.API.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.override.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/ref/Savings.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/ref/Savings.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/refint/Savings.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/refint/Savings.API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.Auth.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.Auth.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.Auth.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.Auth.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.CQRS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.CQRS.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.CQRS.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.CQRS.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.Messaging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.Messaging.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.Messaging.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.Messaging.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/bin/Debug/net8.0/Common.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,41 +188,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.Auth.API: IIS Express.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.Auth.API: http.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.Auth.API: https.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.Checkings.API: IIS Express.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.Checkings.API: http.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.Notification.API: http.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.Users.API: http.executor&quot;: &quot;Debug&quot;,
-    &quot;Docker.docker-compose.override.yml.authdb: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.override.yml.rabbitmq-broker: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.authdb: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/common-cqrs&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Auth.API: IIS Express.executor": "Debug",
+    ".NET Launch Settings Profile.Auth.API: http.executor": "Debug",
+    ".NET Launch Settings Profile.Auth.API: https.executor": "Debug",
+    ".NET Launch Settings Profile.Checkings.API: IIS Express.executor": "Debug",
+    ".NET Launch Settings Profile.Checkings.API: http.executor": "Debug",
+    ".NET Launch Settings Profile.Notification.API: http.executor": "Debug",
+    ".NET Launch Settings Profile.Savings.API: http.executor": "Debug",
+    ".NET Launch Settings Profile.Users.API: http.executor": "Debug",
+    "Docker.docker-compose.override.yml.authdb: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.override.yml.rabbitmq-broker: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.authdb: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "full.screen.before.presentation.mode": "false",
+    "git-widget-placeholder": "feat/common-cqrs",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;DockerIgnore&quot;,
-      &quot;yaml&quot;
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "DockerIgnore",
+      "yaml"
     ],
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\User\\AppData\\Local\\Symbols\\src&quot;
+    "rider.external.source.directories": [
+      "C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\User\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+}]]></component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.Savings.API: http">
     <configuration name="Auth.API: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Services/Auth/Auth.API/Auth.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -653,6 +709,71 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Savings/Savings.API/Data/Repository/SavingsRepository.cs</url>
+          <line>26</line>
+          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Savings\Savings.API\Data\Repository\SavingsRepository.cs" containingFunctionPresentation="Method 'OpenAccount'">
+            <startOffsets>
+              <option value="821" />
+            </startOffsets>
+            <endOffsets>
+              <option value="965" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Open/OpenSavingAccountEndpoint.cs</url>
+          <line>36</line>
+          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Savings\Savings.API\SavingAccount\Commands\Open\OpenSavingAccountEndpoint.cs" containingFunctionPresentation="Lambda expression inside Method 'AddRoutes'">
+            <startOffsets>
+              <option value="960" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1012" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Close/CloseSavingAccountEndpoint.cs</url>
+          <line>31</line>
+          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Savings\Savings.API\SavingAccount\Commands\Close\CloseSavingAccountEndpoint.cs" containingFunctionPresentation="Lambda expression inside Method 'AddRoutes'">
+            <startOffsets>
+              <option value="815" />
+            </startOffsets>
+            <endOffsets>
+              <option value="864" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Close/CloseSavingAccountHandler.cs</url>
+          <line>22</line>
+          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Savings\Savings.API\SavingAccount\Commands\Close\CloseSavingAccountHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="794" />
+            </startOffsets>
+            <endOffsets>
+              <option value="881" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Savings/Savings.API/Data/Repository/SavingsRepository.cs</url>
+          <line>56</line>
+          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Savings\Savings.API\Data\Repository\SavingsRepository.cs" containingFunctionPresentation="Method 'CloseAccount'">
+            <startOffsets>
+              <option value="2131" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2144" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
