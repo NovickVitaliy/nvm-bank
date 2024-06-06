@@ -2,6 +2,7 @@ using Checkings.API.Data.Repository;
 using Common.CQRS.Handlers;
 using Common.CQRS.Requests;
 using Common.ErrorHandling;
+using Common.Messaging.Events;
 using Common.Messaging.Events.UserExists;
 using FluentValidation;
 using MassTransit;
@@ -40,16 +41,27 @@ public sealed class OpenCheckingsAccountValidtor : AbstractValidator<OpenCheckin
 public class OpenCheckingAccountHandler : ICommandHandler<OpenCheckingAccountCommand, OpenCheckingAccountResult>
 {
     private readonly ICheckingsRepository _checkingsRepository;
-
-    public OpenCheckingAccountHandler(ICheckingsRepository checkingsRepository)
+    private readonly IPublishEndpoint _publishEndpoint;
+    public OpenCheckingAccountHandler(ICheckingsRepository checkingsRepository, IPublishEndpoint publishEndpoint)
     {
         _checkingsRepository = checkingsRepository;
+        _publishEndpoint = publishEndpoint;
     }
 
     public async Task<OpenCheckingAccountResult> Handle(OpenCheckingAccountCommand request, CancellationToken cancellationToken)
     {
         var result = await _checkingsRepository.OpenAccount(request.OwnerEmail, request.Currency);
 
+        if (result.IsSuccess)
+        {
+            await _publishEndpoint.Publish(new UserOpenedBankingAccount
+            {
+                Email = request.OwnerEmail,
+                AccountType = nameof(Models.Domain.CheckingAccount),
+                AccountNumber = Guid.Parse(result.Value.AccountNumber),
+            }, cancellationToken);
+        }
+        
         return new OpenCheckingAccountResult(result);
     }
 }
