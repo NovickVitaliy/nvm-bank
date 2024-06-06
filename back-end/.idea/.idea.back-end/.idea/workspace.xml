@@ -22,6 +22,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5530e8c-3401-434c-9d88-bb41217d3e48" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Close/CloseSavingAccountHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Close/CloseSavingAccountHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Open/OpenSavingAccountHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Open/OpenSavingAccountHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -645,13 +647,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Services/Savings/Savings.API/SavingAccount/Commands/Close/CloseSavingAccountHandler.cs</url>
-          <line>25</line>
+          <line>35</line>
           <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Savings\Savings.API\SavingAccount\Commands\Close\CloseSavingAccountHandler.cs" containingFunctionPresentation="Method 'Handle'">
             <startOffsets>
-              <option value="977" />
+              <option value="1262" />
             </startOffsets>
             <endOffsets>
-              <option value="1064" />
+              <option value="1349" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="60" />

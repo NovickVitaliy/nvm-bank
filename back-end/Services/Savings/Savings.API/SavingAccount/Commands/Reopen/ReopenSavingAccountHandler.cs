@@ -1,6 +1,7 @@
 using Common.CQRS.Handlers;
 using Common.CQRS.Requests;
 using Common.ErrorHandling;
+using FluentValidation;
 using Savings.API.Data.Repository;
 
 namespace Savings.API.SavingAccount.Commands.Reopen;
@@ -8,6 +9,15 @@ namespace Savings.API.SavingAccount.Commands.Reopen;
 public record ReopenSavingAccountCommand(Guid AccountId) : ICommand<ReopenSavingAccountResult>;
 
 public record ReopenSavingAccountResult(Result<ReopenedSavingAccountDto> Result);
+
+public class ReopenSavingAccountCommandValidator : AbstractValidator<ReopenSavingAccountCommand>
+{
+    public ReopenSavingAccountCommandValidator()
+    {
+        RuleFor(x => x.AccountId)
+            .NotEmpty().WithMessage("Account Id cannot be empty.");
+    }
+}
 
 public class ReopenSavingAccountHandler : ICommandHandler<ReopenSavingAccountCommand, ReopenSavingAccountResult>
 {

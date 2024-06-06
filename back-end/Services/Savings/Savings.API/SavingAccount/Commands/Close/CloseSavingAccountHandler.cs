@@ -2,6 +2,7 @@ using Common.CQRS.Handlers;
 using Common.CQRS.Requests;
 using Common.ErrorHandling;
 using Common.Messaging.Events;
+using FluentValidation;
 using MassTransit;
 using Savings.API.Data.Repository;
 
@@ -10,6 +11,15 @@ namespace Savings.API.SavingAccount.Commands.Close;
 public record CloseSavingAccountCommand(Guid AccountId, bool IsAware) : ICommand<CloseSavingAccountResult>;
 
 public record CloseSavingAccountResult(Result<bool> Result);
+
+public class CloseSavingAccountCommandValidator : AbstractValidator<CloseSavingAccountCommand>
+{
+    public CloseSavingAccountCommandValidator()
+    {
+        RuleFor(x => x.AccountId)
+            .NotEmpty().WithMessage("Account Id cannot be empty");
+    }
+}
 
 public class CloseSavingAccountHandler : ICommandHandler<CloseSavingAccountCommand, CloseSavingAccountResult>
 {
