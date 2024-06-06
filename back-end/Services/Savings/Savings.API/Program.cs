@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Http.Json;
 using Microsoft.EntityFrameworkCore;
 using Savings.API.Data;
 using Savings.API.Extensions;
+using Savings.API.Services.AccountFactory;
 
 var builder = WebApplication.CreateBuilder(args);
 var assembly = Assembly.GetExecutingAssembly();
@@ -48,6 +49,10 @@ builder.Services.AddDbContext<SavingDbContext>(opt =>
 {
     opt.UseNpgsql(builder.Configuration.GetConnectionString(SavingDbContext.ConnectionStringName));
 });
+
+builder.Services.AddScoped<IAccountFactory, RegularAccountFactory>();
+builder.Services.AddScoped<IAccountFactory, MoneyMarketAccountFactory>();
+builder.Services.AddScoped<IAccountFactory, HighYieldAccountFactory>();
 
 var app = builder.Build();
 
