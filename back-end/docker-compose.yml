@@ -23,6 +23,12 @@
       context: .
       dockerfile: Services/Checkings/Checkings.API/Dockerfile
 
+  savings.api:
+    image: savings.api
+    build:
+      context: .
+      dockerfile: Services/Savings/Savings.API/Dockerfile
+
   authdb:
     image: mcr.microsoft.com/mssql/server
    

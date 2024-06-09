@@ -106,6 +106,21 @@ services:
       - seq-logging
       - rabbitmq-broker
   
+  savings.api:
+    container_name: savings.api
+    restart: always
+    environment:
+      - ASPNETCORE_HTTP_PORTS=8080
+      - MessageBroker__Host=amqp://nvm-bank-mb:5672
+      - Serilog__WriteTo__1__Args__serverUrl=http://seq-logging:5341
+      - ConnectionStrings__SavingsDb=Server=savingsdb;Port=5434;Database=SavingsDb;User Id=savings.api;Password=ifYouSeeThisThenHaveANiceDay;Include Error Detail=true
+    ports:
+      - "6004:8080"
+    depends_on:
+      - notification.api
+      - seq-logging
+      - savingsdb
+  
   rabbitmq-broker:
     container_name: rabbitmq-broker
     restart: always
