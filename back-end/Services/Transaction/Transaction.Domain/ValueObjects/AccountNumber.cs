@@ -2,11 +2,11 @@ using Transaction.Domain.Abstractions;
 
 namespace Transaction.Domain.ValueObjects;
 
-public struct AccountId : IStronglyTypedId
+public struct AccountNumber : IStronglyTypedId
 {
     public Guid Value { get; }
 
-    public AccountId(Guid value)
+    public AccountNumber(Guid value)
     {
         Value = value;
     }

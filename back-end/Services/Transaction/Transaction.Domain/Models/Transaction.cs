@@ -8,14 +8,14 @@ namespace Transaction.Domain.Models;
 public class Transaction : Aggregate<TransactionId>
 {
     public DateTime OccuredOn { get; private set; }
-    public AccountId Source { get; private set; }
-    public AccountId Destination { get; private set; }
+    public AccountNumber Source { get; private set; }
+    public AccountNumber Destination { get; private set; }
     public double Amount { get; private set; }
     public string Currency { get; private set; }
     public double AdditionalFee { get; private set; }
     public string DestinationBank { get; private set; }
 
-    public Transaction(AccountId source, AccountId destination, double amount, string currency, double additionalFee,
+    public Transaction(AccountNumber source, AccountNumber destination, double amount, string currency, double additionalFee,
         string destinationBank)
     {
         Id = new TransactionId(Guid.NewGuid());
@@ -28,7 +28,7 @@ public class Transaction : Aggregate<TransactionId>
         DestinationBank = destinationBank;
     }
 
-    public static Transaction Create(AccountId source, AccountId destination, double amount, string currency, 
+    public static Transaction Create(AccountNumber source, AccountNumber destination, double amount, string currency, 
         string destinationBank)
     {
         ArgumentException.ThrowIfNullOrEmpty(source.Value.ToString());
