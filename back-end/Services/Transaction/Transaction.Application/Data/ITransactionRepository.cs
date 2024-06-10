@@ -1,10 +1,11 @@
+using Common.ErrorHandling;
 using Transaction.Application.Dto;
 
 namespace Transaction.Application.Data;
 
 public interface ITransactionRepository
 {
-    Task<Guid> CreateTransaction(CreateTransactionDto createTransactionDto);
-    Task<TransactionDto> GetTransaction(Guid id);
-    Task<IEnumerable<TransactionDto>> GetTransactionsByAccount(Guid accountNumber);
+    Task<Result<Guid>> CreateTransaction(CreateTransactionDto createTransactionDto);
+    Task<Result<TransactionDto>> GetTransaction(Guid id);
+    Task<Result<IEnumerable<TransactionDto>>> GetTransactionsByAccount(Guid accountNumber);
 }

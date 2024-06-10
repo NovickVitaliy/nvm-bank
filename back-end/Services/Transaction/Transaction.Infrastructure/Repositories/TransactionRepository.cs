@@ -1,3 +1,5 @@
+using System.Collections;
+using Common.ErrorHandling;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using Transaction.Application.Data;
@@ -24,7 +26,7 @@ public class TransactionRepository : ITransactionRepository
             .GetCollection<Domain.Models.Transaction>(_mongoOptions.TransactionsCollectionName);
     }
 
-    public async Task<Guid> CreateTransaction(CreateTransactionDto createTransactionDto)
+    public async Task<Result<Guid>> CreateTransaction(CreateTransactionDto createTransactionDto)
     {
         var transaction = Domain.Models.Transaction.Create(
             new AccountNumber(createTransactionDto.Source),
@@ -37,10 +39,10 @@ public class TransactionRepository : ITransactionRepository
 
         await _transactions.InsertOneAsync(transaction);
 
-        return transaction.Id.Value;
+        return Result<Guid>.Success(transaction.Id.Value);
     }
 
-    public async Task<TransactionDto> GetTransaction(Guid id)
+    public async Task<Result<TransactionDto>> GetTransaction(Guid id)
     {
         var transaction = await (await _transactions
                 .FindAsync(x => x.Id.Equals(new TransactionId(id))))
@@ -51,14 +53,14 @@ public class TransactionRepository : ITransactionRepository
             //TODO: return result response
         }
 
-        return transaction.ToTransactionDto();
+        return Result<TransactionDto>.Success(transaction.ToTransactionDto());
     }
 
-    public async Task<IEnumerable<TransactionDto>> GetTransactionsByAccount(Guid accountNumber)
+    public async Task<Result<IEnumerable<TransactionDto>>> GetTransactionsByAccount(Guid accountNumber)
     {
         var transactions = await (await _transactions.FindAsync(x => x.Source.Equals(new AccountNumber(accountNumber))))
             .ToListAsync();
 
-        return transactions.Select(x => x.ToTransactionDto());
+        return Result<IEnumerable<TransactionDto>>.Success(transactions.Select(x => x.ToTransactionDto()));
     }
 }
