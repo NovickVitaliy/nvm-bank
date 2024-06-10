@@ -49,6 +49,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaction.Domain", "Servi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaction.Application", "Services\Transaction\Transaction.Application\Transaction.Application.csproj", "{C03CC7A4-73A1-45D2-B0DC-8DEB69FAD265}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaction.Infrastructure", "Services\Transaction\Transaction.Infrastructure\Transaction.Infrastructure.csproj", "{D9DDD837-717F-4CFA-96B4-14E59D946919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaction.API", "Services\Transaction\Transaction.API\Transaction.API.csproj", "{B073F2C7-212A-45AE-8157-1930B6DFABFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +80,8 @@ Global
 		{B3346EDF-4C4D-4923-8629-C5BA055EE010} = {0739A066-82FF-4683-8604-A6E174F59E18}
 		{F6F00EAE-3D28-49F0-8B30-D5E8B30BEB65} = {B3346EDF-4C4D-4923-8629-C5BA055EE010}
 		{C03CC7A4-73A1-45D2-B0DC-8DEB69FAD265} = {B3346EDF-4C4D-4923-8629-C5BA055EE010}
+		{D9DDD837-717F-4CFA-96B4-14E59D946919} = {B3346EDF-4C4D-4923-8629-C5BA055EE010}
+		{B073F2C7-212A-45AE-8157-1930B6DFABFD} = {B3346EDF-4C4D-4923-8629-C5BA055EE010}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AE30B96A-9EFE-4B93-9A5E-1286D900019C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -126,5 +132,13 @@ Global
 		{C03CC7A4-73A1-45D2-B0DC-8DEB69FAD265}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C03CC7A4-73A1-45D2-B0DC-8DEB69FAD265}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C03CC7A4-73A1-45D2-B0DC-8DEB69FAD265}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9DDD837-717F-4CFA-96B4-14E59D946919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9DDD837-717F-4CFA-96B4-14E59D946919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9DDD837-717F-4CFA-96B4-14E59D946919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9DDD837-717F-4CFA-96B4-14E59D946919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B073F2C7-212A-45AE-8157-1930B6DFABFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B073F2C7-212A-45AE-8157-1930B6DFABFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B073F2C7-212A-45AE-8157-1930B6DFABFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B073F2C7-212A-45AE-8157-1930B6DFABFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
