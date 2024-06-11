@@ -6,4 +6,11 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Common\Common.Auth\Common.Auth.csproj" />
+      <ProjectReference Include="..\..\..\Common\Common.Messaging\Common.Messaging.csproj" />
+      <ProjectReference Include="..\Transaction.Application\Transaction.Application.csproj" />
+      <ProjectReference Include="..\Transaction.Infrastructure\Transaction.Infrastructure.csproj" />
+    </ItemGroup>
+
 </Project>

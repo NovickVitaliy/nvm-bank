@@ -14,6 +14,7 @@ public class CreateTransactionHandler : ICommandHandler<CreateTransactionCommand
 
     public async Task<CreateTransactionResult> Handle(CreateTransactionCommand request, CancellationToken cancellationToken)
     {
+        //TODO: check if source account has enough money
         var result = await _transactionRepository.CreateTransaction(request.CreateTransactionDto);
 
         if (result.IsSuccess)
