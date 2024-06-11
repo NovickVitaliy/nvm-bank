@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Transaction.Application.Dto;
 using Transaction.Application.Transactions.Commands.CreateTransaction;
@@ -7,6 +8,7 @@ using Transaction.Application.Transactions.Queries.GetTransactionsByAccount;
 
 namespace Transaction.API.Controllers;
 
+[Authorize]
 [Route("transactions")]
 public class TransactionController : ControllerBase {
     private readonly ISender _sender;
