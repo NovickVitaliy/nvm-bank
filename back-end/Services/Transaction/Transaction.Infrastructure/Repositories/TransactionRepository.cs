@@ -44,11 +44,9 @@ public class TransactionRepository : ITransactionRepository {
                 .FindAsync(x => x.Id.Equals(new TransactionId(id))))
             .FirstOrDefaultAsync();
 
-        if (transaction is null) {
-            //TODO: return result response
-        }
-
-        return Result<TransactionDto>.Success(transaction.ToTransactionDto());
+        return transaction is null
+            ? Result<TransactionDto>.Failure(Error.NotFound(nameof(Domain.Models.Transaction), id.ToString()))
+            : Result<TransactionDto>.Success(transaction.ToTransactionDto());
     }
 
     public async Task<Result<IReadOnlyList<TransactionDto>>> GetTransactionsByAccount(Guid accountNumber) {
