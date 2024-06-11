@@ -22,6 +22,7 @@ public class Transaction : Aggregate<TransactionId>
     {
         Id = new TransactionId(Guid.NewGuid());
         OccuredOn = DateTime.Now;
+        CreatedAt = DateTime.Now;
         Source = source;
         SourceType = sourceType;
         Destination = destination;

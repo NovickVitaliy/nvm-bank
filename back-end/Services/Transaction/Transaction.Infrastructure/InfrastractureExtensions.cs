@@ -2,13 +2,15 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using Transaction.Application.Data;
 using Transaction.Infrastructure.Options.Mongo;
+using Transaction.Infrastructure.Repositories;
 
 namespace Transaction.Infrastructure;
 
 public static class InfrastractureExtensions
 {
-    public static IServiceCollection ConfigureInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection ConfigureInfrastructureLayer(this IServiceCollection services, IConfiguration configuration)
     {
         services.ConfigureOptions<MongoOptionsConfigurator>();
         
@@ -19,6 +21,8 @@ public static class InfrastractureExtensions
             return new MongoClient(mongoOptions.ConnectionString);
         });
 
+        services.AddScoped<ITransactionRepository, TransactionRepository>();
+        
         return services;
     }
 }
