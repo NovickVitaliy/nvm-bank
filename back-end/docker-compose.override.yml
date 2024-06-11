@@ -18,6 +18,7 @@ services:
       - POSTGRES_PASSWORD=ifYouSeeThisThenHaveANiceDay
       - POSTGRES_USER=users.api
       - POSTGRES_DB=UsersDb
+      - TZ=Europe/Kyiv
     ports:
       - "5432:5432"
     volumes:
@@ -30,6 +31,7 @@ services:
       - POSTGRES_PASSWORD=ifYouSeeThisThenHaveANiceDay
       - POSTGRES_USER=checkings.api
       - POSTGRES_DB=CheckingsDb
+      - TZ=Europe/Kyiv
     ports:
       - "5433:5432"
     volumes:
@@ -42,10 +44,34 @@ services:
       - POSTGRES_PASSWORD=ifYouSeeThisThenHaveANiceDay
       - POSTGRES_USER=savings.api
       - POSTGRES_DB=SavingsDb
+      - TZ=Europe/Kyiv
     ports:
       - "5434:5432"
     volumes:
       - postgres-savingsdb:/var/lib/postgresql/data
+  
+  transactionsdb:
+    container_name: transactonsdb
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=nvm.bank
+      - MONGO_INITDB_ROOT_PASSWORD=ifYouSeeThisThenHaveANiceDay
+      - TZ=Europe/Kyiv
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-transactionsdb:/data/db
+    
+  mongo-ui:
+    container_name: mongo-ui
+    restart: always
+    ports:
+      - "8082:8081"
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=nvm.bank
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=ifYouSeeThisThenHaveANiceDay
+      - ME_CONFIG_MONGODB_URL=mongodb://nvm.bank:ifYouSeeThisThenHaveANiceDay@transactionsdb:27017/
+      - ME_CONFIG_BASICAUTH=false
   
   auth.api:
     container_name: auth.api
@@ -113,7 +139,7 @@ services:
       - ASPNETCORE_HTTP_PORTS=8080
       - MessageBroker__Host=amqp://nvm-bank-mb:5672
       - Serilog__WriteTo__1__Args__serverUrl=http://seq-logging:5341
-      - ConnectionStrings__SavingsDb=Server=savingsdb;Port=5434;Database=SavingsDb;User Id=savings.api;Password=ifYouSeeThisThenHaveANiceDay;Include Error Detail=true
+      - ConnectionStrings__SavingsDb=Server=savingsdb;Port=5432;Database=SavingsDb;User Id=savings.api;Password=ifYouSeeThisThenHaveANiceDay;Include Error Detail=true
     ports:
       - "6004:8080"
     depends_on:

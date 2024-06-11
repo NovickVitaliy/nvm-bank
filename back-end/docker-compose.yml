@@ -40,6 +40,12 @@
 
   savingsdb:
     image: postgres
+    
+  transactionsdb:
+    image: mongo
+    
+  mongo-ui:
+    image: mongo-express
   
   rabbitmq-broker:
     image: rabbitmq:3-management
@@ -52,3 +58,4 @@ volumes:
   postgres-usersdb:
   postgres-checkingsdb:
   postgres-savingsdb:
+  mongo-transactionsdb:
