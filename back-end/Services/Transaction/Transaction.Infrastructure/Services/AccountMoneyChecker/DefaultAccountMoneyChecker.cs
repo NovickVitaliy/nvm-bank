@@ -2,7 +2,7 @@ using Common.Messaging.Events.CheckAccountMoney;
 using MassTransit;
 using Transaction.Application.Contracts;
 
-namespace Transaction.Infrastructure.Services;
+namespace Transaction.Infrastructure.Services.AccountMoneyChecker;
 
 public class DefaultAccountMoneyChecker : IAccountMoneyChecker {
     private readonly IRequestClient<CheckCheckingAccountMoney> _checkingRequestClient;
