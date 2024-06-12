@@ -645,6 +645,7 @@
         "dependencies": {
           "Common": "1.0.0",
           "Common.CQRS": "1.0.0",
+          "Common.Messaging": "1.0.0",
           "Transaction.Domain": "1.0.0"
         },
         "runtime": {

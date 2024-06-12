@@ -28,7 +28,7 @@ builder.Services.ConfigureAuthentication(builder.Configuration);
 
 builder.Services.ConfigureInfrastructureLayer(builder.Configuration);
 
-builder.Services.ConfigureMessageBroker(builder.Configuration);
+builder.Services.ConfigureMessageBroker(builder.Configuration, Assembly.GetExecutingAssembly());
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 

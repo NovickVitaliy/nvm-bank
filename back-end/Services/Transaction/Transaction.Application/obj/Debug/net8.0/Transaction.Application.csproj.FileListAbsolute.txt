@@ -18,3 +18,5 @@ C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Transaction\Transactio
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Transaction\Transaction.Application\obj\Debug\net8.0\refint\Transaction.Application.dll
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Transaction\Transaction.Application\obj\Debug\net8.0\Transaction.Application.pdb
 C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Transaction\Transaction.Application\obj\Debug\net8.0\ref\Transaction.Application.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Transaction\Transaction.Application\bin\Debug\net8.0\Common.Messaging.dll
+C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Transaction\Transaction.Application\bin\Debug\net8.0\Common.Messaging.pdb

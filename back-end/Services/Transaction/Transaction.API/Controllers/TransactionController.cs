@@ -23,7 +23,9 @@ public class TransactionController : ControllerBase {
 
         var result = await _sender.Send(cmd);
 
-        return Ok(new { id = result.Result.Value });
+        return result.Result.IsFailure
+            ? StatusCode(result.Result.Error.Code, result.Result.Error)
+            : Ok(new { id = result.Result.Value });
     }
 
     [HttpGet("{transactionId:guid}")]
@@ -32,10 +34,9 @@ public class TransactionController : ControllerBase {
 
         var result = await _sender.Send(query);
 
-        return result.Result.Error.Code switch {
-            200 => Ok(result.Result.Value),
-            404 => NotFound(result.Result.Error)
-        };
+        return result.Result.IsFailure
+            ? StatusCode(result.Result.Error.Code, result.Result.Error)
+            : Ok(result.Result.Value);
     }
 
     [HttpGet]
@@ -44,6 +45,8 @@ public class TransactionController : ControllerBase {
 
         var result = await _sender.Send(query);
 
-        return Ok(result.Result.Value);
+        return result.Result.IsFailure
+            ? StatusCode(result.Result.Error.Code, result.Result.Error)
+            : Ok(result.Result.Value);
     }
 }
