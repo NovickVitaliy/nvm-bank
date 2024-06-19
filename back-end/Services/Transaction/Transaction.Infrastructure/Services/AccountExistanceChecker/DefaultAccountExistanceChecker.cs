@@ -1,7 +1,6 @@
 using Common.Messaging.Contracts;
 using Common.Messaging.Events.CheckAccountExistance;
 using MassTransit;
-using Transaction.Application.Contracts;
 
 namespace Transaction.Infrastructure.Services.AccountExistanceChecker;
 

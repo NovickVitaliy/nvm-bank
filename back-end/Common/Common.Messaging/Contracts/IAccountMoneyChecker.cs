@@ -1,6 +1,6 @@
 using Common.Messaging.Events.CheckAccountMoney;
 
-namespace Transaction.Application.Contracts;
+namespace Common.Messaging.Contracts;
 
 public interface IAccountMoneyChecker {
     Task<CheckAccountMoneyResult> Visit(CheckCheckingAccountMoney checkCheckingAccountMoney);

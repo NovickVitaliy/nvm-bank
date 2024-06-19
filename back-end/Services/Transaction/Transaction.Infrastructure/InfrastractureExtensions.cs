@@ -3,7 +3,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
-using Transaction.Application.Contracts;
 using Transaction.Application.Data;
 using Transaction.Infrastructure.Options.Mongo;
 using Transaction.Infrastructure.Repositories;

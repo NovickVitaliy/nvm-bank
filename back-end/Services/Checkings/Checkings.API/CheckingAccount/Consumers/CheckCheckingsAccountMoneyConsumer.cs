@@ -1,24 +1,24 @@
+using Checkings.API.Data;
 using Common.Messaging.Events.CheckAccountMoney;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
-using Savings.API.Data;
 
-namespace Savings.API.SavingAccount.EventHandlers;
+namespace Checkings.API.CheckingAccount.Consumers;
 
-public class CheckSavingsAccountMoneyConsumer : IConsumer<CheckSavingsAccountMoney> {
-    private readonly SavingDbContext _db;
-    private readonly ILogger<CheckSavingsAccountMoneyConsumer> _logger;
-    public CheckSavingsAccountMoneyConsumer(SavingDbContext db, ILogger<CheckSavingsAccountMoneyConsumer> logger) {
+public class CheckCheckingsAccountMoneyConsumer : IConsumer<CheckCheckingAccountMoney> {
+    private readonly CheckingsDbContext _db;
+    private readonly ILogger<CheckCheckingsAccountMoneyConsumer> _logger;
+    public CheckCheckingsAccountMoneyConsumer(CheckingsDbContext db, ILogger<CheckCheckingsAccountMoneyConsumer> logger) {
         _db = db;
         _logger = logger;
     }
 
-    public async Task Consume(ConsumeContext<CheckSavingsAccountMoney> context) {
+    public async Task Consume(ConsumeContext<CheckCheckingAccountMoney> context) {
         _logger.LogInformation("Handling request: {RequestName}", context.Message.GetType().Name);
         
         var msg = context.Message;
 
-        var account = await _db.SavingAccounts
+        var account = await _db.CheckingAccounts
             .AsNoTracking()
             .SingleOrDefaultAsync(x => x.AccountNumber == msg.AccountNumber);
 

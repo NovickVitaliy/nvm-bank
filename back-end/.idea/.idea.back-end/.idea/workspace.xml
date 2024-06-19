@@ -25,71 +25,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5530e8c-3401-434c-9d88-bb41217d3e48" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.back-end/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Messaging/bin/Debug/net8.0/Common.Messaging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Messaging/bin/Debug/net8.0/Common.Messaging.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Messaging/bin/Debug/net8.0/Common.Messaging.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Messaging/bin/Debug/net8.0/Common.Messaging.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.Auth/obj/Debug/net8.0/Common.Auth.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Auth/obj/Debug/net8.0/Common.Auth.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.Auth/obj/Debug/net8.0/Common.Auth.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Auth/obj/Debug/net8.0/Common.Auth.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/Common.BankingAccounts.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/Common.BankingAccounts.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/Common.BankingAccounts.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.BankingAccounts/obj/Debug/net8.0/Common.BankingAccounts.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.CQRS/obj/Debug/net8.0/Common.CQRS.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/Common.Messaging.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/ref/Common.Messaging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/ref/Common.Messaging.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/refint/Common.Messaging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.Messaging/obj/Debug/net8.0/refint/Common.Messaging.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Common.Messaging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Common.Messaging.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Common.Messaging.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Common.Messaging.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Transaction.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Transaction.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Transaction.API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Transaction.API.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Transaction.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Transaction.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Transaction.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Transaction.Application.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Transaction.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Transaction.Application.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Transaction.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Transaction.Infrastructure.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Transaction.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/bin/Debug/net8.0/Transaction.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common/obj/Debug/net8.0/Common.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/Auth.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/Auth.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Auth/Auth.API/obj/Debug/net8.0/Auth.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Checkings/Checkings.API/obj/Debug/net8.0/Checkings.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Notification/Notification.API/obj/Debug/net8.0/Notification.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Notification/Notification.API/obj/Debug/net8.0/Notification.API.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Notification/Notification.API/obj/Debug/net8.0/Notification.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Notification/Notification.API/obj/Debug/net8.0/Notification.API.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Savings/Savings.API/obj/Debug/net8.0/Savings.API.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/Transaction.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/Transaction.API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/Transaction.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/Transaction.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/Transaction.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/Transaction.API.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/Transaction.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/Transaction.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/Transaction.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/Transaction.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/Transaction.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/Transaction.API.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/ref/Transaction.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/ref/Transaction.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/refint/Transaction.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/Debug/net8.0/refint/Transaction.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/Transactions/Commands/CreateTransaction/CreateTransactionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/Transactions/Commands/CreateTransaction/CreateTransactionHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/bin/Debug/net8.0/Common.Messaging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/bin/Debug/net8.0/Common.Messaging.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/bin/Debug/net8.0/Common.Messaging.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/bin/Debug/net8.0/Common.Messaging.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/bin/Debug/net8.0/Transaction.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/bin/Debug/net8.0/Transaction.Application.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/bin/Debug/net8.0/Transaction.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/bin/Debug/net8.0/Transaction.Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.API/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/Transaction.Application.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/Transaction.Application.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/Transaction.Application.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/Transaction.Application.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/Transaction.Application.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/Transaction.Application.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/Transaction.Application.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/Transaction.Application.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/Transaction.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/Transaction.Application.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/Transaction.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/Transaction.Application.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/Transaction.Application.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/Transaction.Application.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/ref/Transaction.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/ref/Transaction.Application.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/refint/Transaction.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/Debug/net8.0/refint/Transaction.Application.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/InfrastractureExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/InfrastractureExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/Services/DefaultAccountMoneyChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/Services/AccountMoneyChecker/DefaultAccountMoneyChecker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/bin/Debug/net8.0/Common.Messaging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/bin/Debug/net8.0/Common.Messaging.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/bin/Debug/net8.0/Common.Messaging.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/bin/Debug/net8.0/Common.Messaging.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/bin/Debug/net8.0/Transaction.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/bin/Debug/net8.0/Transaction.Application.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/bin/Debug/net8.0/Transaction.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/bin/Debug/net8.0/Transaction.Application.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/bin/Debug/net8.0/Transaction.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/bin/Debug/net8.0/Transaction.Infrastructure.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/bin/Debug/net8.0/Transaction.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/bin/Debug/net8.0/Transaction.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Application/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Domain/obj/Debug/net8.0/Transaction.Domain.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Domain/obj/Debug/net8.0/Transaction.Domain.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Domain/obj/Debug/net8.0/Transaction.Domain.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Domain/obj/Debug/net8.0/Transaction.Domain.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/Transaction.Infrastructure.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/Transaction.Infrastructure.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/Transaction.Infrastructure.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/Transaction.Infrastructure.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/Transaction.Infrastructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/Transaction.Infrastructure.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/Transaction.Infrastructure.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/Transaction.Infrastructure.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/Transaction.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/Transaction.Infrastructure.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/Transaction.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/Transaction.Infrastructure.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/Transaction.Infrastructure.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/Transaction.Infrastructure.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/ref/Transaction.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/ref/Transaction.Infrastructure.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/refint/Transaction.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/Debug/net8.0/refint/Transaction.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Transaction/Transaction.Infrastructure/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Users/Users.API/obj/Debug/net8.0/Users.API.AssemblyInfoInputs.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints>
+      <file url="file://$PROJECT_DIR$/Services/Transaction/Transaction.Application/Transactions/Queries/GetTransaction/GetTransactionQuery.cs" />
+    </disable_hints>
   </component>
   <component name="DpaMonitoringSettings">
     <option name="autoShow" value="false" />
@@ -128,13 +108,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d882146b4f265f10bcbec2663fce248db9ffec5fa1aeaf76e32a11ba5eafcd6/MethodBaseInvoker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fb367341658aaedd7de424d4c9189db33c4387e268dcc4011918569442ab12/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/Transaction/Transaction.Application/Transactions/Commands/CreateTransaction/CreateTransactionHandler.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2grRvyb23IkxSbVpgJn9X6qc53X" />
@@ -145,50 +125,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Auth.API: IIS Express.executor": "Debug",
-    ".NET Launch Settings Profile.Auth.API: http.executor": "Debug",
-    ".NET Launch Settings Profile.Auth.API: https.executor": "Debug",
-    ".NET Launch Settings Profile.Checkings.API: IIS Express.executor": "Debug",
-    ".NET Launch Settings Profile.Checkings.API: http.executor": "Debug",
-    ".NET Launch Settings Profile.Notification.API: http.executor": "Debug",
-    ".NET Launch Settings Profile.Savings.API: http.executor": "Debug",
-    ".NET Launch Settings Profile.Transaction.API: IIS Express.executor": "Debug",
-    ".NET Launch Settings Profile.Transaction.API: http.executor": "Debug",
-    ".NET Launch Settings Profile.Users.API: http.executor": "Debug",
-    "Docker.docker-compose.override.yml.authdb: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.override.yml.rabbitmq-broker: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.authdb: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.checkingsdb: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.rabbitmq-broker: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.savingsdb: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.transactionsdb: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.usersdb: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "XThreadsFramesViewSplitterKey": "0.24121405",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "feat/common-cqrs",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Auth.API: IIS Express.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Auth.API: http.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Auth.API: https.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Checkings.API: IIS Express.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Checkings.API: http.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Notification.API: http.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Savings.API: http.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Transaction.API: IIS Express.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Transaction.API: http.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Users.API: http.executor&quot;: &quot;Debug&quot;,
+    &quot;Docker.docker-compose.override.yml.authdb: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.override.yml.rabbitmq-broker: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.authdb: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.checkingsdb: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.rabbitmq-broker: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.savingsdb: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.transactionsdb: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.usersdb: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.24121405&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "DockerIgnore",
-      "yaml"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;DockerIgnore&quot;,
+      &quot;yaml&quot;
     ],
-    "rider.external.source.directories": [
-      "C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\User\\AppData\\Local\\Symbols\\src"
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\User\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\User\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Transaction.API: http">
+}</component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.Transaction.API: IIS Express">
     <configuration name="Auth.API: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Services/Auth/Auth.API/Auth.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -696,11 +676,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml.rabbitmq-broker: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.usersdb: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.transactionsdb: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.savingsdb: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.rabbitmq-broker: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.checkingsdb: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.usersdb: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -902,19 +882,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Services/Transaction/Transaction.Application/Transactions/Commands/CreateTransaction/CreateTransactionHandler.cs</url>
-          <line>26</line>
-          <properties documentPath="C:\Users\User\Desktop\projects\nvm-bank\back-end\Services\Transaction\Transaction.Application\Transactions\Commands\CreateTransaction\CreateTransactionHandler.cs" containingFunctionPresentation="Method 'Handle'">
-            <startOffsets>
-              <option value="1240" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1253" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="77" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

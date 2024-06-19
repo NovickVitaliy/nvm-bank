@@ -31,8 +31,8 @@ namespace Checkings.API.Data.Migrations
                     b.Property<Guid>("AccountNumber")
                         .HasColumnType("uuid");
 
-                    b.Property<decimal>("Balance")
-                        .HasColumnType("numeric(20,0)");
+                    b.Property<double>("Balance")
+                        .HasColumnType("double precision");
 
                     b.Property<DateTime?>("ClosedOn")
                         .HasColumnType("timestamp with time zone");
@@ -55,7 +55,7 @@ namespace Checkings.API.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CheckingAccounts", (string)null);
+                    b.ToTable("CheckingAccounts");
                 });
 #pragma warning restore 612, 618
         }

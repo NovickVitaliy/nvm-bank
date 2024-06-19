@@ -1,21 +1,21 @@
+using Checkings.API.Data;
 using Common.Messaging.Events.CheckAccountExistance;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
-using Savings.API.Data;
 
-namespace Savings.API.SavingAccount.EventHandlers;
+namespace Checkings.API.CheckingAccount.Consumers;
 
-public class CheckSavingAccountExistanceConsumer : IConsumer<CheckSavingAccountExistance> {
-    private readonly SavingDbContext _db;
+public class CheckCheckingAccountExistanceConsumer : IConsumer<CheckCheckingAccountExistance> {
+    private readonly CheckingsDbContext _db;
 
-    public CheckSavingAccountExistanceConsumer(SavingDbContext db) {
+    public CheckCheckingAccountExistanceConsumer(CheckingsDbContext db) {
         _db = db;
     }
 
-    public async Task Consume(ConsumeContext<CheckSavingAccountExistance> context) {
+    public async Task Consume(ConsumeContext<CheckCheckingAccountExistance> context) {
         var msg = context.Message;
 
-        var account = await _db.SavingAccounts
+        var account = await _db.CheckingAccounts
             .AsNoTracking()
             .SingleOrDefaultAsync(x => x.AccountNumber == msg.AccountNumber);
 

@@ -1,4 +1,4 @@
-using Transaction.Application.Contracts;
+using Common.Messaging.Contracts;
 
 namespace Common.Messaging.Events.CheckAccountMoney;
 

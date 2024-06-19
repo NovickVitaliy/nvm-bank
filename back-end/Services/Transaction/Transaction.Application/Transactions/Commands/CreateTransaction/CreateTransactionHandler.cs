@@ -3,7 +3,6 @@ using Common.ErrorHandling;
 using Common.Messaging.Contracts;
 using Common.Messaging.Events.CheckAccountMoney;
 using MassTransit;
-using Transaction.Application.Contracts;
 using Transaction.Application.Data;
 using Transaction.Application.Helpers;
 
@@ -13,12 +12,14 @@ public class CreateTransactionHandler : ICommandHandler<CreateTransactionCommand
     private readonly ITransactionRepository _transactionRepository;
     private readonly IAccountMoneyChecker _accountMoneyChecker;
     private readonly IAccountExistenceChecker _accountExistenceChecker;
-
+    private readonly IWithdrawMoneyCommandVisitor _withdrawMoneyCommandVisitor;
+    
     public CreateTransactionHandler(ITransactionRepository transactionRepository,
-        IAccountMoneyChecker accountMoneyChecker, IAccountExistenceChecker accountExistenceChecker) {
+        IAccountMoneyChecker accountMoneyChecker, IAccountExistenceChecker accountExistenceChecker, IWithdrawMoneyCommandVisitor withdrawMoneyCommandVisitor) {
         _transactionRepository = transactionRepository;
         _accountMoneyChecker = accountMoneyChecker;
         _accountExistenceChecker = accountExistenceChecker;
+        _withdrawMoneyCommandVisitor = withdrawMoneyCommandVisitor;
     }
 
     public async Task<CreateTransactionResult> Handle(CreateTransactionCommand cmd, CancellationToken cancellationToken) {

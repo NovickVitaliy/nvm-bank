@@ -1,6 +1,6 @@
+using Common.Messaging.Contracts;
 using Common.Messaging.Events.CheckAccountMoney;
 using MassTransit;
-using Transaction.Application.Contracts;
 
 namespace Transaction.Infrastructure.Services.AccountMoneyChecker;
 
